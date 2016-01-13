@@ -31,7 +31,8 @@ import uuid
 import platform
 import inspect
 import struct
-
+sys.path.append("flow")
+from FlowHandler import FlowHandler
 # -----------------------------------------------------------------------------
 # Globals
 
@@ -48,7 +49,7 @@ g_commandLineSwitches = None
 USE_EVT_IDLE = False # If False then Timer will be used
 
 TEST_EMBEDDING_IN_PANEL = True
-
+g_flow = FlowHandler()
 # -----------------------------------------------------------------------------
 
 def GetApplicationPath(file=None):
@@ -143,13 +144,13 @@ class MainFrame(wx.Frame):
 
         self.SetSize(size)
 
-        if not url or url=="":
-            url = "file://"+GetApplicationPath("wxpython.html")
-            #url="http:www.baidu.com"
-            # Test hash in url.
-            # url += "#test-hash"
-        # g_url = url
-        # print("g_url"+g_url)
+        # if not url or url=="":
+        #     url = "file://"+GetApplicationPath("wxpython.html")
+        #     #url="http:www.baidu.com"
+        #     # Test hash in url.
+        #     # url += "#test-hash"
+        # # g_url = url
+        # # print("g_url"+g_url)
 
         self.CreateMenu()
 
@@ -166,6 +167,9 @@ class MainFrame(wx.Frame):
         self.Bind(wx.EVT_BUTTON, self.OnButton, goButton)
         self.Bind(wx.EVT_TEXT_ENTER, self.OnButton, self.siteAddressText)
         
+        testButton = wx.Button(self.MPL,label="tt",size=(50,28))
+        topBoxSizer.Add(testButton,proportion=2,border=5,flag=wx.ALL)
+        self.Bind(wx.EVT_BUTTON,self.OnTest,testButton)
 
         self.BoxSizer=wx.BoxSizer(wx.VERTICAL)
         self.BoxSizer.Add(self.MPL,proportion =0, border = 0,flag = wx.ALL | wx.EXPAND)
@@ -213,7 +217,7 @@ class MainFrame(wx.Frame):
         self.javascriptExternal = JavascriptExternal(self.browser)
         jsBindings.SetObject("external", self.javascriptExternal)
         jsBindings.SetProperty("sources", GetSources())
-        self.browser.SetJavascriptBindings(jsBindings)
+        #self.browser.SetJavascriptBindings(jsBindings)
 
         if self.mainPanel:
             self.mainPanel.Bind(wx.EVT_SET_FOCUS, self.OnSetFocus)
@@ -236,6 +240,15 @@ class MainFrame(wx.Frame):
     def OnButton(self,event):
         self.clientHandler.site=str(self.siteAddressText.GetValue())
         self.browser.GetMainFrame().LoadUrl(self.siteAddressText.GetValue())
+    def OnTest(self,event):
+        g_flow.next()
+        # jsreturn = "aa"
+        # jsreturnLine = 0
+        # #jsframe = self.browser.GetMainFrame()
+        # #self.browser.GetMainFrame().ExecuteJavascript ("$('.page__next').click(function() {alert(1); });$('.page__next').click();","http://newgame.duowan.com/ku/")
+        # self.browser.GetMainFrame().ExecuteJavascript("document.getElementById('su').click();")
+        # print(jsreturnLine)
+        # print(jsreturn)
     def CreateMenu(self):
         filemenu = wx.Menu()
         op = filemenu.Append(1, "Open")
@@ -673,7 +686,8 @@ class ClientHandler:
         print("[wxpython.py] LoadHandler::OnLoadingStateChange()")
         print("    isLoading = %s, canGoBack = %s, canGoForward = %s" \
                 % (isLoading, canGoBack, canGoForward))
-
+        g_flow._onLoadingStateChange(browser, isLoading, canGoBack,
+            canGoForward)
     def OnLoadStart(self, browser, frame):
         print("[wxpython.py] LoadHandler::OnLoadStart()")
         print("    frame url = %s" % frame.GetUrl()[:100])
@@ -683,7 +697,7 @@ class ClientHandler:
         print("    frame url = %s" % frame.GetUrl()[:100])
         # For file:// urls the status code = 0
         print("    http status code = %s" % httpStatusCode)
-        
+        g_flow._onLoaded(browser,frame,httpStatusCode)
         # form=TestFrame()
         # form.load(frame)
         # form.Show()
@@ -691,9 +705,13 @@ class ClientHandler:
         # Tests for the Browser object methods
         self._Browser_LoadUrl(browser)
         #link=LinkSave()
-        if not hasattr(self,'logFrame'):
-            self.logFrame=LogFrame(self)
-            self.logFrame.Show()
+        # if not hasattr(self,'logFrame'):
+        #      self.logFrame=LogFrame(self)
+        #      self.logFrame.Show()
+        # if not hasattr(self,'saveHandler'):
+        #     self.saveHandler=PySave()
+        # self.saveHandler.setSite(self.site)
+        # self.saveHandler.onLoadEnd(browser,frame,httpStatusCode)
     def _Browser_LoadUrl(self, browser):
         if browser.GetUrl() == "data:text/html,Test#Browser.LoadUrl":
              browser.LoadUrl("file://"+GetApplicationPath("wxpython.html"))

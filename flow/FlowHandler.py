@@ -12,6 +12,9 @@ import FlowHandler from FlowHandler
 下面首先定义了一个glodal函数flowprint，打印输出用
 '''
 from LinkSave import LinkSave
+from HtmlAnalyzer import HtmlAnalyzer
+#import FlowConst
+
 def flowprint(*msg):
 	#支持可变长参数
 	#*msg ()
@@ -21,8 +24,12 @@ def flowprint(*msg):
 		s = s+str(element)
 	print('[--flow--print]'+s)
 class FlowHandler:			#定义一个普通类，如果是集成类需要带括号，例如：FlowHandler(wx.Frame)
-	items={'a':'bbc','i':3} #定义json格式，可直接获取value=items['i']
-							#变量的作用域为模组级别，可以直接self.item获取
+	items={'a':'bbc','i':3}, #定义json格式，可直接获取value=items['i']#变量的作用域为模组级别，可以直接self.item获取
+	stateChange =[]
+	stateChangeCount=0
+	loaded =[]
+	loadedCount=0
+	browserLoadedFlag=False
 	def __init__(self):
 		pass				#不能留空，至少写pass
 	def next(self):
@@ -30,22 +37,50 @@ class FlowHandler:			#定义一个普通类，如果是集成类需要带括号�
 		#print('xx')
 	def _loadEnded(self):
 		pass
-	def _loadStatusChange(self):
-		pass
 	def _onLoadingStateChange(self,browser, isLoading, canGoBack,canGoForward):
 		flowprint(browser,isLoading,canGoBack,canGoForward)
+
+		self.stateChangeCount+=1
+		self.stateChange.append({'url':browser.GetUrl(),'l':isLoading})
+		#奇怪的stateChangecount=2，但是stateChange只会apped一次
+		#而这一次就是Browser加载完毕的事件，和函数名不符合
+		#更奇怪的是第一次执行cefpython ,只执行一次，但按ongo button是执行2次的
+		if(isLoading==False):
+			self.browserLoadedFlag=True
 	def _onLoaded(self,browser, frame, httpStatusCode):
 		#self.items['i']=self.items['i']-1
 		#flowprint(self.items['i'])#模组级变量 以及
-		#self.stringVisitor = StringVisitor()
-		self.stringVisitor = StringVisitor()
-		browser.GetMainFrame().GetSource(self.stringVisitor)
 		
+		
+		self.loadedCount+=1
+		self.loaded.append(browser.GetUrl())
+		print("FlowHandler url="+browser.GetUrl())
+		print("FlowHandler on loaded"+str(self.loadedCount)+"|"+str(self.stateChangeCount)) #5|2
+		for s in self.loaded:
+			print("onload-"+s)
+		for s in self.stateChange:
+			print("sc-"+s['url']+str(s['l']))
+		if(self.browserLoadedFlag==True):#这里
+			self.stringVisitor = StringVisitor()
+			browser.GetMainFrame().GetSource(self.stringVisitor)
+	def reset(self):
+		self.stateChange =[]
+		self.stateChangeCount=0
+		self.loaded =[]
+		self.loadedCount=0
+		self.browserLoadedFlag = False
 class StringVisitor:
     def Visit(self, string):
-    	flowprint(string)
+    	flowprint("flowhandler Visit")
     	link=LinkSave()
     	link.save("www.baidu.com",string)
+    	print("string visitores\n")
+    	#reload(FlowConst)
+    	#print(FlowConst.getPath())
+    	s=link.read("www.baidu.com")
+    	ana=HtmlAnalyzer()
+    	print('loadlist.py ana')
+    	ana.parse(s)
 class LoadHandler:#同一个py文件，定义的第二个类
 	def __init__(self):
 		pass

@@ -183,10 +183,11 @@ class MainFrame(wx.Frame):
 
         # Global client callbacks must be set before browser is created.
         self.clientHandler = ClientHandler()
-        if self.IsSiteCapturedChecked()==False:
-            self.clientHandler.site=None
-        else:
-            self.clientHandler.site=str(url)
+        # if self.IsSiteCapturedChecked()==False:
+        #     self.clientHandler.site=None
+        # else:
+        #     self.clientHandler.site=str(url)
+
         # cefpython.SetGlobalClientCallback("OnCertificateError",
         #         self.clientHandler._OnCertificateError)
         # cefpython.SetGlobalClientCallback("OnBeforePluginLoad",
@@ -238,7 +239,7 @@ class MainFrame(wx.Frame):
         item=menu.FindItemByPosition(0)
         return item.IsChecked()
     def OnButton(self,event):
-        self.clientHandler.site=str(self.siteAddressText.GetValue())
+        #self.clientHandler.site=str(self.siteAddressText.GetValue())
         self.browser.GetMainFrame().LoadUrl(self.siteAddressText.GetValue())
     def OnTest(self,event):
         g_flow.next()
@@ -461,9 +462,10 @@ class CookieVisitor:
 class ClientHandler:
     mainBrowser = None # May be None for global client callbacks.
     main = None
-    def __init__(self,site=None):
-        if site:
-            self.site=site
+    def __init__(self):
+    #def __init__(self,site=None):
+        # if site:
+        #     self.site=site
         pass
     # -------------------------------------------------------------------------
     # DisplayHandler
@@ -554,6 +556,7 @@ class ClientHandler:
     # -------------------------------------------------------------------------
 
     def OnBeforeBrowse(self, browser, frame, request, isRedirect):
+        g_flow.reset()
         print("[wxpython.py] RequestHandler::OnBeforeBrowse()")
         print("    url = %s" % request.GetUrl()[:100])
         # Handle "magnet:" links.

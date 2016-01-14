@@ -1,3 +1,4 @@
+# -*- coding: UTF-8 -*-
 import os
 import sys
 import struct
@@ -39,13 +40,33 @@ class LinkSave:
         f=open(local,'w')
         f.write(string)
         f.close()
-    def load(self,name):
+    def add(self,name,string):#没测试过
+        local='links/' + name +'.txt'
+        f=open(local,'a')
+        f.write(string+"\n")
+        f.close()
+        '''
+        读写模式的类型有：
+        rU 或 Ua 以读方式打开, 同时提供通用换行符支持 (PEP 278)
+        w     以写方式打开，
+        a     以追加模式打开 (从 EOF 开始, 必要时创建新文件)
+        r+     以读写模式打开
+        w+     以读写模式打开 (参见 w )
+        a+     以读写模式打开 (参见 a )
+        rb     以二进制读模式打开
+        wb     以二进制写模式打开 (参见 w )
+        ab     以二进制追加模式打开 (参见 a )
+        rb+    以二进制读写模式打开 (参见 r+ )
+        wb+    以二进制读写模式打开 (参见 w+ )
+        ab+    以二进制读写模式打开 (参见 a+ )
+        '''
+    def read(self,name):
         local='links/' + name + '.txt'
         f=open(local)
-        
-        self.parse(f.read())
+        s = f.read()
+        #self.parse(f.read())
         f.close()
-        pass
+        return s
     def parse(self,string):
         sel = HtmlXPathSelector(text=string)
         #print(string)

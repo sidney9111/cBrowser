@@ -1,6 +1,16 @@
 # -*- coding:utf-8 -*-
 # An example of embedding CEF browser in wxPython on Windows.
 # Tested with wxPython 2.8.12.1 and 3.0.2.0.
+#----------------------------------------------------------------------------------
+'''
+在python2.7下，将字符串写入到文件时会出现
+"UnicodeEncodeError: 'ascii' codec can't encode character u'\xa0' in position"的错误,
+原因是由于python基于ASCII处理字符的，当出现不属于ASCII的字符时，会出现错误信息。
+'''
+import sys
+reload(sys)
+sys.setdefaultencoding('utf-8')
+#----------------------------------------------------------------------------------
 
 import os, sys
 libcef_dll = os.path.join(os.path.dirname(os.path.abspath(__file__)),
@@ -33,6 +43,7 @@ import inspect
 import struct
 sys.path.append("flow")
 from FlowHandler import FlowHandler
+from OutputFrame import OutputFrame
 # -----------------------------------------------------------------------------
 # Globals
 
@@ -218,7 +229,7 @@ class MainFrame(wx.Frame):
         self.javascriptExternal = JavascriptExternal(self.browser)
         jsBindings.SetObject("external", self.javascriptExternal)
         jsBindings.SetProperty("sources", GetSources())
-        #self.browser.SetJavascriptBindings(jsBindings)
+        self.browser.SetJavascriptBindings(jsBindings)
 
         if self.mainPanel:
             self.mainPanel.Bind(wx.EVT_SET_FOCUS, self.OnSetFocus)
@@ -242,11 +253,13 @@ class MainFrame(wx.Frame):
         #self.clientHandler.site=str(self.siteAddressText.GetValue())
         self.browser.GetMainFrame().LoadUrl(self.siteAddressText.GetValue())
     def OnTest(self,event):
-        g_flow.next()
+        #g_flow.next()
         # jsreturn = "aa"
         # jsreturnLine = 0
-        # #jsframe = self.browser.GetMainFrame()
-        # #self.browser.GetMainFrame().ExecuteJavascript ("$('.page__next').click(function() {alert(1); });$('.page__next').click();","http://newgame.duowan.com/ku/")
+        jsframe = self.browser.GetMainFrame()
+
+        jsframe.ExecuteJavascript ("$('.page__next').find('span').click();")
+        #jsframe.ExecuteJavascript ("$('.page__next').addClass('is-current');")
         # self.browser.GetMainFrame().ExecuteJavascript("document.getElementById('su').click();")
         # print(jsreturnLine)
         # print(jsreturn)
@@ -256,6 +269,10 @@ class MainFrame(wx.Frame):
         self.Bind(wx.EVT_MENU,self.OnOpen,op)
         exit = filemenu.Append(2, "Exit")
         self.Bind(wx.EVT_MENU, self.OnClose, exit)
+        windowsmenu=wx.Menu()
+        outputwindow=windowsmenu.Append(5,"Output")
+        self.Bind(wx.EVT_MENU,self.OnWindow_output,outputwindow)
+
         aboutmenu = wx.Menu()
         ab=aboutmenu.Append(3, "CEF Python")
         menubar = wx.MenuBar()
@@ -267,8 +284,11 @@ class MainFrame(wx.Frame):
         self.Bind(wx.EVT_MENU,self.OnSelectCapture,munCapture)
         menubar.Append(filemenu,"&File")
         menubar.Append(preferencesMenu,"&Preferences")
+        menubar.Append(windowsmenu,"&Windows")
         menubar.Append(aboutmenu, "&About")
         self.SetMenuBar(menubar)
+    def OnWindow_output(self,event):
+        OutputFrame().Show()
     def OnAbout(self,event):
         pass
     def OnOpen(self,event):

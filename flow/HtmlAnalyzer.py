@@ -1,8 +1,10 @@
+# -*- coding: UTF-8 -*-
 #import os
 #import sys
 import struct
 from scrapy.selector import HtmlXPathSelector
 import FlowConst
+from LinkSave import LinkSave
 ##from scrapy.selector import Selector #scrapy 1.1 api
 '''
 Scrapy:An open source and collaborative framework for extracting the data you need from websites.
@@ -37,7 +39,7 @@ def ExceptHook(excType, excValue, traceObject):
     cefpython.QuitMessageLoop()
     cefpython.Shutdown()
     os._exit(1)
-
+data_lst = []
 class HtmlAnalyzer:
     def __int__(self):
         pass
@@ -63,10 +65,27 @@ class HtmlAnalyzer:
         # inputObjects=sel.select('//div[@class="mod-picList"]/div/h3/a/@href')
         # for i,href in enumerate(inputObjects):
         #     print(href.extract())
+        linkSave = LinkSave()
         reload(FlowConst)
-        FlowConst.Read(sel)
+        lst = FlowConst.Read(sel)
 
-
+        ret = self.RepeatCheck(lst)
+        if(ret==False):
+            for key,value in enumerate(lst):
+                linkSave.add("data",value)
+                print(value)
+        data_lst = lst
+    #某些原因chrome embed会读取多次
+    def RepeatCheck(self,lst):#1行单字段
+        if(len(data_lst)!=len(lst)):
+            return False
+        eq = True
+        for number in xrange(0,10):
+            if(data_lst[number]!=lst[number]):
+                eq=False
+        return eq
+    def AllRepeatCheck(self,lst):#多字断
+        pass
 # if __name__ == '__main__':
 #     print('[wxpython.py] architecture=%s-bit' % (8 * struct.calcsize("P")))
 #     #print('[wxpython.py] wx.version=%s' % wx.version())

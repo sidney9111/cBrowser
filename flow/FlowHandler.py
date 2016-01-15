@@ -14,7 +14,7 @@ import FlowHandler from FlowHandler
 from LinkSave import LinkSave
 from HtmlAnalyzer import HtmlAnalyzer
 #import FlowConst
-
+import wx
 def flowprint(*msg):
 	#支持可变长参数
 	#*msg ()
@@ -30,6 +30,7 @@ class FlowHandler:			#定义一个普通类，如果是集成类需要带括号�
 	loaded =[]
 	loadedCount=0
 	browserLoadedFlag=False
+	loopCount=0
 	def __init__(self):
 		pass				#不能留空，至少写pass
 	def next(self):
@@ -61,7 +62,8 @@ class FlowHandler:			#定义一个普通类，如果是集成类需要带括号�
 		for s in self.stateChange:
 			print("sc-"+s['url']+str(s['l']))
 		if(self.browserLoadedFlag==True):#这里
-			self.stringVisitor = StringVisitor()
+			self.browser=browser
+			self.stringVisitor = SouceVisitor(self)
 			browser.GetMainFrame().GetSource(self.stringVisitor)
 	def reset(self):
 		self.stateChange =[]
@@ -69,6 +71,7 @@ class FlowHandler:			#定义一个普通类，如果是集成类需要带括号�
 		self.loaded =[]
 		self.loadedCount=0
 		self.browserLoadedFlag = False
+
 class StringVisitor:
     def Visit(self, string):
     	flowprint("flowhandler Visit")
@@ -79,8 +82,22 @@ class StringVisitor:
     	#print(FlowConst.getPath())
     	s=link.read("www.baidu.com")
     	ana=HtmlAnalyzer()
-    	print('loadlist.py ana')
     	ana.parse(s)
+    	print('self.count',self.stateChangeCount)
+class SouceVisitor:
+	def __init__(self,parent):
+		self.parent=parent
+	def Visit(self,string):
+		flowprint("flowhandler Visit")
+		# link=LinkSave()
+		# link.add("www.baidu.com",string)
+		
+		# s=link.read("www.baidu.com")
+		ana=HtmlAnalyzer()
+		ana.parse(string)
+		self.parent.loopCount+=1
+		if(self.parent.loopCount<=10):    		#翻页
+			self.parent.browser.GetMainFrame().ExecuteJavascript("$('.page__next').find('span').click();")
 class LoadHandler:#同一个py文件，定义的第二个类
 	def __init__(self):
 		pass

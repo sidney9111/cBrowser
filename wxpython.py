@@ -45,6 +45,7 @@ sys.path.append("flow")
 from FlowHandler import FlowHandler
 from OutputFrame import OutputFrame
 from MainScrollPanel import MainScrollPanel
+from BrowserSettingPanel import BrowserSettingPanel
 # -----------------------------------------------------------------------------
 # Globals
 
@@ -208,20 +209,26 @@ class MainFrame(wx.Frame):
         self.BoxSizer.Add(self.MPL,proportion =0, border = 0,flag = wx.ALL | wx.EXPAND)
         self.SetSizer(self.BoxSizer)
 
+        self.splitter_window = wx.SplitterWindow(self)  
+        self.splitter_rightpanel = BrowserSettingPanel(self.splitter_window)
         pages = wx.Notebook(id=1, name='pages',
-              parent=self, pos=wx.Point(0, 0), size=wx.Size(200, 100),
+              parent=self.splitter_window, pos=wx.Point(0, 0),size=wx.Size(600, 100),
               style=0)
+        self.splitter_window.SplitVertically(pages, self.splitter_rightpanel, 100)  #分割面板  
         #DefMainInstance = MainInstance(pages,1)
         instance= MainInstance()
+
         instance.pages=pages
         instance.number=1
+
         if TEST_EMBEDDING_IN_PANEL:
             print("Embedding in a wx.Panel!")
             # You also have to set the wx.WANTS_CHARS style for
             # all parent panels/controls, if it's deeply embedded.
             #self.mainPanel = wx.Panel(self, style=wx.WANTS_CHARS)
             self.mainPanel = wx.Panel(pages, style=wx.WANTS_CHARS)
-        self.BoxSizer.Add(pages,proportion =-10, border = 2,flag = wx.ALL | wx.EXPAND)
+        #self.BoxSizer.Add(pages,proportion =-10, border = 2,flag = wx.ALL | wx.EXPAND)
+        self.BoxSizer.Add(self.splitter_window,proportion =-10, border = 2,flag = wx.ALL | wx.EXPAND)
         pages.AddPage(imageId=-1, page=self.mainPanel, select=True, text=u'b2')
 
         # Global client callbacks must be set before browser is created.
@@ -247,7 +254,7 @@ class MainFrame(wx.Frame):
         self.browser = cefpython.CreateBrowserSync(windowInfo,
                 browserSettings=g_browserSettings,
                 navigateUrl=url)
-
+        instance.browser = self.browser
         self.clientHandler.main = self
         self.browser.SetClientHandler(self.clientHandler)
         #goButton=wx.Button(self.mainPanel,label="Go!",size=(50,50))
@@ -294,7 +301,7 @@ class MainFrame(wx.Frame):
         # # print(jsreturnLine)
         # # print(jsreturn)
         instance = MainInstance()
-        print(instance.number)
+        print("OnTest "+str(instance.number))
         b2 = MainScrollPanel(instance.pages)
         instance.pages.AddPage(imageId=-1, page=b2, select=True, text=u'b2')
     def CreateMenu(self):
@@ -390,8 +397,17 @@ class JavascriptExternal:
         self.mainBrowser.GoForward()
 
     def CreateAnotherBrowser(self, url=None):
-        frame = MainFrame(url=url)
-        frame.Show()
+        #点击链接，创建一个窗口
+        # frame = MainFrame(url=url)
+        # frame.Show()
+        page = wx.Panel(self.pages,style=wx.WANTS_CHARS)
+        parent.AddPage(imageId=-1, page=page, select=True, text='browser')
+        windowInfo = cefpython.WindowInfo()
+        windowInfo.SetAsChild(self.page.GetHandle())
+        self.browser = cefpython.CreateBrowserSync(windowInfo,
+                browserSettings=g_browserSettings,
+                navigateUrl=url)
+
 
     def Print(self, message):
         print("[wxpython.py] Print: "+message)
@@ -622,16 +638,20 @@ class ClientHandler:
             return True
         return False
     def OnBeforeResourceLoad(self, browser, frame, request):
-        #print("[wxpython.py] RequestHandler::OnBeforeResourceLoad()")
-        #print("    url = %s" % request.GetUrl()[:100])
-
+        print("[wxpython.py] RequestHandler::OnBeforeResourceLoad()")
+        print("    url = %s" % request.GetUrl()[:100])
+        
         # if hasattr(self,'site'):
         #     print('OnBeforeResourceLoad hasattr sitedfjsdlkfslkdjflskdjflskdjflksdjflksdf')
         #     if not hasattr(self,'saveHandler'):
         #         self.saveHandler=PySave()
         #     self.saveHandler.setSite(self.site)
         #     self.saveHandler.saveUrl(request.GetUrl()[:100])
-        return False
+        url = request.GetUrl()
+        if(url[-3:]=="jpg"):#no jpg loaded
+            return True
+        else:
+            return False
     def OnResourceRedirect(self, browser, frame, oldUrl, newUrlOut):
         print("[wxpython.py] RequestHandler::OnResourceRedirect()")
         print("    old url = %s" % oldUrl[:100])
@@ -832,7 +852,7 @@ class ClientHandler:
         # frame = MainFrame(url=url, popup=True)
         # frame.Show()
         instance = MainInstance()
-        print(instance.number)
+        #print(instance.number)
         # b2 = wx.Panel(instance.pages, style=wx.WANTS_CHARS)
         # windowInfo = cefpython.WindowInfo()
         # windowInfo.SetAsChild(b2.GetHandle())
@@ -840,9 +860,8 @@ class ClientHandler:
         # browser = cefpython.CreateBrowserSync(windowInfo,
         #         browserSettings=browserSettings,
         #         navigateUrl=url)
-        b2 = MainScrollPanel(instance.pages)
-        instance.pages.AddPage(imageId=-1, page=b2, select=True, text=u'b2')
-
+        
+        instance.browser.LoadUrl(url)
     def _OnAfterCreated(self, browser):
         # This is a global callback set using SetGlobalClientCallback().
         print("[wxpython.py] LifespanHandler::_OnAfterCreated()")
@@ -1075,6 +1094,7 @@ if __name__ == '__main__':
         # "plugins_disabled": True,
         # "file_access_from_file_urls_allowed": True,
         # "universal_access_from_file_urls_allowed": True,
+
     }
 
     # Command line switches set programmatically
@@ -1091,7 +1111,7 @@ if __name__ == '__main__':
     #app = MyApp(False,"http://www.sohu.com")
     app = MyApp("",1)
     app.MainLoop()
-
+    print('main loop finished')
     # Let wx.App destructor do the cleanup before calling
     # cefpython.Shutdown(). This is to ensure reliable CEF shutdown.
     del app

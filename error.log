@@ -3412,3 +3412,299 @@ AttributeError: ClientHandler instance has no attribute 'mainBrowser'
 
 AttributeError: ClientHandler instance has no attribute 'mainBrowser'
 
+
+[2016-01-16 23:55:58] Traceback (most recent call last):
+
+  File "string_visitor_cef3.pyx", line 68, in cefpython_py27.StringVisitor_Visit (cefpython.cpp:59334)
+
+  File "flow\FlowHandler.py", line 97, in Visit
+    ana.parse(string)
+
+  File "flow\HtmlAnalyzer.py", line 72, in parse
+    ret = self.RepeatCheck(lst)
+
+  File "flow\HtmlAnalyzer.py", line 80, in RepeatCheck
+    if(len(data_lst)!=len(lst)):
+
+TypeError: object of type 'NoneType' has no len()
+
+
+[2016-01-17 15:43:28] Traceback (most recent call last):
+
+  File "string_visitor_cef3.pyx", line 68, in cefpython_py27.StringVisitor_Visit (cefpython.cpp:59334)
+
+  File "flow\FlowHandler.py", line 97, in Visit
+    ana.parse(string)
+
+  File "flow\HtmlAnalyzer.py", line 72, in parse
+    ret = self.RepeatCheck(lst)
+
+  File "flow\HtmlAnalyzer.py", line 80, in RepeatCheck
+    if(len(data_lst)!=len(lst)):
+
+TypeError: object of type 'NoneType' has no len()
+
+
+[2016-01-17 15:45:20] Traceback (most recent call last):
+
+  File "string_visitor_cef3.pyx", line 68, in cefpython_py27.StringVisitor_Visit (cefpython.cpp:59334)
+
+  File "flow\FlowHandler.py", line 97, in Visit
+    ana.parse(string)
+
+  File "flow\HtmlAnalyzer.py", line 74, in parse
+    for key,value in enumerate(lst):
+
+TypeError: 'NoneType' object is not iterable
+
+
+[2016-01-17 15:49:40] Traceback (most recent call last):
+
+  File "H:\gamespider\Scrapy\tutorial\cBrowser\wxpython.py", line 324, in OnClose
+    del self.clientHandler.mainBrowser
+
+AttributeError: ClientHandler instance has no attribute 'mainBrowser'
+
+
+[2016-01-17 15:51:55] Traceback (most recent call last):
+
+  File "H:\gamespider\Scrapy\tutorial\cBrowser\wxpython.py", line 324, in OnClose
+    del self.clientHandler.mainBrowser
+
+AttributeError: ClientHandler instance has no attribute 'mainBrowser'
+
+
+[2016-01-17 15:54:57] Traceback (most recent call last):
+
+  File "H:\gamespider\Scrapy\tutorial\cBrowser\wxpython.py", line 324, in OnClose
+    del self.clientHandler.mainBrowser
+
+AttributeError: ClientHandler instance has no attribute 'mainBrowser'
+
+
+[2016-01-17 15:55:15] Traceback (most recent call last):
+
+  File "load_handler_cef3.pyx", line 52, in cefpython_py27.LoadHandler_OnLoadEnd (cefpython.cpp:60218)
+
+  File "H:\gamespider\Scrapy\tutorial\cBrowser\wxpython.py", line 723, in OnLoadEnd
+    g_flow._onLoaded(browser,frame,httpStatusCode)
+
+  File "flow\FlowHandler.py", line 56, in _onLoaded
+    flowprint('22222222222222222222222222222222222222222222222222222222222222|'+httpStatusCode)
+
+TypeError: cannot concatenate 'str' and 'int' objects
+
+
+[2016-01-17 15:55:58] Traceback (most recent call last):
+
+  File "load_handler_cef3.pyx", line 52, in cefpython_py27.LoadHandler_OnLoadEnd (cefpython.cpp:60218)
+
+  File "H:\gamespider\Scrapy\tutorial\cBrowser\wxpython.py", line 723, in OnLoadEnd
+    g_flow._onLoaded(browser,frame,httpStatusCode)
+
+  File "flow\FlowHandler.py", line 55, in _onLoaded
+    print "Finished loading main frame: %s (http code = %d)" % (frame.GetUrl(), httpCode)
+
+NameError: global name 'httpCode' is not defined
+
+
+[2016-01-17 19:23:22] Traceback (most recent call last):
+
+  File "H:\gamespider\Scrapy\tutorial\cBrowser\wxpython.py", line 324, in OnClose
+    del self.clientHandler.mainBrowser
+
+AttributeError: ClientHandler instance has no attribute 'mainBrowser'
+
+
+[2016-01-17 23:36:51] Traceback (most recent call last):
+
+  File "H:\gamespider\Scrapy\tutorial\cBrowser\wxpython.py", line 324, in OnClose
+    del self.clientHandler.mainBrowser
+
+AttributeError: ClientHandler instance has no attribute 'mainBrowser'
+
+
+[2016-01-17 23:38:53] Traceback (most recent call last):
+
+  File "H:\gamespider\Scrapy\tutorial\cBrowser\wxpython.py", line 324, in OnClose
+    del self.clientHandler.mainBrowser
+
+AttributeError: ClientHandler instance has no attribute 'mainBrowser'
+
+
+[2016-01-18 02:35:36] Traceback (most recent call last):
+
+  File "H:\gamespider\Scrapy\tutorial\cBrowser\wxpython.py", line 1046, in <module>
+    app = MyApp("",1)
+
+  File "H:\gamespider\Scrapy\tutorial\cBrowser\wxpython.py", line 858, in __init__
+    wx.App.__init__(self)
+
+  File "C:\Python27\lib\site-packages\wx-3.0-msw\wx\_core.py", line 8628, in __init__
+    self._BootstrapApp()
+
+  File "C:\Python27\lib\site-packages\wx-3.0-msw\wx\_core.py", line 8196, in _BootstrapApp
+    return _core_.PyApp__BootstrapApp(*args, **kwargs)
+
+  File "H:\gamespider\Scrapy\tutorial\cBrowser\wxpython.py", line 871, in OnInit
+    self.OnSearchButton(self.url)
+
+  File "H:\gamespider\Scrapy\tutorial\cBrowser\wxpython.py", line 883, in OnSearchButton
+    frame = MainFrame(url=evt,index=self.index)
+
+  File "H:\gamespider\Scrapy\tutorial\cBrowser\wxpython.py", line 217, in __init__
+    navigateUrl=url)
+
+  File "cefpython.pyx", line 378, in cefpython_py27.CreateBrowserSync (cefpython.cpp:77522)
+
+  File "window_info_cef3.pyx", line 10, in cefpython_py27.SetCefWindowInfo (cefpython.cpp:33291)
+
+Exception: WindowInfo: windowType is not set
+
+
+[2016-01-18 02:37:45] Traceback (most recent call last):
+
+  File "H:\gamespider\Scrapy\tutorial\cBrowser\wxpython.py", line 324, in OnClose
+    del self.clientHandler.mainBrowser
+
+AttributeError: ClientHandler instance has no attribute 'mainBrowser'
+
+
+[2016-01-18 03:05:41] Traceback (most recent call last):
+
+  File "H:\gamespider\Scrapy\tutorial\cBrowser\wxpython.py", line 324, in OnClose
+    del self.clientHandler.mainBrowser
+
+AttributeError: ClientHandler instance has no attribute 'mainBrowser'
+
+
+[2016-01-18 03:05:55] Traceback (most recent call last):
+
+  File "H:\gamespider\Scrapy\tutorial\cBrowser\wxpython.py", line 324, in OnClose
+    del self.clientHandler.mainBrowser
+
+AttributeError: ClientHandler instance has no attribute 'mainBrowser'
+
+
+[2016-01-18 03:12:18] Traceback (most recent call last):
+
+  File "H:\gamespider\Scrapy\tutorial\cBrowser\wxpython.py", line 1049, in <module>
+    app = MyApp("",1)
+
+  File "H:\gamespider\Scrapy\tutorial\cBrowser\wxpython.py", line 861, in __init__
+    wx.App.__init__(self)
+
+  File "C:\Python27\lib\site-packages\wx-3.0-msw\wx\_core.py", line 8628, in __init__
+    self._BootstrapApp()
+
+  File "C:\Python27\lib\site-packages\wx-3.0-msw\wx\_core.py", line 8196, in _BootstrapApp
+    return _core_.PyApp__BootstrapApp(*args, **kwargs)
+
+  File "H:\gamespider\Scrapy\tutorial\cBrowser\wxpython.py", line 874, in OnInit
+    self.OnSearchButton(self.url)
+
+  File "H:\gamespider\Scrapy\tutorial\cBrowser\wxpython.py", line 886, in OnSearchButton
+    frame = MainFrame(url=evt,index=self.index)
+
+  File "H:\gamespider\Scrapy\tutorial\cBrowser\wxpython.py", line 194, in __init__
+    self.pages = wx.Notebook(id=wxID_CLASSBROWSERFRAMEPAGES, name='pages',
+
+NameError: global name 'wxID_CLASSBROWSERFRAMEPAGES' is not defined
+
+
+[2016-01-18 03:12:30] Traceback (most recent call last):
+
+  File "H:\gamespider\Scrapy\tutorial\cBrowser\wxpython.py", line 1049, in <module>
+    app = MyApp("",1)
+
+  File "H:\gamespider\Scrapy\tutorial\cBrowser\wxpython.py", line 861, in __init__
+    wx.App.__init__(self)
+
+  File "C:\Python27\lib\site-packages\wx-3.0-msw\wx\_core.py", line 8628, in __init__
+    self._BootstrapApp()
+
+  File "C:\Python27\lib\site-packages\wx-3.0-msw\wx\_core.py", line 8196, in _BootstrapApp
+    return _core_.PyApp__BootstrapApp(*args, **kwargs)
+
+  File "H:\gamespider\Scrapy\tutorial\cBrowser\wxpython.py", line 874, in OnInit
+    self.OnSearchButton(self.url)
+
+  File "H:\gamespider\Scrapy\tutorial\cBrowser\wxpython.py", line 886, in OnSearchButton
+    frame = MainFrame(url=evt,index=self.index)
+
+  File "H:\gamespider\Scrapy\tutorial\cBrowser\wxpython.py", line 197, in __init__
+    self.pages.AddPage(imageId=-1, page=self.mainPanel, select=False, text='browser')
+
+  File "C:\Python27\lib\site-packages\wx-3.0-msw\wx\_core.py", line 13620, in AddPage
+    return _core_.BookCtrlBase_AddPage(*args, **kwargs)
+
+PyAssertionError: C++ assertion "pPage->GetParent() == this" failed at ..\..\src\msw\notebook.cpp(680) in wxNotebook::InsertPage(): notebook pages must have notebook as parent
+
+
+[2016-01-18 03:13:40] Traceback (most recent call last):
+
+  File "H:\gamespider\Scrapy\tutorial\cBrowser\wxpython.py", line 1051, in <module>
+    app = MyApp("",1)
+
+  File "H:\gamespider\Scrapy\tutorial\cBrowser\wxpython.py", line 863, in __init__
+    wx.App.__init__(self)
+
+  File "C:\Python27\lib\site-packages\wx-3.0-msw\wx\_core.py", line 8628, in __init__
+    self._BootstrapApp()
+
+  File "C:\Python27\lib\site-packages\wx-3.0-msw\wx\_core.py", line 8196, in _BootstrapApp
+    return _core_.PyApp__BootstrapApp(*args, **kwargs)
+
+  File "H:\gamespider\Scrapy\tutorial\cBrowser\wxpython.py", line 876, in OnInit
+    self.OnSearchButton(self.url)
+
+  File "H:\gamespider\Scrapy\tutorial\cBrowser\wxpython.py", line 888, in OnSearchButton
+    frame = MainFrame(url=evt,index=self.index)
+
+  File "H:\gamespider\Scrapy\tutorial\cBrowser\wxpython.py", line 195, in __init__
+    self.mainPanel = wx.Panel(self.pages,style=ex.WANTS_CHARS)
+
+NameError: global name 'ex' is not defined
+
+
+[2016-01-18 03:18:23] Traceback (most recent call last):
+
+  File "H:\gamespider\Scrapy\tutorial\cBrowser\wxpython.py", line 329, in OnClose
+    del self.clientHandler.mainBrowser
+
+AttributeError: ClientHandler instance has no attribute 'mainBrowser'
+
+
+[2016-01-18 03:19:00] Traceback (most recent call last):
+
+  File "H:\gamespider\Scrapy\tutorial\cBrowser\wxpython.py", line 329, in OnClose
+    del self.clientHandler.mainBrowser
+
+AttributeError: ClientHandler instance has no attribute 'mainBrowser'
+
+
+[2016-01-18 03:21:01] Traceback (most recent call last):
+
+  File "H:\gamespider\Scrapy\tutorial\cBrowser\wxpython.py", line 329, in OnClose
+    del self.clientHandler.mainBrowser
+
+AttributeError: ClientHandler instance has no attribute 'mainBrowser'
+
+
+[2016-01-18 03:21:18] Traceback (most recent call last):
+
+  File "task.pyx", line 55, in cefpython_py27.PyTaskRunnable (cefpython.cpp:29291)
+
+  File "H:\gamespider\Scrapy\tutorial\cBrowser\wxpython.py", line 813, in _CreatePopup
+    page = wx.Panel(self.pages,style=wx.WANTS_CHARS)
+
+AttributeError: ClientHandler instance has no attribute 'pages'
+
+
+[2016-01-18 19:17:59] Traceback (most recent call last):
+
+  File "H:\gamespider\Scrapy\tutorial\cBrowser\wxpython.py", line 329, in OnClose
+    del self.clientHandler.mainBrowser
+
+AttributeError: ClientHandler instance has no attribute 'mainBrowser'
+

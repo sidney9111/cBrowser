@@ -4872,3 +4872,2043 @@ http://requirejs.org/docs/errors.html#scripterror", source: http://images.sohu.c
 [0501/085338:ERROR_REPORT:browser_main.cc(126)] Check failed: browser_contexts_.empty(). 
 [CEF Python] App: Renderer: OnContextReleased()
 [CEF Python] App: Renderer: OnBrowserDestroyed()
+[CEF Python] Initialize() called
+[CEF Python] CefExecuteProcess(): exitCode = -1
+[CEF Python] CefInitialize()
+[CEF Python] App_OnBeforeCommandLineProcessing_BrowserProcess()
+[CEF Python] App: Command line string for the browser process: "C:\Python27\python.exe" --browser-subprocess-path="C:\Python27\lib\site-packages\cefpython3/subprocess" --lang=en-US --log-file="H:\gamespider\Scrapy\tutorial\cBrowser\debug.log" --log-severity=info --enable-release-dcheck --resources-dir-path="C:\Python27\lib\site-packages\cefpython3" --locales-dir-path="C:\Python27\lib\site-packages\cefpython3/locales" --remote-debugging-port=64041 --no-sandbox "H:\gamespider\Scrapy\tutorial\cBrowser\wxpython.py"
+[CEF Python] BrowserProcessHandler_OnBeforeChildProcessLaunch()
+[CEF Python] BrowserProcessHandler_OnBeforeChildProcessLaunch()
+[CEF Python] CreateBrowserSync() called
+[CEF Python] navigateUrl: 
+[CEF Python] CefBrowser::CreateBrowserSync()
+[CEF Python] App: Browser: OnAfterCreated(): auto_zooming = system_dpi
+
+[CEF Python] App: Browser: SetBrowserDpiSettings: DPI=96 zoom=0
+
+[CEF Python] GetPyBrowser(): creating new PyBrowser, browserId=1
+[CEF Python] CefBrowser::CreateBrowserSync() succeeded
+[CEF Python] SendProcessMessage(): message=DoJavascriptBindings, arguments size=1
+[CEF Python] BrowserProcessHandler_OnBeforeChildProcessLaunch()
+[CEF Python] App: Command line string for the renderer process: "C:\Python27\lib\site-packages\cefpython3/subprocess" --type=renderer --no-sandbox --lang=en-US --enable-release-dcheck --lang=en-US --locales-dir-path="C:\Python27\lib\site-packages\cefpython3/locales" --log-file="H:\gamespider\Scrapy\tutorial\cBrowser\debug.log" --log-severity=info --resources-dir-path="C:\Python27\lib\site-packages\cefpython3" --channel="4484.1.1977345371\2024623430" /prefetch:673131151
+[CEF Python] App: Renderer: OnProcessMessageReceived(): DoJavascriptBindings
+[CEF Python] App: Renderer: OnContextCreated()
+[CEF Python] App: Renderer: DoJavascriptBindingsForFrame(): bindings are set
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextCreated
+[CEF Python] V8ContextHandler_OnContextCreated()
+[CEF Python] App: Renderer: DoJavascriptBindingsForFrame(): bindings are set
+[0116/235557:INFO:CONSOLE(1)] "JQMIGRATE: Logging is active", source: http://assets.dwstatic.com/b=amkit/gallery&f=jquery-plugin/jquery-migrate.js,underscore/1.6.0/underscore.js,mustache/0.8.2/mustache.js&nm&20150507 (1)
+[CEF Python] App: Renderer: OnContextCreated()
+[CEF Python] App: Renderer: OnContextCreated()
+[CEF Python] App: Renderer: OnContextCreated()
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextCreated
+[CEF Python] V8ContextHandler_OnContextCreated()
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextCreated
+[CEF Python] V8ContextHandler_OnContextCreated()
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextCreated
+[CEF Python] V8ContextHandler_OnContextCreated()
+[CEF Python] App: Renderer: OnContextCreated()
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextCreated
+[CEF Python] V8ContextHandler_OnContextCreated()
+[CEF Python] App: Renderer: OnContextReleased()
+[CEF Python] App: Renderer: OnContextCreated()
+[CEF Python] QuitMessageLoop()
+[CEF Python] Shutdown()
+[CEF Python] del g_pyFrames[1#3]
+[CEF Python] del g_pyFrames[1#2]
+[CEF Python] del g_pyFrames[1#1]
+[CEF Python] del g_pyFrames[1#5]
+[CEF Python] del g_pyFrames[1#4]
+[CEF Python] del g_pyFrames[1#-4]
+[CEF Python] del g_pyBrowsers[1]
+[0116/235558:ERROR_REPORT:browser_main.cc(126)] Check failed: browser_contexts_.empty(). 
+[CEF Python] App: Renderer: OnContextReleased()
+[CEF Python] App: Renderer: OnContextReleased()
+[CEF Python] App: Renderer: OnContextReleased()
+[CEF Python] App: Renderer: OnContextReleased()
+[CEF Python] App: Renderer: OnContextReleased()
+[CEF Python] App: Renderer: OnBrowserDestroyed()
+[CEF Python] Initialize() called
+[CEF Python] CefExecuteProcess(): exitCode = -1
+[CEF Python] CefInitialize()
+[CEF Python] App_OnBeforeCommandLineProcessing_BrowserProcess()
+[CEF Python] App: Command line string for the browser process: "C:\Python27\python.exe" --browser-subprocess-path="C:\Python27\lib\site-packages\cefpython3/subprocess" --lang=en-US --log-file="H:\gamespider\Scrapy\tutorial\cBrowser\debug.log" --log-severity=info --enable-release-dcheck --resources-dir-path="C:\Python27\lib\site-packages\cefpython3" --locales-dir-path="C:\Python27\lib\site-packages\cefpython3/locales" --remote-debugging-port=60461 --no-sandbox "H:\gamespider\Scrapy\tutorial\cBrowser\wxpython.py"
+[CEF Python] BrowserProcessHandler_OnBeforeChildProcessLaunch()
+[CEF Python] BrowserProcessHandler_OnBeforeChildProcessLaunch()
+[CEF Python] CreateBrowserSync() called
+[CEF Python] navigateUrl: 
+[CEF Python] CefBrowser::CreateBrowserSync()
+[CEF Python] App: Browser: OnAfterCreated(): auto_zooming = system_dpi
+
+[CEF Python] App: Browser: SetBrowserDpiSettings: DPI=96 zoom=0
+
+[CEF Python] GetPyBrowser(): creating new PyBrowser, browserId=1
+[CEF Python] CefBrowser::CreateBrowserSync() succeeded
+[CEF Python] SendProcessMessage(): message=DoJavascriptBindings, arguments size=1
+[CEF Python] BrowserProcessHandler_OnBeforeChildProcessLaunch()
+[CEF Python] App: Command line string for the renderer process: "C:\Python27\lib\site-packages\cefpython3/subprocess" --type=renderer --no-sandbox --lang=en-US --enable-release-dcheck --lang=en-US --locales-dir-path="C:\Python27\lib\site-packages\cefpython3/locales" --log-file="H:\gamespider\Scrapy\tutorial\cBrowser\debug.log" --log-severity=info --resources-dir-path="C:\Python27\lib\site-packages\cefpython3" --channel="19092.1.1131692894\1859763951" /prefetch:673131151
+[CEF Python] App: Renderer: OnProcessMessageReceived(): DoJavascriptBindings
+[CEF Python] App: Renderer: OnContextCreated()
+[CEF Python] App: Renderer: DoJavascriptBindingsForFrame(): bindings are set
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextCreated
+[CEF Python] V8ContextHandler_OnContextCreated()
+[CEF Python] App: Renderer: DoJavascriptBindingsForFrame(): bindings are set
+[0117/154326:INFO:CONSOLE(1)] "JQMIGRATE: Logging is active", source: http://assets.dwstatic.com/b=amkit/gallery&f=jquery-plugin/jquery-migrate.js,underscore/1.6.0/underscore.js,mustache/0.8.2/mustache.js&nm&20150507 (1)
+[CEF Python] App: Renderer: OnContextCreated()
+[CEF Python] App: Renderer: OnContextCreated()
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextCreated
+[CEF Python] V8ContextHandler_OnContextCreated()
+[CEF Python] App: Renderer: OnContextCreated()
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextCreated
+[CEF Python] V8ContextHandler_OnContextCreated()
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextCreated
+[CEF Python] V8ContextHandler_OnContextCreated()
+[CEF Python] App: Renderer: OnContextCreated()
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextCreated
+[CEF Python] V8ContextHandler_OnContextCreated()
+[CEF Python] App: Renderer: OnContextReleased()
+[CEF Python] App: Renderer: OnContextCreated()
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextReleased
+[CEF Python] V8ContextHandler_OnContextReleased()
+[CEF Python] del g_pyFrames[1#5]
+[CEF Python] App: Browser: OnProcessMessageReceived(): RemovePythonCallbacksForFrame
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextCreated
+[CEF Python] V8ContextHandler_OnContextCreated()
+[CEF Python] QuitMessageLoop()
+[CEF Python] Shutdown()
+[CEF Python] del g_pyFrames[1#3]
+[CEF Python] del g_pyFrames[1#2]
+[CEF Python] del g_pyFrames[1#1]
+[CEF Python] del g_pyFrames[1#5]
+[CEF Python] del g_pyFrames[1#4]
+[CEF Python] del g_pyFrames[1#-4]
+[CEF Python] del g_pyBrowsers[1]
+[0117/154328:ERROR_REPORT:browser_main.cc(126)] Check failed: browser_contexts_.empty(). 
+[CEF Python] App: Renderer: OnContextReleased()
+[CEF Python] App: Renderer: OnContextReleased()
+[CEF Python] App: Renderer: OnContextReleased()
+[CEF Python] App: Renderer: OnContextReleased()
+[CEF Python] App: Renderer: OnContextReleased()
+[CEF Python] App: Renderer: OnBrowserDestroyed()
+[CEF Python] Initialize() called
+[CEF Python] CefExecuteProcess(): exitCode = -1
+[CEF Python] CefInitialize()
+[CEF Python] App_OnBeforeCommandLineProcessing_BrowserProcess()
+[CEF Python] App: Command line string for the browser process: "C:\Python27\python.exe" --browser-subprocess-path="C:\Python27\lib\site-packages\cefpython3/subprocess" --lang=en-US --log-file="H:\gamespider\Scrapy\tutorial\cBrowser\debug.log" --log-severity=info --enable-release-dcheck --resources-dir-path="C:\Python27\lib\site-packages\cefpython3" --locales-dir-path="C:\Python27\lib\site-packages\cefpython3/locales" --remote-debugging-port=60534 --no-sandbox "H:\gamespider\Scrapy\tutorial\cBrowser\wxpython.py"
+[CEF Python] BrowserProcessHandler_OnBeforeChildProcessLaunch()
+[CEF Python] BrowserProcessHandler_OnBeforeChildProcessLaunch()
+[CEF Python] CreateBrowserSync() called
+[CEF Python] navigateUrl: 
+[CEF Python] CefBrowser::CreateBrowserSync()
+[CEF Python] App: Browser: OnAfterCreated(): auto_zooming = system_dpi
+
+[CEF Python] App: Browser: SetBrowserDpiSettings: DPI=96 zoom=0
+
+[CEF Python] GetPyBrowser(): creating new PyBrowser, browserId=1
+[CEF Python] CefBrowser::CreateBrowserSync() succeeded
+[CEF Python] SendProcessMessage(): message=DoJavascriptBindings, arguments size=1
+[CEF Python] BrowserProcessHandler_OnBeforeChildProcessLaunch()
+[CEF Python] App: Command line string for the renderer process: "C:\Python27\lib\site-packages\cefpython3/subprocess" --type=renderer --no-sandbox --lang=en-US --enable-release-dcheck --lang=en-US --locales-dir-path="C:\Python27\lib\site-packages\cefpython3/locales" --log-file="H:\gamespider\Scrapy\tutorial\cBrowser\debug.log" --log-severity=info --resources-dir-path="C:\Python27\lib\site-packages\cefpython3" --channel="13724.1.49318025\614562499" /prefetch:673131151
+[CEF Python] App: Renderer: OnProcessMessageReceived(): DoJavascriptBindings
+[CEF Python] App: Renderer: OnContextCreated()
+[CEF Python] App: Renderer: DoJavascriptBindingsForFrame(): bindings are set
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextCreated
+[CEF Python] V8ContextHandler_OnContextCreated()
+[CEF Python] App: Renderer: DoJavascriptBindingsForFrame(): bindings are set
+[CEF Python] App: Renderer: OnContextCreated()
+[CEF Python] App: Renderer: OnContextCreated()
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextCreated
+[CEF Python] App: Renderer: OnContextCreated()
+[CEF Python] V8ContextHandler_OnContextCreated()
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextCreated
+[CEF Python] V8ContextHandler_OnContextCreated()
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextCreated
+[CEF Python] V8ContextHandler_OnContextCreated()
+[0117/154516:INFO:CONSOLE(1)] "JQMIGRATE: Logging is active", source: http://assets.dwstatic.com/b=amkit/gallery&f=jquery-plugin/jquery-migrate.js,underscore/1.6.0/underscore.js,mustache/0.8.2/mustache.js&nm&20150507 (1)
+[CEF Python] App: Renderer: OnContextCreated()
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextCreated
+[CEF Python] V8ContextHandler_OnContextCreated()
+[CEF Python] App: Renderer: OnContextReleased()
+[CEF Python] App: Renderer: OnContextCreated()
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextReleased
+[CEF Python] V8ContextHandler_OnContextReleased()
+[CEF Python] del g_pyFrames[1#5]
+[CEF Python] App: Browser: OnProcessMessageReceived(): RemovePythonCallbacksForFrame
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextCreated
+[CEF Python] V8ContextHandler_OnContextCreated()
+[CEF Python] QuitMessageLoop()
+[CEF Python] Shutdown()
+[CEF Python] del g_pyFrames[1#3]
+[CEF Python] del g_pyFrames[1#2]
+[CEF Python] del g_pyFrames[1#1]
+[CEF Python] del g_pyFrames[1#5]
+[CEF Python] del g_pyFrames[1#4]
+[CEF Python] del g_pyFrames[1#-4]
+[CEF Python] del g_pyBrowsers[1]
+[0117/154520:ERROR_REPORT:browser_main.cc(126)] Check failed: browser_contexts_.empty(). 
+[CEF Python] App: Renderer: OnContextReleased()
+[CEF Python] App: Renderer: OnContextReleased()
+[CEF Python] App: Renderer: OnContextReleased()
+[CEF Python] App: Renderer: OnContextReleased()
+[CEF Python] App: Renderer: OnContextReleased()
+[CEF Python] App: Renderer: OnBrowserDestroyed()
+[CEF Python] Initialize() called
+[CEF Python] CefExecuteProcess(): exitCode = -1
+[CEF Python] CefInitialize()
+[CEF Python] App_OnBeforeCommandLineProcessing_BrowserProcess()
+[CEF Python] App: Command line string for the browser process: "C:\Python27\python.exe" --browser-subprocess-path="C:\Python27\lib\site-packages\cefpython3/subprocess" --lang=en-US --log-file="H:\gamespider\Scrapy\tutorial\cBrowser\debug.log" --log-severity=info --enable-release-dcheck --resources-dir-path="C:\Python27\lib\site-packages\cefpython3" --locales-dir-path="C:\Python27\lib\site-packages\cefpython3/locales" --remote-debugging-port=50033 --no-sandbox "H:\gamespider\Scrapy\tutorial\cBrowser\wxpython.py"
+[CEF Python] BrowserProcessHandler_OnBeforeChildProcessLaunch()
+[CEF Python] BrowserProcessHandler_OnBeforeChildProcessLaunch()
+[CEF Python] CreateBrowserSync() called
+[CEF Python] navigateUrl: 
+[CEF Python] CefBrowser::CreateBrowserSync()
+[CEF Python] App: Browser: OnAfterCreated(): auto_zooming = system_dpi
+
+[CEF Python] App: Browser: SetBrowserDpiSettings: DPI=96 zoom=0
+
+[CEF Python] GetPyBrowser(): creating new PyBrowser, browserId=1
+[CEF Python] CefBrowser::CreateBrowserSync() succeeded
+[CEF Python] SendProcessMessage(): message=DoJavascriptBindings, arguments size=1
+[CEF Python] BrowserProcessHandler_OnBeforeChildProcessLaunch()
+[CEF Python] App: Command line string for the renderer process: "C:\Python27\lib\site-packages\cefpython3/subprocess" --type=renderer --no-sandbox --lang=en-US --enable-release-dcheck --lang=en-US --locales-dir-path="C:\Python27\lib\site-packages\cefpython3/locales" --log-file="H:\gamespider\Scrapy\tutorial\cBrowser\debug.log" --log-severity=info --resources-dir-path="C:\Python27\lib\site-packages\cefpython3" --channel="13268.1.2034742062\1563617959" /prefetch:673131151
+[CEF Python] App: Renderer: OnProcessMessageReceived(): DoJavascriptBindings
+[CEF Python] App: Renderer: OnContextCreated()
+[CEF Python] App: Renderer: DoJavascriptBindingsForFrame(): bindings are set
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextCreated
+[CEF Python] App: Renderer: DoJavascriptBindingsForFrame(): bindings are set
+[CEF Python] V8ContextHandler_OnContextCreated()
+[0117/154603:INFO:CONSOLE(1)] "JQMIGRATE: Logging is active", source: http://assets.dwstatic.com/b=amkit/gallery&f=jquery-plugin/jquery-migrate.js,underscore/1.6.0/underscore.js,mustache/0.8.2/mustache.js&nm&20150507 (1)
+[CEF Python] App: Renderer: OnContextCreated()
+[CEF Python] App: Renderer: OnContextCreated()
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextCreated
+[CEF Python] V8ContextHandler_OnContextCreated()
+[CEF Python] App: Renderer: OnContextCreated()
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextCreated
+[CEF Python] V8ContextHandler_OnContextCreated()
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextCreated
+[CEF Python] V8ContextHandler_OnContextCreated()
+[CEF Python] App: Renderer: OnContextCreated()
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextCreated
+[CEF Python] V8ContextHandler_OnContextCreated()
+[CEF Python] App: Renderer: OnContextReleased()
+[CEF Python] App: Renderer: OnContextCreated()
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextReleased
+[CEF Python] V8ContextHandler_OnContextReleased()
+[CEF Python] del g_pyFrames[1#5]
+[CEF Python] App: Browser: OnProcessMessageReceived(): RemovePythonCallbacksForFrame
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextCreated
+[CEF Python] V8ContextHandler_OnContextCreated()
+[CEF Python] App: Renderer: OnContextReleased()
+[0117/154621:WARNING:content_browser_client.cc(393)] No browser info matching process id 3 and view id 0
+[CEF Python] App: Renderer: OnContextReleased()
+[CEF Python] App: Renderer: OnContextReleased()
+[0117/154621:WARNING:content_browser_client.cc(393)] No browser info matching process id 3 and view id 0
+[CEF Python] App: Renderer: OnContextReleased()
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextReleased
+[CEF Python] V8ContextHandler_OnContextReleased()
+[CEF Python] del g_pyFrames[1#5]
+[CEF Python] App: Renderer: OnContextReleased()
+[CEF Python] App: Renderer: OnContextCreated()
+[CEF Python] App: Browser: OnProcessMessageReceived(): RemovePythonCallbacksForFrame
+[CEF Python] App: Renderer: DoJavascriptBindingsForFrame(): bindings are set
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextReleased
+[CEF Python] V8ContextHandler_OnContextReleased()
+[CEF Python] del g_pyFrames[1#4]
+[CEF Python] App: Browser: OnProcessMessageReceived(): RemovePythonCallbacksForFrame
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextReleased
+[CEF Python] V8ContextHandler_OnContextReleased()
+[CEF Python] del g_pyFrames[1#3]
+[CEF Python] App: Browser: OnProcessMessageReceived(): RemovePythonCallbacksForFrame
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextReleased
+[CEF Python] V8ContextHandler_OnContextReleased()
+[CEF Python] del g_pyFrames[1#2]
+[CEF Python] App: Browser: OnProcessMessageReceived(): RemovePythonCallbacksForFrame
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextReleased
+[CEF Python] V8ContextHandler_OnContextReleased()
+[CEF Python] del g_pyFrames[1#1]
+[CEF Python] App: Browser: OnProcessMessageReceived(): RemovePythonCallbacksForFrame
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextCreated
+[CEF Python] V8ContextHandler_OnContextCreated()
+[0117/154622:INFO:CONSOLE(1)] "JQMIGRATE: Logging is active", source: http://assets.dwstatic.com/b=amkit/gallery&f=jquery-plugin/jquery-migrate.js,underscore/1.6.0/underscore.js,mustache/0.8.2/mustache.js&nm&20150507 (1)
+[CEF Python] App: Renderer: OnContextCreated()
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextCreated
+[CEF Python] App: Renderer: OnContextCreated()
+[CEF Python] V8ContextHandler_OnContextCreated()
+[CEF Python] App: Renderer: OnContextCreated()
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextCreated
+[CEF Python] V8ContextHandler_OnContextCreated()
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextCreated
+[CEF Python] V8ContextHandler_OnContextCreated()
+[CEF Python] App: Renderer: OnContextCreated()
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextCreated
+[CEF Python] App: Renderer: OnContextReleased()
+[CEF Python] V8ContextHandler_OnContextCreated()
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextReleased
+[CEF Python] App: Renderer: OnContextCreated()
+[CEF Python] V8ContextHandler_OnContextReleased()
+[CEF Python] del g_pyFrames[1#9]
+[CEF Python] App: Browser: OnProcessMessageReceived(): RemovePythonCallbacksForFrame
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextCreated
+[CEF Python] V8ContextHandler_OnContextCreated()
+[0117/154657:ERROR_REPORT:context.cc(287)] Check failed: OnInitThread(). 
+[0117/154657:ERROR_REPORT:context.cc(355)] Check failed: CEF_CURRENTLY_ON(content::BrowserThread::UI). 
+[0117/154657:ERROR_REPORT:print_job_manager.cc(81)] Check failed: content::BrowserThread::CurrentlyOn(content::BrowserThread::UI). 
+[0117/154657:ERROR_REPORT:print_job_manager.cc(92)] Check failed: content::BrowserThread::CurrentlyOn(content::BrowserThread::UI). 
+[0117/154657:ERROR_REPORT:browser_host_impl.cc(1193)] Check failed: CEF_CURRENTLY_ON(content::BrowserThread::UI). 
+[CEF Python] del g_pyFrames[1#1]
+[CEF Python] del g_pyFrames[1#8]
+[CEF Python] del g_pyFrames[1#7]
+[CEF Python] del g_pyFrames[1#6]
+[CEF Python] del g_pyFrames[1#9]
+[CEF Python] del g_pyFrames[1#-4]
+[CEF Python] del g_pyBrowsers[1]
+[CEF Python] Initialize() called
+[CEF Python] CefExecuteProcess(): exitCode = -1
+[CEF Python] CefInitialize()
+[CEF Python] App_OnBeforeCommandLineProcessing_BrowserProcess()
+[CEF Python] App: Command line string for the browser process: "C:\Python27\python.exe" --browser-subprocess-path="C:\Python27\lib\site-packages\cefpython3/subprocess" --lang=en-US --log-file="H:\gamespider\Scrapy\tutorial\cBrowser\debug.log" --log-severity=info --enable-release-dcheck --resources-dir-path="C:\Python27\lib\site-packages\cefpython3" --locales-dir-path="C:\Python27\lib\site-packages\cefpython3/locales" --remote-debugging-port=54193 --no-sandbox "H:\gamespider\Scrapy\tutorial\cBrowser\wxpython.py"
+[CEF Python] BrowserProcessHandler_OnBeforeChildProcessLaunch()
+[CEF Python] BrowserProcessHandler_OnBeforeChildProcessLaunch()
+[CEF Python] CreateBrowserSync() called
+[CEF Python] navigateUrl: 
+[CEF Python] CefBrowser::CreateBrowserSync()
+[CEF Python] App: Browser: OnAfterCreated(): auto_zooming = system_dpi
+
+[CEF Python] App: Browser: SetBrowserDpiSettings: DPI=96 zoom=0
+
+[CEF Python] GetPyBrowser(): creating new PyBrowser, browserId=1
+[CEF Python] CefBrowser::CreateBrowserSync() succeeded
+[CEF Python] SendProcessMessage(): message=DoJavascriptBindings, arguments size=1
+[CEF Python] BrowserProcessHandler_OnBeforeChildProcessLaunch()
+[CEF Python] App: Command line string for the renderer process: "C:\Python27\lib\site-packages\cefpython3/subprocess" --type=renderer --no-sandbox --lang=en-US --enable-release-dcheck --lang=en-US --locales-dir-path="C:\Python27\lib\site-packages\cefpython3/locales" --log-file="H:\gamespider\Scrapy\tutorial\cBrowser\debug.log" --log-severity=info --resources-dir-path="C:\Python27\lib\site-packages\cefpython3" --channel="4584.1.109163188\1065205277" /prefetch:673131151
+[CEF Python] App: Renderer: OnProcessMessageReceived(): DoJavascriptBindings
+[CEF Python] App: Renderer: OnContextCreated()
+[CEF Python] App: Renderer: DoJavascriptBindingsForFrame(): bindings are set
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextCreated
+[CEF Python] V8ContextHandler_OnContextCreated()
+[CEF Python] App: Renderer: DoJavascriptBindingsForFrame(): bindings are set
+[0117/154804:INFO:CONSOLE(1)] "JQMIGRATE: Logging is active", source: http://assets.dwstatic.com/b=amkit/gallery&f=jquery-plugin/jquery-migrate.js,underscore/1.6.0/underscore.js,mustache/0.8.2/mustache.js&nm&20150507 (1)
+[CEF Python] App: Renderer: OnContextCreated()
+[CEF Python] App: Renderer: OnContextCreated()
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextCreated
+[CEF Python] App: Renderer: OnContextCreated()
+[CEF Python] V8ContextHandler_OnContextCreated()
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextCreated
+[CEF Python] V8ContextHandler_OnContextCreated()
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextCreated
+[CEF Python] V8ContextHandler_OnContextCreated()
+[CEF Python] App: Renderer: OnContextCreated()
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextCreated
+[CEF Python] V8ContextHandler_OnContextCreated()
+[CEF Python] App: Renderer: OnContextReleased()
+[CEF Python] App: Renderer: OnContextCreated()
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextReleased
+[CEF Python] V8ContextHandler_OnContextReleased()
+[CEF Python] del g_pyFrames[1#5]
+[CEF Python] App: Browser: OnProcessMessageReceived(): RemovePythonCallbacksForFrame
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextCreated
+[CEF Python] V8ContextHandler_OnContextCreated()
+[CEF Python] App: Renderer: OnContextReleased()
+[CEF Python] App: Renderer: OnContextReleased()
+[0117/154840:WARNING:content_browser_client.cc(393)] No browser info matching process id 3 and view id 0
+[CEF Python] App: Renderer: OnContextReleased()
+[0117/154840:WARNING:content_browser_client.cc(393)] No browser info matching process id 3 and view id 0
+[CEF Python] App: Renderer: OnContextReleased()
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextReleased
+[CEF Python] V8ContextHandler_OnContextReleased()
+[CEF Python] del g_pyFrames[1#5]
+[CEF Python] App: Renderer: OnContextReleased()
+[CEF Python] App: Browser: OnProcessMessageReceived(): RemovePythonCallbacksForFrame
+[CEF Python] App: Renderer: OnContextCreated()
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextReleased
+[CEF Python] App: Renderer: DoJavascriptBindingsForFrame(): bindings are set
+[CEF Python] V8ContextHandler_OnContextReleased()
+[CEF Python] del g_pyFrames[1#4]
+[CEF Python] App: Browser: OnProcessMessageReceived(): RemovePythonCallbacksForFrame
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextReleased
+[CEF Python] V8ContextHandler_OnContextReleased()
+[CEF Python] del g_pyFrames[1#3]
+[CEF Python] App: Browser: OnProcessMessageReceived(): RemovePythonCallbacksForFrame
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextReleased
+[CEF Python] V8ContextHandler_OnContextReleased()
+[CEF Python] del g_pyFrames[1#2]
+[CEF Python] App: Browser: OnProcessMessageReceived(): RemovePythonCallbacksForFrame
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextReleased
+[CEF Python] V8ContextHandler_OnContextReleased()
+[CEF Python] del g_pyFrames[1#1]
+[CEF Python] App: Browser: OnProcessMessageReceived(): RemovePythonCallbacksForFrame
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextCreated
+[CEF Python] V8ContextHandler_OnContextCreated()
+[0117/154842:INFO:CONSOLE(1)] "JQMIGRATE: Logging is active", source: http://assets.dwstatic.com/b=amkit/gallery&f=jquery-plugin/jquery-migrate.js,underscore/1.6.0/underscore.js,mustache/0.8.2/mustache.js&nm&20150507 (1)
+[CEF Python] App: Renderer: OnContextCreated()
+[CEF Python] App: Renderer: OnContextCreated()
+[CEF Python] App: Renderer: OnContextCreated()
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextCreated
+[CEF Python] V8ContextHandler_OnContextCreated()
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextCreated
+[CEF Python] V8ContextHandler_OnContextCreated()
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextCreated
+[CEF Python] V8ContextHandler_OnContextCreated()
+[CEF Python] App: Renderer: OnContextCreated()
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextCreated
+[CEF Python] V8ContextHandler_OnContextCreated()
+[CEF Python] App: Renderer: OnContextReleased()
+[CEF Python] App: Renderer: OnContextCreated()
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextReleased
+[CEF Python] V8ContextHandler_OnContextReleased()
+[CEF Python] del g_pyFrames[1#9]
+[CEF Python] App: Browser: OnProcessMessageReceived(): RemovePythonCallbacksForFrame
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextCreated
+[CEF Python] V8ContextHandler_OnContextCreated()
+[CEF Python] QuitMessageLoop()
+[0117/154940:ERROR_REPORT:message_loop.cc(324)] Check failed: false. Must be inside Run to call Quit
+[CEF Python] Shutdown()
+[CEF Python] del g_pyFrames[1#1]
+[CEF Python] del g_pyFrames[1#8]
+[CEF Python] del g_pyFrames[1#7]
+[CEF Python] del g_pyFrames[1#6]
+[CEF Python] del g_pyFrames[1#9]
+[CEF Python] del g_pyFrames[1#-4]
+[CEF Python] del g_pyBrowsers[1]
+[0117/154940:ERROR_REPORT:browser_main.cc(126)] Check failed: browser_contexts_.empty(). 
+[CEF Python] App: Renderer: OnContextReleased()
+[CEF Python] App: Renderer: OnContextReleased()
+[CEF Python] App: Renderer: OnContextReleased()
+[CEF Python] App: Renderer: OnContextReleased()
+[CEF Python] App: Renderer: OnContextReleased()
+[CEF Python] App: Renderer: OnBrowserDestroyed()
+[CEF Python] Initialize() called
+[CEF Python] CefExecuteProcess(): exitCode = -1
+[CEF Python] CefInitialize()
+[CEF Python] App_OnBeforeCommandLineProcessing_BrowserProcess()
+[CEF Python] App: Command line string for the browser process: "C:\Python27\python.exe" --browser-subprocess-path="C:\Python27\lib\site-packages\cefpython3/subprocess" --lang=en-US --log-file="H:\gamespider\Scrapy\tutorial\cBrowser\debug.log" --log-severity=info --enable-release-dcheck --resources-dir-path="C:\Python27\lib\site-packages\cefpython3" --locales-dir-path="C:\Python27\lib\site-packages\cefpython3/locales" --remote-debugging-port=57235 --no-sandbox "H:\gamespider\Scrapy\tutorial\cBrowser\wxpython.py"
+[CEF Python] BrowserProcessHandler_OnBeforeChildProcessLaunch()
+[CEF Python] BrowserProcessHandler_OnBeforeChildProcessLaunch()
+[CEF Python] CreateBrowserSync() called
+[CEF Python] navigateUrl: 
+[CEF Python] CefBrowser::CreateBrowserSync()
+[CEF Python] App: Browser: OnAfterCreated(): auto_zooming = system_dpi
+
+[CEF Python] App: Browser: SetBrowserDpiSettings: DPI=96 zoom=0
+
+[CEF Python] GetPyBrowser(): creating new PyBrowser, browserId=1
+[CEF Python] CefBrowser::CreateBrowserSync() succeeded
+[CEF Python] SendProcessMessage(): message=DoJavascriptBindings, arguments size=1
+[CEF Python] BrowserProcessHandler_OnBeforeChildProcessLaunch()
+[CEF Python] App: Command line string for the renderer process: "C:\Python27\lib\site-packages\cefpython3/subprocess" --type=renderer --no-sandbox --lang=en-US --enable-release-dcheck --lang=en-US --locales-dir-path="C:\Python27\lib\site-packages\cefpython3/locales" --log-file="H:\gamespider\Scrapy\tutorial\cBrowser\debug.log" --log-severity=info --resources-dir-path="C:\Python27\lib\site-packages\cefpython3" --channel="16592.1.140517753\502907124" /prefetch:673131151
+[CEF Python] App: Renderer: OnProcessMessageReceived(): DoJavascriptBindings
+[CEF Python] App: Renderer: OnContextCreated()
+[CEF Python] App: Renderer: DoJavascriptBindingsForFrame(): bindings are set
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextCreated
+[CEF Python] V8ContextHandler_OnContextCreated()
+[CEF Python] App: Renderer: DoJavascriptBindingsForFrame(): bindings are set
+[0117/154955:INFO:CONSOLE(1)] "JQMIGRATE: Logging is active", source: http://assets.dwstatic.com/b=amkit/gallery&f=jquery-plugin/jquery-migrate.js,underscore/1.6.0/underscore.js,mustache/0.8.2/mustache.js&nm&20150507 (1)
+[CEF Python] App: Renderer: OnContextCreated()
+[CEF Python] App: Renderer: OnContextCreated()
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextCreated
+[CEF Python] App: Renderer: OnContextCreated()
+[CEF Python] V8ContextHandler_OnContextCreated()
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextCreated
+[CEF Python] V8ContextHandler_OnContextCreated()
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextCreated
+[CEF Python] V8ContextHandler_OnContextCreated()
+[CEF Python] App: Renderer: OnContextCreated()
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextCreated
+[CEF Python] V8ContextHandler_OnContextCreated()
+[CEF Python] App: Renderer: OnContextReleased()
+[CEF Python] App: Renderer: OnContextCreated()
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextReleased
+[CEF Python] V8ContextHandler_OnContextReleased()
+[CEF Python] del g_pyFrames[1#5]
+[CEF Python] App: Browser: OnProcessMessageReceived(): RemovePythonCallbacksForFrame
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextCreated
+[CEF Python] V8ContextHandler_OnContextCreated()
+[CEF Python] PyTaskRunnable: taskId=1, func=_CreatePopup
+[CEF Python] CreateBrowserSync() called
+[CEF Python] navigateUrl: http://www.5253.com/
+[CEF Python] CefBrowser::CreateBrowserSync()
+[CEF Python] App: Browser: OnAfterCreated(): auto_zooming = system_dpi
+
+[CEF Python] GetPyBrowser(): creating new PyBrowser, browserId=2
+[CEF Python] BrowserProcessHandler_OnBeforeChildProcessLaunch()
+[CEF Python] CefBrowser::CreateBrowserSync() succeeded
+[CEF Python] SendProcessMessage(): message=DoJavascriptBindings, arguments size=1
+[CEF Python] App: Command line string for the renderer process: "C:\Python27\lib\site-packages\cefpython3/subprocess" --type=renderer --no-sandbox --lang=en-US --enable-release-dcheck --lang=en-US --locales-dir-path="C:\Python27\lib\site-packages\cefpython3/locales" --log-file="H:\gamespider\Scrapy\tutorial\cBrowser\debug.log" --log-severity=info --resources-dir-path="C:\Python27\lib\site-packages\cefpython3" --channel="16592.2.1792465858\517656642" /prefetch:673131151
+[CEF Python] App: Renderer: OnProcessMessageReceived(): DoJavascriptBindings
+[CEF Python] App: Renderer: OnContextCreated()
+[CEF Python] App: Renderer: DoJavascriptBindingsForFrame(): bindings are set
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextCreated
+[CEF Python] V8ContextHandler_OnContextCreated()
+[CEF Python] App: Renderer: DoJavascriptBindingsForFrame(): bindings are set
+[CEF Python] App: Renderer: OnContextCreated()
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextCreated
+[CEF Python] App: Renderer: OnContextCreated()
+[CEF Python] App: Renderer: OnContextCreated()
+[CEF Python] V8ContextHandler_OnContextCreated()
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextCreated
+[CEF Python] V8ContextHandler_OnContextCreated()
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextCreated
+[CEF Python] V8ContextHandler_OnContextCreated()
+[0117/155015:INFO:CONSOLE(0)] "event.returnValue is deprecated. Please use the standard event.preventDefault() instead.", source:  (0)
+[CEF Python] QuitMessageLoop()
+[0117/155155:ERROR_REPORT:message_loop.cc(324)] Check failed: false. Must be inside Run to call Quit
+[CEF Python] Shutdown()
+[CEF Python] del g_pyFrames[1#3]
+[CEF Python] del g_pyFrames[1#2]
+[CEF Python] del g_pyFrames[1#1]
+[CEF Python] del g_pyFrames[1#5]
+[CEF Python] del g_pyFrames[1#4]
+[CEF Python] del g_pyFrames[1#-4]
+[CEF Python] del g_pyBrowsers[1]
+[CEF Python] del g_pyFrames[2#4]
+[CEF Python] del g_pyFrames[2#1]
+[CEF Python] App: Renderer: OnContextReleased()
+[CEF Python] App: Renderer: OnContextReleased()
+[CEF Python] del g_pyFrames[2#2]
+[CEF Python] App: Renderer: OnContextReleased()
+[CEF Python] del g_pyFrames[2#3]
+[CEF Python] App: Renderer: OnContextReleased()
+[CEF Python] del g_pyBrowsers[2]
+[CEF Python] App: Renderer: OnContextReleased()
+[0117/155155:ERROR_REPORT:browser_main.cc(126)] Check failed: browser_contexts_.empty(). 
+[CEF Python] App: Renderer: OnBrowserDestroyed()
+[CEF Python] App: Renderer: OnContextReleased()
+[CEF Python] App: Renderer: OnContextReleased()
+[CEF Python] App: Renderer: OnContextReleased()
+[CEF Python] App: Renderer: OnContextReleased()
+[CEF Python] App: Renderer: OnBrowserDestroyed()
+[CEF Python] Initialize() called
+[CEF Python] CefExecuteProcess(): exitCode = -1
+[CEF Python] CefInitialize()
+[CEF Python] App_OnBeforeCommandLineProcessing_BrowserProcess()
+[CEF Python] App: Command line string for the browser process: "C:\Python27\python.exe" --browser-subprocess-path="C:\Python27\lib\site-packages\cefpython3/subprocess" --lang=en-US --log-file="H:\gamespider\Scrapy\tutorial\cBrowser\debug.log" --log-severity=info --enable-release-dcheck --resources-dir-path="C:\Python27\lib\site-packages\cefpython3" --locales-dir-path="C:\Python27\lib\site-packages\cefpython3/locales" --remote-debugging-port=56506 --no-sandbox "H:\gamespider\Scrapy\tutorial\cBrowser\wxpython.py"
+[CEF Python] BrowserProcessHandler_OnBeforeChildProcessLaunch()
+[CEF Python] BrowserProcessHandler_OnBeforeChildProcessLaunch()
+[CEF Python] CreateBrowserSync() called
+[CEF Python] navigateUrl: 
+[CEF Python] CefBrowser::CreateBrowserSync()
+[CEF Python] App: Browser: OnAfterCreated(): auto_zooming = system_dpi
+
+[CEF Python] App: Browser: SetBrowserDpiSettings: DPI=96 zoom=0
+
+[CEF Python] GetPyBrowser(): creating new PyBrowser, browserId=1
+[CEF Python] CefBrowser::CreateBrowserSync() succeeded
+[CEF Python] SendProcessMessage(): message=DoJavascriptBindings, arguments size=1
+[CEF Python] BrowserProcessHandler_OnBeforeChildProcessLaunch()
+[CEF Python] App: Command line string for the renderer process: "C:\Python27\lib\site-packages\cefpython3/subprocess" --type=renderer --no-sandbox --lang=en-US --enable-release-dcheck --lang=en-US --locales-dir-path="C:\Python27\lib\site-packages\cefpython3/locales" --log-file="H:\gamespider\Scrapy\tutorial\cBrowser\debug.log" --log-severity=info --resources-dir-path="C:\Python27\lib\site-packages\cefpython3" --channel="13204.1.1657148658\1096440360" /prefetch:673131151
+[CEF Python] App: Renderer: OnProcessMessageReceived(): DoJavascriptBindings
+[CEF Python] App: Renderer: OnContextCreated()
+[CEF Python] App: Renderer: DoJavascriptBindingsForFrame(): bindings are set
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextCreated
+[CEF Python] App: Renderer: DoJavascriptBindingsForFrame(): bindings are set
+[CEF Python] V8ContextHandler_OnContextCreated()
+[0117/155210:INFO:CONSOLE(1)] "JQMIGRATE: Logging is active", source: http://assets.dwstatic.com/b=amkit/gallery&f=jquery-plugin/jquery-migrate.js,underscore/1.6.0/underscore.js,mustache/0.8.2/mustache.js&nm&20150507 (1)
+[CEF Python] App: Renderer: OnContextCreated()
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextCreated
+[CEF Python] V8ContextHandler_OnContextCreated()
+[CEF Python] App: Renderer: OnContextReleased()
+[CEF Python] App: Renderer: OnContextCreated()
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextReleased
+[CEF Python] V8ContextHandler_OnContextReleased()
+[CEF Python] del g_pyFrames[1#2]
+[CEF Python] App: Browser: OnProcessMessageReceived(): RemovePythonCallbacksForFrame
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextCreated
+[CEF Python] V8ContextHandler_OnContextCreated()
+[CEF Python] App: Renderer: OnContextCreated()
+[CEF Python] App: Renderer: OnContextCreated()
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextCreated
+[CEF Python] V8ContextHandler_OnContextCreated()
+[CEF Python] App: Renderer: OnContextCreated()
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextCreated
+[CEF Python] V8ContextHandler_OnContextCreated()
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextCreated
+[CEF Python] V8ContextHandler_OnContextCreated()
+[CEF Python] QuitMessageLoop()
+[CEF Python] Shutdown()
+[CEF Python] del g_pyFrames[1#3]
+[CEF Python] del g_pyFrames[1#2]
+[CEF Python] del g_pyFrames[1#1]
+[CEF Python] del g_pyFrames[1#5]
+[CEF Python] del g_pyFrames[1#4]
+[CEF Python] del g_pyFrames[1#-4]
+[CEF Python] del g_pyBrowsers[1]
+[0117/155457:ERROR_REPORT:browser_main.cc(126)] Check failed: browser_contexts_.empty(). 
+[CEF Python] App: Renderer: OnContextReleased()
+[CEF Python] App: Renderer: OnContextReleased()
+[CEF Python] App: Renderer: OnContextReleased()
+[CEF Python] App: Renderer: OnContextReleased()
+[CEF Python] App: Renderer: OnContextReleased()
+[CEF Python] App: Renderer: OnBrowserDestroyed()
+[CEF Python] Initialize() called
+[CEF Python] CefExecuteProcess(): exitCode = -1
+[CEF Python] CefInitialize()
+[CEF Python] App_OnBeforeCommandLineProcessing_BrowserProcess()
+[CEF Python] App: Command line string for the browser process: "C:\Python27\python.exe" --browser-subprocess-path="C:\Python27\lib\site-packages\cefpython3/subprocess" --lang=en-US --log-file="H:\gamespider\Scrapy\tutorial\cBrowser\debug.log" --log-severity=info --enable-release-dcheck --resources-dir-path="C:\Python27\lib\site-packages\cefpython3" --locales-dir-path="C:\Python27\lib\site-packages\cefpython3/locales" --remote-debugging-port=53962 --no-sandbox "H:\gamespider\Scrapy\tutorial\cBrowser\wxpython.py"
+[CEF Python] BrowserProcessHandler_OnBeforeChildProcessLaunch()
+[CEF Python] BrowserProcessHandler_OnBeforeChildProcessLaunch()
+[CEF Python] CreateBrowserSync() called
+[CEF Python] navigateUrl: 
+[CEF Python] CefBrowser::CreateBrowserSync()
+[CEF Python] App: Browser: OnAfterCreated(): auto_zooming = system_dpi
+
+[CEF Python] App: Browser: SetBrowserDpiSettings: DPI=96 zoom=0
+
+[CEF Python] GetPyBrowser(): creating new PyBrowser, browserId=1
+[CEF Python] CefBrowser::CreateBrowserSync() succeeded
+[CEF Python] SendProcessMessage(): message=DoJavascriptBindings, arguments size=1
+[CEF Python] BrowserProcessHandler_OnBeforeChildProcessLaunch()
+[CEF Python] App: Command line string for the renderer process: "C:\Python27\lib\site-packages\cefpython3/subprocess" --type=renderer --no-sandbox --lang=en-US --enable-release-dcheck --lang=en-US --locales-dir-path="C:\Python27\lib\site-packages\cefpython3/locales" --log-file="H:\gamespider\Scrapy\tutorial\cBrowser\debug.log" --log-severity=info --resources-dir-path="C:\Python27\lib\site-packages\cefpython3" --channel="12376.1.1646539868\1685113014" /prefetch:673131151
+[CEF Python] App: Renderer: OnProcessMessageReceived(): DoJavascriptBindings
+[CEF Python] App: Renderer: OnContextCreated()
+[CEF Python] App: Renderer: DoJavascriptBindingsForFrame(): bindings are set
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextCreated
+[CEF Python] App: Renderer: DoJavascriptBindingsForFrame(): bindings are set
+[CEF Python] V8ContextHandler_OnContextCreated()
+[0117/155514:INFO:CONSOLE(1)] "JQMIGRATE: Logging is active", source: http://assets.dwstatic.com/b=amkit/gallery&f=jquery-plugin/jquery-migrate.js,underscore/1.6.0/underscore.js,mustache/0.8.2/mustache.js&nm&20150507 (1)
+[CEF Python] App: Renderer: OnContextCreated()
+[CEF Python] App: Renderer: OnContextCreated()
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextCreated
+[CEF Python] App: Renderer: OnContextCreated()
+[CEF Python] V8ContextHandler_OnContextCreated()
+[CEF Python] QuitMessageLoop()
+[CEF Python] Shutdown()
+[CEF Python] del g_pyFrames[1#2]
+[CEF Python] del g_pyFrames[1#1]
+[CEF Python] del g_pyFrames[1#-4]
+[CEF Python] del g_pyBrowsers[1]
+[0117/155515:ERROR_REPORT:browser_main.cc(126)] Check failed: browser_contexts_.empty(). 
+[CEF Python] App: Renderer: OnContextReleased()
+[CEF Python] App: Renderer: OnContextReleased()
+[CEF Python] App: Renderer: OnContextReleased()
+[CEF Python] App: Renderer: OnContextReleased()
+[CEF Python] App: Renderer: OnBrowserDestroyed()
+[CEF Python] Initialize() called
+[CEF Python] CefExecuteProcess(): exitCode = -1
+[CEF Python] CefInitialize()
+[CEF Python] App_OnBeforeCommandLineProcessing_BrowserProcess()
+[CEF Python] App: Command line string for the browser process: "C:\Python27\python.exe" --browser-subprocess-path="C:\Python27\lib\site-packages\cefpython3/subprocess" --lang=en-US --log-file="H:\gamespider\Scrapy\tutorial\cBrowser\debug.log" --log-severity=info --enable-release-dcheck --resources-dir-path="C:\Python27\lib\site-packages\cefpython3" --locales-dir-path="C:\Python27\lib\site-packages\cefpython3/locales" --remote-debugging-port=49680 --no-sandbox "H:\gamespider\Scrapy\tutorial\cBrowser\wxpython.py"
+[CEF Python] BrowserProcessHandler_OnBeforeChildProcessLaunch()
+[CEF Python] BrowserProcessHandler_OnBeforeChildProcessLaunch()
+[CEF Python] CreateBrowserSync() called
+[CEF Python] navigateUrl: 
+[CEF Python] CefBrowser::CreateBrowserSync()
+[CEF Python] App: Browser: OnAfterCreated(): auto_zooming = system_dpi
+
+[CEF Python] App: Browser: SetBrowserDpiSettings: DPI=96 zoom=0
+
+[CEF Python] GetPyBrowser(): creating new PyBrowser, browserId=1
+[CEF Python] CefBrowser::CreateBrowserSync() succeeded
+[CEF Python] SendProcessMessage(): message=DoJavascriptBindings, arguments size=1
+[CEF Python] BrowserProcessHandler_OnBeforeChildProcessLaunch()
+[CEF Python] App: Command line string for the renderer process: "C:\Python27\lib\site-packages\cefpython3/subprocess" --type=renderer --no-sandbox --lang=en-US --enable-release-dcheck --lang=en-US --locales-dir-path="C:\Python27\lib\site-packages\cefpython3/locales" --log-file="H:\gamespider\Scrapy\tutorial\cBrowser\debug.log" --log-severity=info --resources-dir-path="C:\Python27\lib\site-packages\cefpython3" --channel="21404.1.1934775752\425575080" /prefetch:673131151
+[CEF Python] App: Renderer: OnProcessMessageReceived(): DoJavascriptBindings
+[CEF Python] App: Renderer: OnContextCreated()
+[CEF Python] App: Renderer: DoJavascriptBindingsForFrame(): bindings are set
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextCreated
+[CEF Python] App: Renderer: DoJavascriptBindingsForFrame(): bindings are set
+[CEF Python] V8ContextHandler_OnContextCreated()
+[0117/155555:INFO:CONSOLE(1)] "JQMIGRATE: Logging is active", source: http://assets.dwstatic.com/b=amkit/gallery&f=jquery-plugin/jquery-migrate.js,underscore/1.6.0/underscore.js,mustache/0.8.2/mustache.js&nm&20150507 (1)
+[CEF Python] App: Renderer: OnContextCreated()
+[CEF Python] App: Renderer: OnContextCreated()
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextCreated
+[CEF Python] V8ContextHandler_OnContextCreated()
+[CEF Python] App: Renderer: OnContextCreated()
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextCreated
+[CEF Python] V8ContextHandler_OnContextCreated()
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextCreated
+[CEF Python] V8ContextHandler_OnContextCreated()
+[CEF Python] App: Renderer: OnContextCreated()
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextCreated
+[CEF Python] V8ContextHandler_OnContextCreated()
+[CEF Python] App: Renderer: OnContextReleased()
+[CEF Python] App: Renderer: OnContextCreated()
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextReleased
+[CEF Python] V8ContextHandler_OnContextReleased()
+[CEF Python] del g_pyFrames[1#5]
+[CEF Python] App: Browser: OnProcessMessageReceived(): RemovePythonCallbacksForFrame
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextCreated
+[CEF Python] V8ContextHandler_OnContextCreated()
+[CEF Python] QuitMessageLoop()
+[CEF Python] Shutdown()
+[CEF Python] del g_pyFrames[1#3]
+[CEF Python] del g_pyFrames[1#2]
+[CEF Python] del g_pyFrames[1#1]
+[CEF Python] del g_pyFrames[1#5]
+[CEF Python] del g_pyFrames[1#4]
+[CEF Python] del g_pyFrames[1#-4]
+[CEF Python] del g_pyBrowsers[1]
+[0117/155558:ERROR_REPORT:browser_main.cc(126)] Check failed: browser_contexts_.empty(). 
+[CEF Python] GetPyBrowser(): creating new PyBrowser, browserId=1
+[CEF Python] App: Renderer: OnContextReleased()
+[CEF Python] App: Renderer: OnContextReleased()
+[CEF Python] App: Renderer: OnContextReleased()
+[CEF Python] App: Renderer: OnContextReleased()
+[CEF Python] App: Renderer: OnContextReleased()
+[CEF Python] App: Renderer: OnBrowserDestroyed()
+[CEF Python] Initialize() called
+[CEF Python] CefExecuteProcess(): exitCode = -1
+[CEF Python] CefInitialize()
+[CEF Python] App_OnBeforeCommandLineProcessing_BrowserProcess()
+[CEF Python] App: Command line string for the browser process: "C:\Python27\python.exe" --browser-subprocess-path="C:\Python27\lib\site-packages\cefpython3/subprocess" --lang=en-US --log-file="H:\gamespider\Scrapy\tutorial\cBrowser\debug.log" --log-severity=info --enable-release-dcheck --resources-dir-path="C:\Python27\lib\site-packages\cefpython3" --locales-dir-path="C:\Python27\lib\site-packages\cefpython3/locales" --remote-debugging-port=60610 --no-sandbox "H:\gamespider\Scrapy\tutorial\cBrowser\wxpython.py"
+[CEF Python] BrowserProcessHandler_OnBeforeChildProcessLaunch()
+[CEF Python] BrowserProcessHandler_OnBeforeChildProcessLaunch()
+[CEF Python] CreateBrowserSync() called
+[CEF Python] navigateUrl: 
+[CEF Python] CefBrowser::CreateBrowserSync()
+[CEF Python] App: Browser: OnAfterCreated(): auto_zooming = system_dpi
+
+[CEF Python] App: Browser: SetBrowserDpiSettings: DPI=96 zoom=0
+
+[CEF Python] GetPyBrowser(): creating new PyBrowser, browserId=1
+[CEF Python] CefBrowser::CreateBrowserSync() succeeded
+[CEF Python] SendProcessMessage(): message=DoJavascriptBindings, arguments size=1
+[CEF Python] BrowserProcessHandler_OnBeforeChildProcessLaunch()
+[CEF Python] App: Command line string for the renderer process: "C:\Python27\lib\site-packages\cefpython3/subprocess" --type=renderer --no-sandbox --lang=en-US --enable-release-dcheck --lang=en-US --locales-dir-path="C:\Python27\lib\site-packages\cefpython3/locales" --log-file="H:\gamespider\Scrapy\tutorial\cBrowser\debug.log" --log-severity=info --resources-dir-path="C:\Python27\lib\site-packages\cefpython3" --channel="21484.1.1267117338\1943922608" /prefetch:673131151
+[CEF Python] App: Renderer: OnProcessMessageReceived(): DoJavascriptBindings
+[CEF Python] App: Renderer: OnContextCreated()
+[CEF Python] App: Renderer: DoJavascriptBindingsForFrame(): bindings are set
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextCreated
+[CEF Python] App: Renderer: DoJavascriptBindingsForFrame(): bindings are set
+[CEF Python] V8ContextHandler_OnContextCreated()
+[0117/155802:INFO:CONSOLE(1)] "JQMIGRATE: Logging is active", source: http://assets.dwstatic.com/b=amkit/gallery&f=jquery-plugin/jquery-migrate.js,underscore/1.6.0/underscore.js,mustache/0.8.2/mustache.js&nm&20150507 (1)
+[CEF Python] App: Renderer: OnContextCreated()
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextCreated
+[CEF Python] V8ContextHandler_OnContextCreated()
+[CEF Python] App: Renderer: OnContextReleased()
+[CEF Python] App: Renderer: OnContextCreated()
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextReleased
+[CEF Python] V8ContextHandler_OnContextReleased()
+[CEF Python] del g_pyFrames[1#2]
+[CEF Python] App: Browser: OnProcessMessageReceived(): RemovePythonCallbacksForFrame
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextCreated
+[CEF Python] V8ContextHandler_OnContextCreated()
+[CEF Python] App: Renderer: OnContextCreated()
+[CEF Python] App: Renderer: OnContextCreated()
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextCreated
+[CEF Python] App: Renderer: OnContextCreated()
+[CEF Python] V8ContextHandler_OnContextCreated()
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextCreated
+[CEF Python] V8ContextHandler_OnContextCreated()
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextCreated
+[CEF Python] V8ContextHandler_OnContextCreated()
+[CEF Python] PyTaskRunnable: taskId=1, func=_CreatePopup
+[CEF Python] CreateBrowserSync() called
+[CEF Python] navigateUrl: http://www.5253.com/
+[CEF Python] CefBrowser::CreateBrowserSync()
+[CEF Python] App: Browser: OnAfterCreated(): auto_zooming = system_dpi
+
+[CEF Python] GetPyBrowser(): creating new PyBrowser, browserId=2
+[CEF Python] BrowserProcessHandler_OnBeforeChildProcessLaunch()
+[CEF Python] CefBrowser::CreateBrowserSync() succeeded
+[CEF Python] SendProcessMessage(): message=DoJavascriptBindings, arguments size=1
+[CEF Python] App: Command line string for the renderer process: "C:\Python27\lib\site-packages\cefpython3/subprocess" --type=renderer --no-sandbox --lang=en-US --enable-release-dcheck --lang=en-US --locales-dir-path="C:\Python27\lib\site-packages\cefpython3/locales" --log-file="H:\gamespider\Scrapy\tutorial\cBrowser\debug.log" --log-severity=info --resources-dir-path="C:\Python27\lib\site-packages\cefpython3" --channel="21484.2.649264857\1097049998" /prefetch:673131151
+[CEF Python] App: Renderer: OnProcessMessageReceived(): DoJavascriptBindings
+[CEF Python] App: Renderer: OnContextCreated()
+[CEF Python] App: Renderer: DoJavascriptBindingsForFrame(): bindings are set
+[CEF Python] App: Renderer: DoJavascriptBindingsForFrame(): bindings are set
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextCreated
+[CEF Python] V8ContextHandler_OnContextCreated()
+[CEF Python] App: Renderer: OnContextCreated()
+[CEF Python] App: Renderer: OnContextCreated()
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextCreated
+[CEF Python] V8ContextHandler_OnContextCreated()
+[CEF Python] App: Renderer: OnContextCreated()
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextCreated
+[CEF Python] V8ContextHandler_OnContextCreated()
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextCreated
+[CEF Python] V8ContextHandler_OnContextCreated()
+[CEF Python] BrowserProcessHandler_OnBeforeChildProcessLaunch()
+[0117/155831:INFO:CONSOLE(0)] "event.returnValue is deprecated. Please use the standard event.preventDefault() instead.", source:  (0)
+[CEF Python] QuitMessageLoop()
+[0117/192322:ERROR_REPORT:message_loop.cc(324)] Check failed: false. Must be inside Run to call Quit
+[CEF Python] Shutdown()
+[CEF Python] del g_pyFrames[1#3]
+[CEF Python] del g_pyFrames[1#2]
+[CEF Python] del g_pyFrames[1#1]
+[CEF Python] del g_pyFrames[1#5]
+[CEF Python] del g_pyFrames[1#4]
+[CEF Python] del g_pyFrames[1#-4]
+[CEF Python] del g_pyBrowsers[1]
+[CEF Python] del g_pyFrames[2#4]
+[CEF Python] del g_pyFrames[2#1]
+[CEF Python] del g_pyFrames[2#2]
+[CEF Python] del g_pyFrames[2#3]
+[CEF Python] App: Renderer: OnContextReleased()
+[CEF Python] del g_pyBrowsers[2]
+[CEF Python] App: Renderer: OnContextReleased()
+[0117/192322:ERROR_REPORT:browser_main.cc(126)] Check failed: browser_contexts_.empty(). 
+[CEF Python] App: Renderer: OnContextReleased()
+[CEF Python] App: Renderer: OnContextReleased()
+[CEF Python] App: Renderer: OnContextReleased()
+[CEF Python] App: Renderer: OnBrowserDestroyed()
+[CEF Python] App: Renderer: OnContextReleased()
+[CEF Python] App: Renderer: OnContextReleased()
+[CEF Python] App: Renderer: OnContextReleased()
+[CEF Python] App: Renderer: OnContextReleased()
+[CEF Python] App: Renderer: OnBrowserDestroyed()
+[CEF Python] Initialize() called
+[CEF Python] CefExecuteProcess(): exitCode = -1
+[CEF Python] CefInitialize()
+[CEF Python] App_OnBeforeCommandLineProcessing_BrowserProcess()
+[CEF Python] App: Command line string for the browser process: "C:\Python27\python.exe" --browser-subprocess-path="C:\Python27\lib\site-packages\cefpython3/subprocess" --lang=en-US --log-file="H:\gamespider\Scrapy\tutorial\cBrowser\debug.log" --log-severity=info --enable-release-dcheck --resources-dir-path="C:\Python27\lib\site-packages\cefpython3" --locales-dir-path="C:\Python27\lib\site-packages\cefpython3/locales" --remote-debugging-port=52616 --no-sandbox "H:\gamespider\Scrapy\tutorial\cBrowser\wxpython.py"
+[CEF Python] BrowserProcessHandler_OnBeforeChildProcessLaunch()
+[CEF Python] BrowserProcessHandler_OnBeforeChildProcessLaunch()
+[CEF Python] CreateBrowserSync() called
+[CEF Python] navigateUrl: 
+[CEF Python] CefBrowser::CreateBrowserSync()
+[CEF Python] App: Browser: OnAfterCreated(): auto_zooming = system_dpi
+
+[CEF Python] App: Browser: SetBrowserDpiSettings: DPI=96 zoom=0
+
+[CEF Python] GetPyBrowser(): creating new PyBrowser, browserId=1
+[CEF Python] CefBrowser::CreateBrowserSync() succeeded
+[CEF Python] SendProcessMessage(): message=DoJavascriptBindings, arguments size=1
+[CEF Python] BrowserProcessHandler_OnBeforeChildProcessLaunch()
+[CEF Python] App: Command line string for the renderer process: "C:\Python27\lib\site-packages\cefpython3/subprocess" --type=renderer --no-sandbox --lang=en-US --enable-release-dcheck --lang=en-US --locales-dir-path="C:\Python27\lib\site-packages\cefpython3/locales" --log-file="H:\gamespider\Scrapy\tutorial\cBrowser\debug.log" --log-severity=info --resources-dir-path="C:\Python27\lib\site-packages\cefpython3" --channel="17280.1.491204759\1902401262" /prefetch:673131151
+[CEF Python] App: Renderer: OnProcessMessageReceived(): DoJavascriptBindings
+[CEF Python] App: Renderer: OnContextCreated()
+[CEF Python] App: Renderer: DoJavascriptBindingsForFrame(): bindings are set
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextCreated
+[CEF Python] App: Renderer: DoJavascriptBindingsForFrame(): bindings are set
+[CEF Python] V8ContextHandler_OnContextCreated()
+[CEF Python] App: Renderer: OnContextCreated()
+[CEF Python] App: Renderer: OnContextCreated()
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextCreated
+[CEF Python] V8ContextHandler_OnContextCreated()
+[CEF Python] App: Renderer: OnContextCreated()
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextCreated
+[CEF Python] V8ContextHandler_OnContextCreated()
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextCreated
+[CEF Python] V8ContextHandler_OnContextCreated()
+[0117/233632:INFO:CONSOLE(1)] "JQMIGRATE: Logging is active", source: http://assets.dwstatic.com/b=amkit/gallery&f=jquery-plugin/jquery-migrate.js,underscore/1.6.0/underscore.js,mustache/0.8.2/mustache.js&nm&20150507 (1)
+[CEF Python] App: Renderer: OnContextCreated()
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextCreated
+[CEF Python] V8ContextHandler_OnContextCreated()
+[CEF Python] App: Renderer: OnContextReleased()
+[CEF Python] App: Renderer: OnContextCreated()
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextReleased
+[CEF Python] V8ContextHandler_OnContextReleased()
+[CEF Python] del g_pyFrames[1#5]
+[CEF Python] App: Browser: OnProcessMessageReceived(): RemovePythonCallbacksForFrame
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextCreated
+[CEF Python] V8ContextHandler_OnContextCreated()
+[CEF Python] PyTaskRunnable: taskId=1, func=_CreatePopup
+[CEF Python] CreateBrowserSync() called
+[CEF Python] navigateUrl: http://newgame.duowan.com/ku/
+[CEF Python] CefBrowser::CreateBrowserSync()
+[CEF Python] App: Browser: OnAfterCreated(): auto_zooming = system_dpi
+
+[CEF Python] GetPyBrowser(): creating new PyBrowser, browserId=2
+[CEF Python] BrowserProcessHandler_OnBeforeChildProcessLaunch()
+[CEF Python] CefBrowser::CreateBrowserSync() succeeded
+[CEF Python] SendProcessMessage(): message=DoJavascriptBindings, arguments size=1
+[CEF Python] App: Command line string for the renderer process: "C:\Python27\lib\site-packages\cefpython3/subprocess" --type=renderer --no-sandbox --lang=en-US --enable-release-dcheck --lang=en-US --locales-dir-path="C:\Python27\lib\site-packages\cefpython3/locales" --log-file="H:\gamespider\Scrapy\tutorial\cBrowser\debug.log" --log-severity=info --resources-dir-path="C:\Python27\lib\site-packages\cefpython3" --channel="17280.2.1080267968\2095894727" /prefetch:673131151
+[CEF Python] App: Renderer: OnProcessMessageReceived(): DoJavascriptBindings
+[CEF Python] App: Renderer: OnContextCreated()
+[CEF Python] App: Renderer: DoJavascriptBindingsForFrame(): bindings are set
+[CEF Python] App: Renderer: DoJavascriptBindingsForFrame(): bindings are set
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextCreated
+[CEF Python] V8ContextHandler_OnContextCreated()
+[CEF Python] App: Renderer: OnContextCreated()
+[CEF Python] App: Renderer: OnContextReleased()
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextCreated
+[CEF Python] App: Renderer: OnContextCreated()
+[CEF Python] V8ContextHandler_OnContextCreated()
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextReleased
+[CEF Python] V8ContextHandler_OnContextReleased()
+[CEF Python] del g_pyFrames[2#2]
+[CEF Python] App: Browser: OnProcessMessageReceived(): RemovePythonCallbacksForFrame
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextCreated
+[CEF Python] V8ContextHandler_OnContextCreated()
+[CEF Python] BrowserProcessHandler_OnBeforeChildProcessLaunch()
+[CEF Python] App: Renderer: OnContextCreated()
+[CEF Python] App: Renderer: OnContextCreated()
+[CEF Python] App: Renderer: OnContextCreated()
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextCreated
+[CEF Python] V8ContextHandler_OnContextCreated()
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextCreated
+[CEF Python] V8ContextHandler_OnContextCreated()
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextCreated
+[CEF Python] V8ContextHandler_OnContextCreated()
+[CEF Python] App: Renderer: OnContextReleased()
+[CEF Python] App: Renderer: OnContextReleased()
+[CEF Python] App: Renderer: OnContextReleased()
+[CEF Python] App: Renderer: OnContextReleased()
+[CEF Python] App: Renderer: OnContextReleased()
+[CEF Python] App: Renderer: OnContextCreated()
+[CEF Python] App: Renderer: DoJavascriptBindingsForFrame(): bindings are set
+[0117/233644:WARNING:content_browser_client.cc(393)] No browser info matching process id 4 and view id 0
+[0117/233650:WARNING:content_browser_client.cc(393)] No browser info matching process id 4 and view id 0
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextReleased
+[CEF Python] V8ContextHandler_OnContextReleased()
+[CEF Python] del g_pyFrames[2#5]
+[CEF Python] App: Browser: OnProcessMessageReceived(): RemovePythonCallbacksForFrame
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextReleased
+[CEF Python] V8ContextHandler_OnContextReleased()
+[CEF Python] del g_pyFrames[2#4]
+[CEF Python] App: Browser: OnProcessMessageReceived(): RemovePythonCallbacksForFrame
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextReleased
+[CEF Python] V8ContextHandler_OnContextReleased()
+[CEF Python] del g_pyFrames[2#3]
+[CEF Python] App: Browser: OnProcessMessageReceived(): RemovePythonCallbacksForFrame
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextReleased
+[CEF Python] V8ContextHandler_OnContextReleased()
+[CEF Python] del g_pyFrames[2#2]
+[CEF Python] App: Browser: OnProcessMessageReceived(): RemovePythonCallbacksForFrame
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextReleased
+[CEF Python] V8ContextHandler_OnContextReleased()
+[CEF Python] del g_pyFrames[2#1]
+[CEF Python] App: Browser: OnProcessMessageReceived(): RemovePythonCallbacksForFrame
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextCreated
+[CEF Python] V8ContextHandler_OnContextCreated()
+[CEF Python] App: Renderer: OnContextCreated()
+[CEF Python] App: Renderer: OnContextCreated()
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextCreated
+[CEF Python] V8ContextHandler_OnContextCreated()
+[CEF Python] App: Renderer: OnContextCreated()
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextCreated
+[CEF Python] V8ContextHandler_OnContextCreated()
+[CEF Python] App: Renderer: OnContextCreated()
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextCreated
+[CEF Python] V8ContextHandler_OnContextCreated()
+[CEF Python] App: Renderer: OnContextReleased()
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextCreated
+[CEF Python] App: Renderer: OnContextCreated()
+[CEF Python] V8ContextHandler_OnContextCreated()
+[CEF Python] QuitMessageLoop()
+[CEF Python] Shutdown()
+[CEF Python] del g_pyFrames[1#3]
+[CEF Python] del g_pyFrames[1#2]
+[CEF Python] del g_pyFrames[1#1]
+[CEF Python] del g_pyFrames[1#5]
+[CEF Python] del g_pyFrames[1#4]
+[CEF Python] del g_pyFrames[1#-4]
+[CEF Python] del g_pyBrowsers[1]
+[CEF Python] del g_pyFrames[2#7]
+[CEF Python] del g_pyFrames[2#8]
+[CEF Python] App: Renderer: OnContextReleased()
+[CEF Python] del g_pyFrames[2#9]
+[CEF Python] App: Renderer: OnContextReleased()
+[CEF Python] del g_pyFrames[2#6]
+[CEF Python] App: Renderer: OnContextReleased()
+[CEF Python] del g_pyFrames[2#1]
+[CEF Python] App: Renderer: OnContextReleased()
+[CEF Python] App: Renderer: OnContextReleased()
+[CEF Python] del g_pyBrowsers[2]
+[CEF Python] App: Renderer: OnBrowserDestroyed()
+[0117/233651:ERROR_REPORT:browser_main.cc(126)] Check failed: browser_contexts_.empty(). 
+[CEF Python] App: Renderer: OnContextReleased()
+[CEF Python] App: Renderer: OnContextReleased()
+[CEF Python] App: Renderer: OnContextReleased()
+[CEF Python] App: Renderer: OnContextReleased()
+[CEF Python] App: Renderer: OnContextReleased()
+[CEF Python] App: Renderer: OnBrowserDestroyed()
+[CEF Python] Initialize() called
+[CEF Python] CefExecuteProcess(): exitCode = -1
+[CEF Python] CefInitialize()
+[CEF Python] App_OnBeforeCommandLineProcessing_BrowserProcess()
+[CEF Python] App: Command line string for the browser process: "C:\Python27\python.exe" --browser-subprocess-path="C:\Python27\lib\site-packages\cefpython3/subprocess" --lang=en-US --log-file="H:\gamespider\Scrapy\tutorial\cBrowser\debug.log" --log-severity=info --enable-release-dcheck --resources-dir-path="C:\Python27\lib\site-packages\cefpython3" --locales-dir-path="C:\Python27\lib\site-packages\cefpython3/locales" --remote-debugging-port=56138 --no-sandbox "H:\gamespider\Scrapy\tutorial\cBrowser\wxpython.py"
+[CEF Python] BrowserProcessHandler_OnBeforeChildProcessLaunch()
+[CEF Python] BrowserProcessHandler_OnBeforeChildProcessLaunch()
+[CEF Python] CreateBrowserSync() called
+[CEF Python] navigateUrl: 
+[CEF Python] CefBrowser::CreateBrowserSync()
+[CEF Python] App: Browser: OnAfterCreated(): auto_zooming = system_dpi
+
+[CEF Python] App: Browser: SetBrowserDpiSettings: DPI=96 zoom=0
+
+[CEF Python] GetPyBrowser(): creating new PyBrowser, browserId=1
+[CEF Python] CefBrowser::CreateBrowserSync() succeeded
+[CEF Python] SendProcessMessage(): message=DoJavascriptBindings, arguments size=1
+[CEF Python] BrowserProcessHandler_OnBeforeChildProcessLaunch()
+[CEF Python] App: Command line string for the renderer process: "C:\Python27\lib\site-packages\cefpython3/subprocess" --type=renderer --no-sandbox --lang=en-US --enable-release-dcheck --lang=en-US --locales-dir-path="C:\Python27\lib\site-packages\cefpython3/locales" --log-file="H:\gamespider\Scrapy\tutorial\cBrowser\debug.log" --log-severity=info --resources-dir-path="C:\Python27\lib\site-packages\cefpython3" --channel="14208.1.1071878807\596500824" /prefetch:673131151
+[CEF Python] App: Renderer: OnProcessMessageReceived(): DoJavascriptBindings
+[CEF Python] App: Renderer: OnContextCreated()
+[CEF Python] App: Renderer: DoJavascriptBindingsForFrame(): bindings are set
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextCreated
+set
+[CEF Python] V8ContextHandler_OnContextCreated()
+[CEF Python] App: Renderer: OnContextCreated()
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextCreated
+[CEF Python] App: Renderer: OnContextCreated()
+[CEF Python] V8ContextHandler_OnContextCreated()
+[CEF Python] App: Renderer: OnContextCreated()
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextCreated
+[CEF Python] V8ContextHandler_OnContextCreated()
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextCreated
+[CEF Python] V8ContextHandler_OnContextCreated()
+[0117/233709:INFO:CONSOLE(1)] "JQMIGRATE: Logging is active", source: http://assets.dwstatic.com/b=amkit/gallery&f=jquery-plugin/jquery-migrate.js,underscore/1.6.0/underscore.js,mustache/0.8.2/mustache.js&nm&20150507 (1)
+[CEF Python] App: Renderer: OnContextCreated()
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextCreated
+[CEF Python] V8ContextHandler_OnContextCreated()
+[CEF Python] App: Renderer: OnContextReleased()
+[CEF Python] App: Renderer: OnContextCreated()
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextReleased
+[CEF Python] V8ContextHandler_OnContextReleased()
+[CEF Python] del g_pyFrames[1#5]
+[CEF Python] App: Browser: OnProcessMessageReceived(): RemovePythonCallbacksForFrame
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextCreated
+[CEF Python] V8ContextHandler_OnContextCreated()
+[CEF Python] PyTaskRunnable: taskId=1, func=_CreatePopup
+[CEF Python] CreateBrowserSync() called
+[CEF Python] navigateUrl: http://newgame.duowan.com/ku/
+[CEF Python] CefBrowser::CreateBrowserSync()
+[CEF Python] App: Browser: OnAfterCreated(): auto_zooming = system_dpi
+
+[CEF Python] GetPyBrowser(): creating new PyBrowser, browserId=2
+[CEF Python] BrowserProcessHandler_OnBeforeChildProcessLaunch()
+[CEF Python] CefBrowser::CreateBrowserSync() succeeded
+[CEF Python] SendProcessMessage(): message=DoJavascriptBindings, arguments size=1
+[CEF Python] App: Command line string for the renderer process: "C:\Python27\lib\site-packages\cefpython3/subprocess" --type=renderer --no-sandbox --lang=en-US --enable-release-dcheck --lang=en-US --locales-dir-path="C:\Python27\lib\site-packages\cefpython3/locales" --log-file="H:\gamespider\Scrapy\tutorial\cBrowser\debug.log" --log-severity=info --resources-dir-path="C:\Python27\lib\site-packages\cefpython3" --channel="14208.2.1323876030\773107905" /prefetch:673131151
+[CEF Python] App: Renderer: OnProcessMessageReceived(): DoJavascriptBindings
+[CEF Python] App: Renderer: OnContextCreated()
+[CEF Python] App: Renderer: DoJavascriptBindingsForFrame(): bindings are set
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextCreated
+[CEF Python] App: Renderer: DoJavascriptBindingsForFrame(): bindings are set
+[CEF Python] V8ContextHandler_OnContextCreated()
+[CEF Python] App: Renderer: OnContextCreated()
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextCreated
+[CEF Python] App: Renderer: OnContextCreated()
+[CEF Python] V8ContextHandler_OnContextCreated()
+[CEF Python] App: Renderer: OnContextCreated()
+[CEF Python] App: Renderer: OnContextCreated()
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextCreated
+[CEF Python] V8ContextHandler_OnContextCreated()
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextCreated
+[CEF Python] V8ContextHandler_OnContextCreated()
+[CEF Python] App: Renderer: OnContextReleased()
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextCreated
+[CEF Python] V8ContextHandler_OnContextCreated()
+[CEF Python] App: Renderer: OnContextCreated()
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextReleased
+[CEF Python] V8ContextHandler_OnContextReleased()
+[CEF Python] del g_pyFrames[2#5]
+[CEF Python] App: Browser: OnProcessMessageReceived(): RemovePythonCallbacksForFrame
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextCreated
+[CEF Python] BrowserProcessHandler_OnBeforeChildProcessLaunch()
+[CEF Python] V8ContextHandler_OnContextCreated()
+[CEF Python] App: Renderer: OnContextReleased()
+[CEF Python] App: Renderer: OnContextReleased()
+[0117/233741:WARNING:content_browser_client.cc(393)] No browser info matching process id 4 and view id 0
+[CEF Python] App: Renderer: OnContextReleased()
+[0117/233741:WARNING:content_browser_client.cc(393)] No browser info matching process id 4 and view id 0
+[CEF Python] App: Renderer: OnContextReleased()
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextReleased
+[CEF Python] V8ContextHandler_OnContextReleased()
+[CEF Python] del g_pyFrames[2#5]
+[CEF Python] App: Browser: OnProcessMessageReceived(): RemovePythonCallbacksForFrame
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextReleased
+[CEF Python] V8ContextHandler_OnContextReleased()
+[CEF Python] del g_pyFrames[2#4]
+[CEF Python] App: Browser: OnProcessMessageReceived(): RemovePythonCallbacksForFrame
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextReleased
+[CEF Python] V8ContextHandler_OnContextReleased()
+[CEF Python] del g_pyFrames[2#3]
+[CEF Python] App: Browser: OnProcessMessageReceived(): RemovePythonCallbacksForFrame
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextReleased
+[CEF Python] V8ContextHandler_OnContextReleased()
+[CEF Python] del g_pyFrames[2#2]
+[CEF Python] App: Renderer: OnContextReleased()
+[CEF Python] App: Renderer: OnContextCreated()
+[CEF Python] App: Browser: OnProcessMessageReceived(): RemovePythonCallbacksForFrame
+[CEF Python] App: Renderer: DoJavascriptBindingsForFrame(): bindings are set
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextReleased
+[CEF Python] V8ContextHandler_OnContextReleased()
+[CEF Python] del g_pyFrames[2#1]
+[CEF Python] App: Browser: OnProcessMessageReceived(): RemovePythonCallbacksForFrame
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextCreated
+[CEF Python] V8ContextHandler_OnContextCreated()
+[CEF Python] App: Renderer: OnContextCreated()
+[CEF Python] App: Renderer: OnContextCreated()
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextCreated
+[CEF Python] App: Renderer: OnContextCreated()
+[CEF Python] V8ContextHandler_OnContextCreated()
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextCreated
+[CEF Python] V8ContextHandler_OnContextCreated()
+[CEF Python] App: Renderer: OnContextCreated()
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextCreated
+[CEF Python] V8ContextHandler_OnContextCreated()
+[CEF Python] App: Renderer: OnContextReleased()
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextCreated
+[CEF Python] App: Renderer: OnContextCreated()
+[CEF Python] V8ContextHandler_OnContextCreated()
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextReleased
+[CEF Python] V8ContextHandler_OnContextReleased()
+[CEF Python] del g_pyFrames[2#9]
+[CEF Python] App: Browser: OnProcessMessageReceived(): RemovePythonCallbacksForFrame
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextCreated
+[CEF Python] V8ContextHandler_OnContextCreated()
+[CEF Python] App: Renderer: OnContextReleased()
+[CEF Python] App: Renderer: OnContextReleased()
+[0117/233743:WARNING:content_browser_client.cc(393)] No browser info matching process id 4 and view id 0
+[CEF Python] App: Renderer: OnContextReleased()
+[CEF Python] App: Renderer: OnContextReleased()
+[0117/233744:WARNING:content_browser_client.cc(393)] No browser info matching process id 4 and view id 0
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextReleased
+[CEF Python] V8ContextHandler_OnContextReleased()
+[CEF Python] del g_pyFrames[2#9]
+[CEF Python] App: Browser: OnProcessMessageReceived(): RemovePythonCallbacksForFrame
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextReleased
+[CEF Python] V8ContextHandler_OnContextReleased()
+[CEF Python] del g_pyFrames[2#8]
+[CEF Python] App: Browser: OnProcessMessageReceived(): RemovePythonCallbacksForFrame
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextReleased
+[CEF Python] V8ContextHandler_OnContextReleased()
+[CEF Python] del g_pyFrames[2#7]
+[CEF Python] App: Browser: OnProcessMessageReceived(): RemovePythonCallbacksForFrame
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextReleased
+[CEF Python] V8ContextHandler_OnContextReleased()
+[CEF Python] del g_pyFrames[2#6]
+[CEF Python] App: Browser: OnProcessMessageReceived(): RemovePythonCallbacksForFrame
+[CEF Python] App: Renderer: OnContextReleased()
+[CEF Python] App: Renderer: OnContextCreated()
+[CEF Python] App: Renderer: DoJavascriptBindingsForFrame(): bindings are set
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextReleased
+[CEF Python] V8ContextHandler_OnContextReleased()
+[CEF Python] del g_pyFrames[2#1]
+[CEF Python] App: Browser: OnProcessMessageReceived(): RemovePythonCallbacksForFrame
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextCreated
+[CEF Python] V8ContextHandler_OnContextCreated()
+[CEF Python] App: Renderer: OnContextCreated()
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextCreated
+[CEF Python] V8ContextHandler_OnContextCreated()
+[CEF Python] App: Renderer: OnContextCreated()
+[CEF Python] App: Renderer: OnContextCreated()
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextCreated
+[CEF Python] V8ContextHandler_OnContextCreated()
+[CEF Python] App: Renderer: OnContextCreated()
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextCreated
+[CEF Python] V8ContextHandler_OnContextCreated()
+[CEF Python] App: Renderer: OnContextReleased()
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextCreated
+[CEF Python] App: Renderer: OnContextCreated()
+[CEF Python] V8ContextHandler_OnContextCreated()
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextReleased
+[CEF Python] V8ContextHandler_OnContextReleased()
+[CEF Python] del g_pyFrames[2#13]
+[CEF Python] App: Browser: OnProcessMessageReceived(): RemovePythonCallbacksForFrame
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextCreated
+[CEF Python] V8ContextHandler_OnContextCreated()
+[CEF Python] App: Renderer: OnContextReleased()
+[CEF Python] App: Renderer: OnContextReleased()
+[0117/233746:WARNING:content_browser_client.cc(393)] No browser info matching process id 4 and view id 0
+[CEF Python] App: Renderer: OnContextReleased()
+[CEF Python] App: Renderer: OnContextReleased()
+[0117/233746:WARNING:content_browser_client.cc(393)] No browser info matching process id 4 and view id 0
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextReleased
+[CEF Python] V8ContextHandler_OnContextReleased()
+[CEF Python] del g_pyFrames[2#13]
+[CEF Python] App: Browser: OnProcessMessageReceived(): RemovePythonCallbacksForFrame
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextReleased
+[CEF Python] V8ContextHandler_OnContextReleased()
+[CEF Python] del g_pyFrames[2#12]
+[CEF Python] App: Browser: OnProcessMessageReceived(): RemovePythonCallbacksForFrame
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextReleased
+[CEF Python] V8ContextHandler_OnContextReleased()
+[CEF Python] del g_pyFrames[2#11]
+[CEF Python] App: Browser: OnProcessMessageReceived(): RemovePythonCallbacksForFrame
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextReleased
+[CEF Python] V8ContextHandler_OnContextReleased()
+[CEF Python] del g_pyFrames[2#10]
+[CEF Python] App: Browser: OnProcessMessageReceived(): RemovePythonCallbacksForFrame
+[CEF Python] App: Renderer: OnContextReleased()
+[CEF Python] App: Renderer: OnContextCreated()
+[CEF Python] App: Renderer: DoJavascriptBindingsForFrame(): bindings are set
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextReleased
+[CEF Python] V8ContextHandler_OnContextReleased()
+[CEF Python] del g_pyFrames[2#1]
+[CEF Python] App: Browser: OnProcessMessageReceived(): RemovePythonCallbacksForFrame
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextCreated
+[CEF Python] V8ContextHandler_OnContextCreated()
+[CEF Python] App: Renderer: OnContextCreated()
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextCreated
+[CEF Python] V8ContextHandler_OnContextCreated()
+[CEF Python] App: Renderer: OnContextCreated()
+[CEF Python] App: Renderer: OnContextCreated()
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextCreated
+[CEF Python] V8ContextHandler_OnContextCreated()
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextCreated
+[CEF Python] App: Renderer: OnContextCreated()
+[CEF Python] V8ContextHandler_OnContextCreated()
+[CEF Python] App: Renderer: OnContextReleased()
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextCreated
+[CEF Python] App: Renderer: OnContextCreated()
+[CEF Python] V8ContextHandler_OnContextCreated()
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextReleased
+[CEF Python] V8ContextHandler_OnContextReleased()
+[CEF Python] del g_pyFrames[2#17]
+[CEF Python] App: Browser: OnProcessMessageReceived(): RemovePythonCallbacksForFrame
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextCreated
+[CEF Python] V8ContextHandler_OnContextCreated()
+[CEF Python] App: Renderer: OnContextReleased()
+[CEF Python] App: Renderer: OnContextReleased()
+[0117/233747:WARNING:content_browser_client.cc(393)] No browser info matching process id 4 and view id 0
+[CEF Python] App: Renderer: OnContextReleased()
+[0117/233747:WARNING:content_browser_client.cc(393)] No browser info matching process id 4 and view id 0
+[CEF Python] App: Renderer: OnContextReleased()
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextReleased
+[CEF Python] V8ContextHandler_OnContextReleased()
+[CEF Python] del g_pyFrames[2#17]
+[CEF Python] App: Browser: OnProcessMessageReceived(): RemovePythonCallbacksForFrame
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextReleased
+[CEF Python] V8ContextHandler_OnContextReleased()
+[CEF Python] del g_pyFrames[2#16]
+[CEF Python] App: Browser: OnProcessMessageReceived(): RemovePythonCallbacksForFrame
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextReleased
+[CEF Python] V8ContextHandler_OnContextReleased()
+[CEF Python] del g_pyFrames[2#15]
+[CEF Python] App: Browser: OnProcessMessageReceived(): RemovePythonCallbacksForFrame
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextReleased
+[CEF Python] V8ContextHandler_OnContextReleased()
+[CEF Python] App: Renderer: OnContextReleased()
+[CEF Python] App: Renderer: OnContextCreated()
+[CEF Python] del g_pyFrames[2#14]
+[CEF Python] App: Renderer: DoJavascriptBindingsForFrame(): bindings are set
+[CEF Python] App: Browser: OnProcessMessageReceived(): RemovePythonCallbacksForFrame
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextReleased
+[CEF Python] V8ContextHandler_OnContextReleased()
+[CEF Python] del g_pyFrames[2#1]
+[CEF Python] App: Browser: OnProcessMessageReceived(): RemovePythonCallbacksForFrame
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextCreated
+[CEF Python] V8ContextHandler_OnContextCreated()
+[0117/233747:INFO:CONSOLE(0)] "Uncaught ReferenceError: $ is not defined", source:  (0)
+[CEF Python] App: Renderer: OnContextCreated()
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextCreated
+[CEF Python] V8ContextHandler_OnContextCreated()
+[CEF Python] App: Renderer: OnContextCreated()
+[CEF Python] App: Renderer: OnContextCreated()
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextCreated
+[CEF Python] V8ContextHandler_OnContextCreated()
+[CEF Python] App: Renderer: OnContextCreated()
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextCreated
+[CEF Python] V8ContextHandler_OnContextCreated()
+[CEF Python] App: Renderer: OnContextReleased()
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextCreated
+[CEF Python] App: Renderer: OnContextCreated()
+[CEF Python] V8ContextHandler_OnContextCreated()
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextReleased
+[CEF Python] V8ContextHandler_OnContextReleased()
+[CEF Python] del g_pyFrames[2#21]
+[CEF Python] App: Browser: OnProcessMessageReceived(): RemovePythonCallbacksForFrame
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextCreated
+[CEF Python] V8ContextHandler_OnContextCreated()
+[CEF Python] App: Renderer: OnContextReleased()
+[0117/233749:WARNING:content_browser_client.cc(393)] No browser info matching process id 4 and view id 0
+[CEF Python] App: Renderer: OnContextReleased()
+[0117/233749:WARNING:content_browser_client.cc(393)] No browser info matching process id 4 and view id 0
+[CEF Python] App: Renderer: OnContextReleased()
+[CEF Python] App: Renderer: OnContextReleased()
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextReleased
+[CEF Python] V8ContextHandler_OnContextReleased()
+[CEF Python] del g_pyFrames[2#21]
+[CEF Python] App: Browser: OnProcessMessageReceived(): RemovePythonCallbacksForFrame
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextReleased
+[CEF Python] V8ContextHandler_OnContextReleased()
+[CEF Python] del g_pyFrames[2#20]
+[CEF Python] App: Browser: OnProcessMessageReceived(): RemovePythonCallbacksForFrame
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextReleased
+[CEF Python] V8ContextHandler_OnContextReleased()
+[CEF Python] del g_pyFrames[2#19]
+[CEF Python] App: Browser: OnProcessMessageReceived(): RemovePythonCallbacksForFrame
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextReleased
+[CEF Python] V8ContextHandler_OnContextReleased()
+[CEF Python] del g_pyFrames[2#18]
+[CEF Python] App: Browser: OnProcessMessageReceived(): RemovePythonCallbacksForFrame
+[CEF Python] App: Renderer: OnContextReleased()
+[CEF Python] App: Renderer: OnContextCreated()
+[CEF Python] App: Renderer: DoJavascriptBindingsForFrame(): bindings are set
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextReleased
+[CEF Python] V8ContextHandler_OnContextReleased()
+[CEF Python] del g_pyFrames[2#1]
+[CEF Python] App: Browser: OnProcessMessageReceived(): RemovePythonCallbacksForFrame
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextCreated
+[CEF Python] V8ContextHandler_OnContextCreated()
+[CEF Python] App: Renderer: OnContextCreated()
+[CEF Python] App: Renderer: OnContextCreated()
+[CEF Python] App: Renderer: OnContextCreated()
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextCreated
+[CEF Python] V8ContextHandler_OnContextCreated()
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextCreated
+[CEF Python] V8ContextHandler_OnContextCreated()
+[CEF Python] App: Renderer: OnContextCreated()
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextCreated
+[CEF Python] V8ContextHandler_OnContextCreated()
+[CEF Python] App: Renderer: OnContextReleased()
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextCreated
+[CEF Python] App: Renderer: OnContextCreated()
+[CEF Python] V8ContextHandler_OnContextCreated()
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextReleased
+[CEF Python] V8ContextHandler_OnContextReleased()
+[CEF Python] del g_pyFrames[2#25]
+[CEF Python] App: Browser: OnProcessMessageReceived(): RemovePythonCallbacksForFrame
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextCreated
+[CEF Python] V8ContextHandler_OnContextCreated()
+[CEF Python] QuitMessageLoop()
+[0117/233853:ERROR_REPORT:message_loop.cc(324)] Check failed: false. Must be inside Run to call Quit
+[CEF Python] Shutdown()
+[CEF Python] del g_pyFrames[1#-4]
+[CEF Python] del g_pyFrames[1#3]
+[CEF Python] del g_pyFrames[1#2]
+[CEF Python] del g_pyFrames[1#1]
+[CEF Python] del g_pyFrames[1#5]
+[CEF Python] del g_pyFrames[1#4]
+[CEF Python] del g_pyBrowsers[1]
+[CEF Python] del g_pyFrames[2#1]
+[CEF Python] del g_pyFrames[2#23]
+[CEF Python] del g_pyFrames[2#22]
+[CEF Python] App: Renderer: OnContextReleased()
+[CEF Python] App: Renderer: OnContextReleased()
+[CEF Python] del g_pyFrames[2#25]
+[CEF Python] App: Renderer: OnContextReleased()
+[CEF Python] del g_pyFrames[2#24]
+[CEF Python] App: Renderer: OnContextReleased()
+[CEF Python] del g_pyBrowsers[2]
+[CEF Python] App: Renderer: OnContextReleased()
+[CEF Python] App: Renderer: OnContextReleased()
+[0117/233853:ERROR_REPORT:browser_main.cc(126)] Check failed: browser_contexts_.empty(). 
+[CEF Python] App: Renderer: OnContextReleased()
+[CEF Python] App: Renderer: OnContextReleased()
+[CEF Python] App: Renderer: OnContextReleased()
+[CEF Python] App: Renderer: OnContextReleased()
+[CEF Python] App: Renderer: OnBrowserDestroyed()
+[CEF Python] App: Renderer: OnBrowserDestroyed()
+[CEF Python] Initialize() called
+[CEF Python] CefExecuteProcess(): exitCode = -1
+[CEF Python] CefInitialize()
+[CEF Python] App_OnBeforeCommandLineProcessing_BrowserProcess()
+[CEF Python] App: Command line string for the browser process: "C:\Python27\python.exe" --browser-subprocess-path="C:\Python27\lib\site-packages\cefpython3/subprocess" --lang=en-US --log-file="H:\gamespider\Scrapy\tutorial\cBrowser\debug.log" --log-severity=info --enable-release-dcheck --resources-dir-path="C:\Python27\lib\site-packages\cefpython3" --locales-dir-path="C:\Python27\lib\site-packages\cefpython3/locales" --remote-debugging-port=50357 --no-sandbox "H:\gamespider\Scrapy\tutorial\cBrowser\wxpython.py"
+[CEF Python] BrowserProcessHandler_OnBeforeChildProcessLaunch()
+[CEF Python] BrowserProcessHandler_OnBeforeChildProcessLaunch()
+[CEF Python] CreateBrowserSync() called
+[CEF Python] QuitMessageLoop()
+[0118/023537:ERROR_REPORT:message_loop.cc(324)] Check failed: false. Must be inside Run to call Quit
+[CEF Python] Shutdown()
+[CEF Python] Initialize() called
+[CEF Python] CefExecuteProcess(): exitCode = -1
+[CEF Python] CefInitialize()
+[CEF Python] App_OnBeforeCommandLineProcessing_BrowserProcess()
+[CEF Python] App: Command line string for the browser process: "C:\Python27\python.exe" --browser-subprocess-path="C:\Python27\lib\site-packages\cefpython3/subprocess" --lang=en-US --log-file="H:\gamespider\Scrapy\tutorial\cBrowser\debug.log" --log-severity=info --enable-release-dcheck --resources-dir-path="C:\Python27\lib\site-packages\cefpython3" --locales-dir-path="C:\Python27\lib\site-packages\cefpython3/locales" --remote-debugging-port=59913 --no-sandbox "H:\gamespider\Scrapy\tutorial\cBrowser\wxpython.py"
+[CEF Python] BrowserProcessHandler_OnBeforeChildProcessLaunch()
+[CEF Python] BrowserProcessHandler_OnBeforeChildProcessLaunch()
+[CEF Python] CreateBrowserSync() called
+[CEF Python] navigateUrl: 
+[CEF Python] CefBrowser::CreateBrowserSync()
+[CEF Python] App: Browser: OnAfterCreated(): auto_zooming = system_dpi
+
+[CEF Python] App: Browser: SetBrowserDpiSettings: DPI=96 zoom=0
+
+[CEF Python] GetPyBrowser(): creating new PyBrowser, browserId=1
+[CEF Python] CefBrowser::CreateBrowserSync() succeeded
+[CEF Python] SendProcessMessage(): message=DoJavascriptBindings, arguments size=1
+[CEF Python] QuitMessageLoop()
+[0118/023745:ERROR_REPORT:message_loop.cc(324)] Check failed: false. Must be inside Run to call Quit
+[CEF Python] Shutdown()
+[CEF Python] del g_pyBrowsers[1]
+[CEF Python] Initialize() called
+[CEF Python] CefExecuteProcess(): exitCode = -1
+[CEF Python] CefInitialize()
+[CEF Python] App_OnBeforeCommandLineProcessing_BrowserProcess()
+[CEF Python] App: Command line string for the browser process: "C:\Python27\python.exe" --browser-subprocess-path="C:\Python27\lib\site-packages\cefpython3/subprocess" --lang=en-US --log-severity=info --enable-release-dcheck --resources-dir-path="C:\Python27\lib\site-packages\cefpython3" --locales-dir-path="C:\Python27\lib\site-packages\cefpython3/locales" --remote-debugging-port=60960 --no-sandbox "H:\gamespider\Scrapy\tutorial\cBrowser\testNotebook.py"
+[CEF Python] BrowserProcessHandler_OnBeforeChildProcessLaunch()
+[CEF Python] BrowserProcessHandler_OnBeforeChildProcessLaunch()
+[CEF Python] CreateBrowserSync() called
+[CEF Python] navigateUrl: www.baidu.com
+[CEF Python] CefBrowser::CreateBrowserSync()
+[CEF Python] App: Browser: OnAfterCreated(): auto_zooming = system_dpi
+
+[CEF Python] App: Browser: SetBrowserDpiSettings: DPI=96 zoom=0
+
+[CEF Python] GetPyBrowser(): creating new PyBrowser, browserId=1
+[CEF Python] BrowserProcessHandler_OnBeforeChildProcessLaunch()
+[CEF Python] CefBrowser::CreateBrowserSync() succeeded
+[CEF Python] del g_pyBrowsers[1]
+[CEF Python] Initialize() called
+[CEF Python] CefExecuteProcess(): exitCode = -1
+[CEF Python] CefInitialize()
+[CEF Python] App_OnBeforeCommandLineProcessing_BrowserProcess()
+[CEF Python] App: Command line string for the browser process: "C:\Python27\python.exe" --browser-subprocess-path="C:\Python27\lib\site-packages\cefpython3/subprocess" --lang=en-US --log-severity=info --enable-release-dcheck --resources-dir-path="C:\Python27\lib\site-packages\cefpython3" --locales-dir-path="C:\Python27\lib\site-packages\cefpython3/locales" --remote-debugging-port=59721 --no-sandbox "H:\gamespider\Scrapy\tutorial\cBrowser\testNotebook.py"
+[CEF Python] BrowserProcessHandler_OnBeforeChildProcessLaunch()
+[CEF Python] BrowserProcessHandler_OnBeforeChildProcessLaunch()
+[CEF Python] CreateBrowserSync() called
+[CEF Python] navigateUrl: www.baidu.com
+[CEF Python] CefBrowser::CreateBrowserSync()
+[CEF Python] App: Browser: OnAfterCreated(): auto_zooming = system_dpi
+
+[CEF Python] App: Browser: SetBrowserDpiSettings: DPI=96 zoom=0
+
+[CEF Python] GetPyBrowser(): creating new PyBrowser, browserId=1
+[CEF Python] BrowserProcessHandler_OnBeforeChildProcessLaunch()
+[CEF Python] CefBrowser::CreateBrowserSync() succeeded
+[CEF Python] del g_pyFrames[1#-4]
+[CEF Python] del g_pyBrowsers[1]
+[CEF Python] Initialize() called
+[CEF Python] CefExecuteProcess(): exitCode = -1
+[CEF Python] CefInitialize()
+[CEF Python] App_OnBeforeCommandLineProcessing_BrowserProcess()
+[CEF Python] App: Command line string for the browser process: "C:\Python27\python.exe" --browser-subprocess-path="C:\Python27\lib\site-packages\cefpython3/subprocess" --lang=en-US --log-severity=info --enable-release-dcheck --resources-dir-path="C:\Python27\lib\site-packages\cefpython3" --locales-dir-path="C:\Python27\lib\site-packages\cefpython3/locales" --remote-debugging-port=64400 --no-sandbox "H:\gamespider\Scrapy\tutorial\cBrowser\testNotebook.py"
+[CEF Python] BrowserProcessHandler_OnBeforeChildProcessLaunch()
+[CEF Python] BrowserProcessHandler_OnBeforeChildProcessLaunch()
+[CEF Python] Initialize() called
+[CEF Python] CefExecuteProcess(): exitCode = -1
+[CEF Python] CefInitialize()
+[CEF Python] App_OnBeforeCommandLineProcessing_BrowserProcess()
+[CEF Python] App: Command line string for the browser process: "C:\Python27\python.exe" --browser-subprocess-path="C:\Python27\lib\site-packages\cefpython3/subprocess" --lang=en-US --log-severity=info --enable-release-dcheck --resources-dir-path="C:\Python27\lib\site-packages\cefpython3" --locales-dir-path="C:\Python27\lib\site-packages\cefpython3/locales" --remote-debugging-port=59589 --no-sandbox "H:\gamespider\Scrapy\tutorial\cBrowser\testNotebook.py"
+[CEF Python] BrowserProcessHandler_OnBeforeChildProcessLaunch()
+[CEF Python] BrowserProcessHandler_OnBeforeChildProcessLaunch()
+[CEF Python] Initialize() called
+[CEF Python] CefExecuteProcess(): exitCode = -1
+[CEF Python] CefInitialize()
+[CEF Python] App_OnBeforeCommandLineProcessing_BrowserProcess()
+[CEF Python] App: Command line string for the browser process: "C:\Python27\python.exe" --browser-subprocess-path="C:\Python27\lib\site-packages\cefpython3/subprocess" --lang=en-US --log-severity=info --enable-release-dcheck --resources-dir-path="C:\Python27\lib\site-packages\cefpython3" --locales-dir-path="C:\Python27\lib\site-packages\cefpython3/locales" --remote-debugging-port=64475 --no-sandbox "H:\gamespider\Scrapy\tutorial\cBrowser\testNotebook.py"
+[CEF Python] BrowserProcessHandler_OnBeforeChildProcessLaunch()
+[CEF Python] BrowserProcessHandler_OnBeforeChildProcessLaunch()
+[CEF Python] CreateBrowserSync() called
+[CEF Python] navigateUrl: www.baidu.com
+[CEF Python] CefBrowser::CreateBrowserSync()
+[CEF Python] App: Browser: OnAfterCreated(): auto_zooming = system_dpi
+
+[CEF Python] App: Browser: SetBrowserDpiSettings: DPI=96 zoom=0
+
+[CEF Python] GetPyBrowser(): creating new PyBrowser, browserId=1
+[CEF Python] BrowserProcessHandler_OnBeforeChildProcessLaunch()
+[CEF Python] CefBrowser::CreateBrowserSync() succeeded
+[CEF Python] del g_pyBrowsers[1]
+[CEF Python] Initialize() called
+[CEF Python] CefExecuteProcess(): exitCode = -1
+[CEF Python] CefInitialize()
+[CEF Python] App_OnBeforeCommandLineProcessing_BrowserProcess()
+[CEF Python] App: Command line string for the browser process: "C:\Python27\python.exe" --browser-subprocess-path="C:\Python27\lib\site-packages\cefpython3/subprocess" --lang=en-US --log-severity=info --enable-release-dcheck --resources-dir-path="C:\Python27\lib\site-packages\cefpython3" --locales-dir-path="C:\Python27\lib\site-packages\cefpython3/locales" --remote-debugging-port=59420 --no-sandbox "H:\gamespider\Scrapy\tutorial\cBrowser\testNotebook.py"
+[CEF Python] BrowserProcessHandler_OnBeforeChildProcessLaunch()
+[CEF Python] BrowserProcessHandler_OnBeforeChildProcessLaunch()
+[CEF Python] CreateBrowserSync() called
+[CEF Python] navigateUrl: www.baidu.com
+[CEF Python] CefBrowser::CreateBrowserSync()
+[CEF Python] App: Browser: OnAfterCreated(): auto_zooming = system_dpi
+
+[CEF Python] App: Browser: SetBrowserDpiSettings: DPI=96 zoom=0
+
+[CEF Python] GetPyBrowser(): creating new PyBrowser, browserId=1
+[CEF Python] BrowserProcessHandler_OnBeforeChildProcessLaunch()
+[CEF Python] CefBrowser::CreateBrowserSync() succeeded
+[CEF Python] del g_pyFrames[1#-4]
+[CEF Python] del g_pyBrowsers[1]
+[CEF Python] Initialize() called
+[CEF Python] CefExecuteProcess(): exitCode = -1
+[CEF Python] CefInitialize()
+[CEF Python] App_OnBeforeCommandLineProcessing_BrowserProcess()
+[CEF Python] App: Command line string for the browser process: "C:\Python27\python.exe" --browser-subprocess-path="C:\Python27\lib\site-packages\cefpython3/subprocess" --lang=en-US --log-severity=info --enable-release-dcheck --resources-dir-path="C:\Python27\lib\site-packages\cefpython3" --locales-dir-path="C:\Python27\lib\site-packages\cefpython3/locales" --remote-debugging-port=55201 --no-sandbox "H:\gamespider\Scrapy\tutorial\cBrowser\testNotebook.py"
+[CEF Python] BrowserProcessHandler_OnBeforeChildProcessLaunch()
+[CEF Python] BrowserProcessHandler_OnBeforeChildProcessLaunch()
+[CEF Python] CreateBrowserSync() called
+[CEF Python] navigateUrl: www.baidu.com
+[CEF Python] CefBrowser::CreateBrowserSync()
+[CEF Python] App: Browser: OnAfterCreated(): auto_zooming = system_dpi
+
+[CEF Python] App: Browser: SetBrowserDpiSettings: DPI=96 zoom=0
+
+[CEF Python] GetPyBrowser(): creating new PyBrowser, browserId=1
+[CEF Python] BrowserProcessHandler_OnBeforeChildProcessLaunch()
+[CEF Python] CefBrowser::CreateBrowserSync() succeeded
+[CEF Python] del g_pyFrames[1#-4]
+[CEF Python] del g_pyBrowsers[1]
+[CEF Python] Initialize() called
+[CEF Python] CefExecuteProcess(): exitCode = -1
+[CEF Python] CefInitialize()
+[CEF Python] App_OnBeforeCommandLineProcessing_BrowserProcess()
+[CEF Python] App: Command line string for the browser process: "C:\Python27\python.exe" --browser-subprocess-path="C:\Python27\lib\site-packages\cefpython3/subprocess" --lang=en-US --log-severity=info --enable-release-dcheck --resources-dir-path="C:\Python27\lib\site-packages\cefpython3" --locales-dir-path="C:\Python27\lib\site-packages\cefpython3/locales" --remote-debugging-port=54166 --no-sandbox "H:\gamespider\Scrapy\tutorial\cBrowser\testNotebook.py"
+[CEF Python] BrowserProcessHandler_OnBeforeChildProcessLaunch()
+[CEF Python] BrowserProcessHandler_OnBeforeChildProcessLaunch()
+[CEF Python] Initialize() called
+[CEF Python] CefExecuteProcess(): exitCode = -1
+[CEF Python] CefInitialize()
+[CEF Python] App_OnBeforeCommandLineProcessing_BrowserProcess()
+[CEF Python] App: Command line string for the browser process: "C:\Python27\python.exe" --browser-subprocess-path="C:\Python27\lib\site-packages\cefpython3/subprocess" --lang=en-US --log-severity=info --enable-release-dcheck --resources-dir-path="C:\Python27\lib\site-packages\cefpython3" --locales-dir-path="C:\Python27\lib\site-packages\cefpython3/locales" --remote-debugging-port=52024 --no-sandbox "H:\gamespider\Scrapy\tutorial\cBrowser\testNotebook.py"
+[CEF Python] BrowserProcessHandler_OnBeforeChildProcessLaunch()
+[CEF Python] BrowserProcessHandler_OnBeforeChildProcessLaunch()
+[CEF Python] CreateBrowserSync() called
+[CEF Python] navigateUrl: www.baidu.com
+[CEF Python] CefBrowser::CreateBrowserSync()
+[CEF Python] App: Browser: OnAfterCreated(): auto_zooming = system_dpi
+
+[CEF Python] App: Browser: SetBrowserDpiSettings: DPI=96 zoom=0
+
+[CEF Python] GetPyBrowser(): creating new PyBrowser, browserId=1
+[CEF Python] BrowserProcessHandler_OnBeforeChildProcessLaunch()
+[CEF Python] CefBrowser::CreateBrowserSync() succeeded
+[CEF Python] del g_pyBrowsers[1]
+[CEF Python] Initialize() called
+[CEF Python] CefExecuteProcess(): exitCode = -1
+[CEF Python] CefInitialize()
+[CEF Python] App_OnBeforeCommandLineProcessing_BrowserProcess()
+[CEF Python] App: Command line string for the browser process: "C:\Python27\python.exe" --browser-subprocess-path="C:\Python27\lib\site-packages\cefpython3/subprocess" --lang=en-US --log-severity=info --enable-release-dcheck --resources-dir-path="C:\Python27\lib\site-packages\cefpython3" --locales-dir-path="C:\Python27\lib\site-packages\cefpython3/locales" --remote-debugging-port=56628 --no-sandbox "H:\gamespider\Scrapy\tutorial\cBrowser\testNotebook.py"
+[CEF Python] BrowserProcessHandler_OnBeforeChildProcessLaunch()
+[CEF Python] BrowserProcessHandler_OnBeforeChildProcessLaunch()
+[CEF Python] CreateBrowserSync() called
+[CEF Python] navigateUrl: www.baidu.com
+[CEF Python] CefBrowser::CreateBrowserSync()
+[CEF Python] App: Browser: OnAfterCreated(): auto_zooming = system_dpi
+
+[CEF Python] App: Browser: SetBrowserDpiSettings: DPI=96 zoom=0
+
+[CEF Python] GetPyBrowser(): creating new PyBrowser, browserId=1
+[CEF Python] BrowserProcessHandler_OnBeforeChildProcessLaunch()
+[CEF Python] CefBrowser::CreateBrowserSync() succeeded
+[CEF Python] del g_pyBrowsers[1]
+[CEF Python] Initialize() called
+[CEF Python] CefExecuteProcess(): exitCode = -1
+[CEF Python] CefInitialize()
+[CEF Python] App_OnBeforeCommandLineProcessing_BrowserProcess()
+[CEF Python] App: Command line string for the browser process: "C:\Python27\python.exe" --browser-subprocess-path="C:\Python27\lib\site-packages\cefpython3/subprocess" --lang=en-US --log-severity=info --enable-release-dcheck --resources-dir-path="C:\Python27\lib\site-packages\cefpython3" --locales-dir-path="C:\Python27\lib\site-packages\cefpython3/locales" --remote-debugging-port=57876 --no-sandbox "H:\gamespider\Scrapy\tutorial\cBrowser\testNotebook.py"
+[CEF Python] BrowserProcessHandler_OnBeforeChildProcessLaunch()
+[CEF Python] BrowserProcessHandler_OnBeforeChildProcessLaunch()
+[CEF Python] CreateBrowserSync() called
+[CEF Python] navigateUrl: www.baidu.com
+[CEF Python] CefBrowser::CreateBrowserSync()
+[CEF Python] App: Browser: OnAfterCreated(): auto_zooming = system_dpi
+
+[CEF Python] App: Browser: SetBrowserDpiSettings: DPI=96 zoom=0
+
+[CEF Python] GetPyBrowser(): creating new PyBrowser, browserId=1
+[CEF Python] BrowserProcessHandler_OnBeforeChildProcessLaunch()
+[CEF Python] CefBrowser::CreateBrowserSync() succeeded
+[CEF Python] del g_pyFrames[1#-4]
+[CEF Python] del g_pyBrowsers[1]
+[CEF Python] Initialize() called
+[CEF Python] CefExecuteProcess(): exitCode = -1
+[CEF Python] CefInitialize()
+[CEF Python] App_OnBeforeCommandLineProcessing_BrowserProcess()
+[CEF Python] App: Command line string for the browser process: "C:\Python27\python.exe" --browser-subprocess-path="C:\Python27\lib\site-packages\cefpython3/subprocess" --lang=en-US --log-severity=info --enable-release-dcheck --resources-dir-path="C:\Python27\lib\site-packages\cefpython3" --locales-dir-path="C:\Python27\lib\site-packages\cefpython3/locales" --remote-debugging-port=59884 --no-sandbox "H:\gamespider\Scrapy\tutorial\cBrowser\testNotebook.py"
+[CEF Python] BrowserProcessHandler_OnBeforeChildProcessLaunch()
+[CEF Python] BrowserProcessHandler_OnBeforeChildProcessLaunch()
+[CEF Python] CreateBrowserSync() called
+[CEF Python] navigateUrl: www.baidu.com
+[CEF Python] CefBrowser::CreateBrowserSync()
+[CEF Python] App: Browser: OnAfterCreated(): auto_zooming = system_dpi
+
+[CEF Python] App: Browser: SetBrowserDpiSettings: DPI=96 zoom=0
+
+[CEF Python] GetPyBrowser(): creating new PyBrowser, browserId=1
+[CEF Python] BrowserProcessHandler_OnBeforeChildProcessLaunch()
+[CEF Python] CefBrowser::CreateBrowserSync() succeeded
+[CEF Python] del g_pyBrowsers[1]
+[CEF Python] Initialize() called
+[CEF Python] CefExecuteProcess(): exitCode = -1
+[CEF Python] CefInitialize()
+[CEF Python] App_OnBeforeCommandLineProcessing_BrowserProcess()
+[CEF Python] App: Command line string for the browser process: "C:\Python27\python.exe" --browser-subprocess-path="C:\Python27\lib\site-packages\cefpython3/subprocess" --lang=en-US --log-severity=info --enable-release-dcheck --resources-dir-path="C:\Python27\lib\site-packages\cefpython3" --locales-dir-path="C:\Python27\lib\site-packages\cefpython3/locales" --remote-debugging-port=49243 --no-sandbox "H:\gamespider\Scrapy\tutorial\cBrowser\testNotebook.py"
+[CEF Python] BrowserProcessHandler_OnBeforeChildProcessLaunch()
+[CEF Python] CreateBrowserSync() called
+[CEF Python] BrowserProcessHandler_OnBeforeChildProcessLaunch()
+[CEF Python] navigateUrl: www.baidu.com
+[CEF Python] CefBrowser::CreateBrowserSync()
+[CEF Python] App: Browser: OnAfterCreated(): auto_zooming = system_dpi
+
+[CEF Python] App: Browser: SetBrowserDpiSettings: DPI=96 zoom=0
+
+[CEF Python] GetPyBrowser(): creating new PyBrowser, browserId=1
+[CEF Python] BrowserProcessHandler_OnBeforeChildProcessLaunch()
+[CEF Python] CefBrowser::CreateBrowserSync() succeeded
+[CEF Python] del g_pyBrowsers[1]
+[CEF Python] Initialize() called
+[CEF Python] CefExecuteProcess(): exitCode = -1
+[CEF Python] CefInitialize()
+[CEF Python] App_OnBeforeCommandLineProcessing_BrowserProcess()
+[CEF Python] App: Command line string for the browser process: "C:\Python27\python.exe" --browser-subprocess-path="C:\Python27\lib\site-packages\cefpython3/subprocess" --lang=en-US --log-file="H:\gamespider\Scrapy\tutorial\cBrowser\debug.log" --log-severity=info --enable-release-dcheck --resources-dir-path="C:\Python27\lib\site-packages\cefpython3" --locales-dir-path="C:\Python27\lib\site-packages\cefpython3/locales" --remote-debugging-port=59389 --no-sandbox "H:\gamespider\Scrapy\tutorial\cBrowser\wxpython.py"
+[CEF Python] BrowserProcessHandler_OnBeforeChildProcessLaunch()
+[CEF Python] BrowserProcessHandler_OnBeforeChildProcessLaunch()
+[CEF Python] CreateBrowserSync() called
+[CEF Python] navigateUrl: 
+[CEF Python] CefBrowser::CreateBrowserSync()
+[CEF Python] App: Browser: OnAfterCreated(): auto_zooming = system_dpi
+
+[CEF Python] App: Browser: SetBrowserDpiSettings: DPI=96 zoom=0
+
+[CEF Python] GetPyBrowser(): creating new PyBrowser, browserId=1
+[CEF Python] CefBrowser::CreateBrowserSync() succeeded
+[CEF Python] SendProcessMessage(): message=DoJavascriptBindings, arguments size=1
+[CEF Python] QuitMessageLoop()
+[0118/030541:ERROR_REPORT:message_loop.cc(324)] Check failed: false. Must be inside Run to call Quit
+[CEF Python] Shutdown()
+[CEF Python] del g_pyBrowsers[1]
+[CEF Python] Initialize() called
+[CEF Python] CefExecuteProcess(): exitCode = -1
+[CEF Python] CefInitialize()
+[CEF Python] App_OnBeforeCommandLineProcessing_BrowserProcess()
+[CEF Python] App: Command line string for the browser process: "C:\Python27\python.exe" --browser-subprocess-path="C:\Python27\lib\site-packages\cefpython3/subprocess" --lang=en-US --log-file="H:\gamespider\Scrapy\tutorial\cBrowser\debug.log" --log-severity=info --enable-release-dcheck --resources-dir-path="C:\Python27\lib\site-packages\cefpython3" --locales-dir-path="C:\Python27\lib\site-packages\cefpython3/locales" --remote-debugging-port=53757 --no-sandbox "H:\gamespider\Scrapy\tutorial\cBrowser\wxpython.py"
+[CEF Python] BrowserProcessHandler_OnBeforeChildProcessLaunch()
+[CEF Python] BrowserProcessHandler_OnBeforeChildProcessLaunch()
+[CEF Python] CreateBrowserSync() called
+[CEF Python] navigateUrl: 
+[CEF Python] CefBrowser::CreateBrowserSync()
+[CEF Python] App: Browser: OnAfterCreated(): auto_zooming = system_dpi
+
+[CEF Python] App: Browser: SetBrowserDpiSettings: DPI=96 zoom=0
+
+[CEF Python] GetPyBrowser(): creating new PyBrowser, browserId=1
+[CEF Python] CefBrowser::CreateBrowserSync() succeeded
+[CEF Python] SendProcessMessage(): message=DoJavascriptBindings, arguments size=1
+[CEF Python] QuitMessageLoop()
+[CEF Python] Shutdown()
+[CEF Python] del g_pyBrowsers[1]
+[CEF Python] Initialize() called
+[CEF Python] CefExecuteProcess(): exitCode = -1
+[CEF Python] CefInitialize()
+[CEF Python] App_OnBeforeCommandLineProcessing_BrowserProcess()
+[CEF Python] App: Command line string for the browser process: "C:\Python27\python.exe" --browser-subprocess-path="C:\Python27\lib\site-packages\cefpython3/subprocess" --lang=en-US --log-severity=info --enable-release-dcheck --resources-dir-path="C:\Python27\lib\site-packages\cefpython3" --locales-dir-path="C:\Python27\lib\site-packages\cefpython3/locales" --remote-debugging-port=58853 --no-sandbox "H:\gamespider\Scrapy\tutorial\cBrowser\testNotebook.py"
+[CEF Python] BrowserProcessHandler_OnBeforeChildProcessLaunch()
+[CEF Python] BrowserProcessHandler_OnBeforeChildProcessLaunch()
+[CEF Python] CreateBrowserSync() called
+[CEF Python] navigateUrl: www.baidu.com
+[CEF Python] CefBrowser::CreateBrowserSync()
+[CEF Python] App: Browser: OnAfterCreated(): auto_zooming = system_dpi
+
+[CEF Python] App: Browser: SetBrowserDpiSettings: DPI=96 zoom=0
+
+[CEF Python] GetPyBrowser(): creating new PyBrowser, browserId=1
+[CEF Python] BrowserProcessHandler_OnBeforeChildProcessLaunch()
+[CEF Python] CefBrowser::CreateBrowserSync() succeeded
+[CEF Python] del g_pyFrames[1#-4]
+[CEF Python] del g_pyBrowsers[1]
+[CEF Python] Initialize() called
+[CEF Python] CefExecuteProcess(): exitCode = -1
+[CEF Python] CefInitialize()
+[CEF Python] App_OnBeforeCommandLineProcessing_BrowserProcess()
+[CEF Python] App: Command line string for the browser process: "C:\Python27\python.exe" --browser-subprocess-path="C:\Python27\lib\site-packages\cefpython3/subprocess" --lang=en-US --log-severity=info --enable-release-dcheck --resources-dir-path="C:\Python27\lib\site-packages\cefpython3" --locales-dir-path="C:\Python27\lib\site-packages\cefpython3/locales" --remote-debugging-port=57328 --no-sandbox "H:\gamespider\Scrapy\tutorial\cBrowser\testNotebook.py"
+[CEF Python] BrowserProcessHandler_OnBeforeChildProcessLaunch()
+[CEF Python] BrowserProcessHandler_OnBeforeChildProcessLaunch()
+[CEF Python] CreateBrowserSync() called
+[CEF Python] navigateUrl: www.baidu.com
+[CEF Python] CefBrowser::CreateBrowserSync()
+[CEF Python] App: Browser: OnAfterCreated(): auto_zooming = system_dpi
+
+[CEF Python] App: Browser: SetBrowserDpiSettings: DPI=96 zoom=0
+
+[CEF Python] GetPyBrowser(): creating new PyBrowser, browserId=1
+[CEF Python] BrowserProcessHandler_OnBeforeChildProcessLaunch()
+[CEF Python] CefBrowser::CreateBrowserSync() succeeded
+[CEF Python] del g_pyBrowsers[1]
+[CEF Python] Initialize() called
+[CEF Python] CefExecuteProcess(): exitCode = -1
+[CEF Python] CefInitialize()
+[CEF Python] App_OnBeforeCommandLineProcessing_BrowserProcess()
+[CEF Python] App: Command line string for the browser process: "C:\Python27\python.exe" --browser-subprocess-path="C:\Python27\lib\site-packages\cefpython3/subprocess" --lang=en-US --log-severity=info --enable-release-dcheck --resources-dir-path="C:\Python27\lib\site-packages\cefpython3" --locales-dir-path="C:\Python27\lib\site-packages\cefpython3/locales" --remote-debugging-port=64210 --no-sandbox "H:\gamespider\Scrapy\tutorial\cBrowser\testNotebook.py"
+[CEF Python] BrowserProcessHandler_OnBeforeChildProcessLaunch()
+[CEF Python] BrowserProcessHandler_OnBeforeChildProcessLaunch()
+[CEF Python] CreateBrowserSync() called
+[CEF Python] navigateUrl: www.baidu.com
+[CEF Python] CefBrowser::CreateBrowserSync()
+[CEF Python] App: Browser: OnAfterCreated(): auto_zooming = system_dpi
+
+[CEF Python] App: Browser: SetBrowserDpiSettings: DPI=96 zoom=0
+
+[CEF Python] GetPyBrowser(): creating new PyBrowser, browserId=1
+[CEF Python] BrowserProcessHandler_OnBeforeChildProcessLaunch()
+[CEF Python] CefBrowser::CreateBrowserSync() succeeded
+[CEF Python] del g_pyBrowsers[1]
+[CEF Python] Initialize() called
+[CEF Python] CefExecuteProcess(): exitCode = -1
+[CEF Python] CefInitialize()
+[CEF Python] App_OnBeforeCommandLineProcessing_BrowserProcess()
+[CEF Python] App: Command line string for the browser process: "C:\Python27\python.exe" --browser-subprocess-path="C:\Python27\lib\site-packages\cefpython3/subprocess" --lang=en-US --log-severity=info --enable-release-dcheck --resources-dir-path="C:\Python27\lib\site-packages\cefpython3" --locales-dir-path="C:\Python27\lib\site-packages\cefpython3/locales" --remote-debugging-port=63653 --no-sandbox "H:\gamespider\Scrapy\tutorial\cBrowser\testNotebook.py"
+[CEF Python] BrowserProcessHandler_OnBeforeChildProcessLaunch()
+[CEF Python] BrowserProcessHandler_OnBeforeChildProcessLaunch()
+[CEF Python] CreateBrowserSync() called
+[CEF Python] Initialize() called
+[CEF Python] CefExecuteProcess(): exitCode = -1
+[CEF Python] CefInitialize()
+[CEF Python] App_OnBeforeCommandLineProcessing_BrowserProcess()
+[CEF Python] App: Command line string for the browser process: "C:\Python27\python.exe" --browser-subprocess-path="C:\Python27\lib\site-packages\cefpython3/subprocess" --lang=en-US --log-severity=info --enable-release-dcheck --resources-dir-path="C:\Python27\lib\site-packages\cefpython3" --locales-dir-path="C:\Python27\lib\site-packages\cefpython3/locales" --remote-debugging-port=49604 --no-sandbox "H:\gamespider\Scrapy\tutorial\cBrowser\testNotebook.py"
+[CEF Python] BrowserProcessHandler_OnBeforeChildProcessLaunch()
+[CEF Python] BrowserProcessHandler_OnBeforeChildProcessLaunch()
+[CEF Python] Initialize() called
+[CEF Python] CefExecuteProcess(): exitCode = -1
+[CEF Python] CefInitialize()
+[CEF Python] App_OnBeforeCommandLineProcessing_BrowserProcess()
+[CEF Python] App: Command line string for the browser process: "C:\Python27\python.exe" --browser-subprocess-path="C:\Python27\lib\site-packages\cefpython3/subprocess" --lang=en-US --log-severity=info --enable-release-dcheck --resources-dir-path="C:\Python27\lib\site-packages\cefpython3" --locales-dir-path="C:\Python27\lib\site-packages\cefpython3/locales" --remote-debugging-port=49206 --no-sandbox "H:\gamespider\Scrapy\tutorial\cBrowser\testNotebook.py"
+[CEF Python] BrowserProcessHandler_OnBeforeChildProcessLaunch()
+[CEF Python] BrowserProcessHandler_OnBeforeChildProcessLaunch()
+[CEF Python] CreateBrowserSync() called
+[CEF Python] navigateUrl: www.baidu.com
+[CEF Python] CefBrowser::CreateBrowserSync()
+[CEF Python] App: Browser: OnAfterCreated(): auto_zooming = system_dpi
+
+[CEF Python] App: Browser: SetBrowserDpiSettings: DPI=96 zoom=0
+
+[CEF Python] GetPyBrowser(): creating new PyBrowser, browserId=1
+[CEF Python] BrowserProcessHandler_OnBeforeChildProcessLaunch()
+[CEF Python] CefBrowser::CreateBrowserSync() succeeded
+[CEF Python] del g_pyBrowsers[1]
+[CEF Python] Initialize() called
+[CEF Python] CefExecuteProcess(): exitCode = -1
+[CEF Python] CefInitialize()
+[CEF Python] App_OnBeforeCommandLineProcessing_BrowserProcess()
+[CEF Python] App: Command line string for the browser process: "C:\Python27\python.exe" --browser-subprocess-path="C:\Python27\lib\site-packages\cefpython3/subprocess" --lang=en-US --log-severity=info --enable-release-dcheck --resources-dir-path="C:\Python27\lib\site-packages\cefpython3" --locales-dir-path="C:\Python27\lib\site-packages\cefpython3/locales" --remote-debugging-port=60453 --no-sandbox "H:\gamespider\Scrapy\tutorial\cBrowser\testNotebook.py"
+[CEF Python] BrowserProcessHandler_OnBeforeChildProcessLaunch()
+[CEF Python] BrowserProcessHandler_OnBeforeChildProcessLaunch()
+[CEF Python] CreateBrowserSync() called
+[CEF Python] navigateUrl: www.baidu.com
+[CEF Python] CefBrowser::CreateBrowserSync()
+[CEF Python] App: Browser: OnAfterCreated(): auto_zooming = system_dpi
+
+[CEF Python] App: Browser: SetBrowserDpiSettings: DPI=96 zoom=0
+
+[CEF Python] GetPyBrowser(): creating new PyBrowser, browserId=1
+[CEF Python] BrowserProcessHandler_OnBeforeChildProcessLaunch()
+[CEF Python] CefBrowser::CreateBrowserSync() succeeded
+[CEF Python] del g_pyFrames[1#-4]
+[CEF Python] del g_pyBrowsers[1]
+[CEF Python] Initialize() called
+[CEF Python] CefExecuteProcess(): exitCode = -1
+[CEF Python] CefInitialize()
+[CEF Python] App_OnBeforeCommandLineProcessing_BrowserProcess()
+[CEF Python] App: Command line string for the browser process: "C:\Python27\python.exe" --browser-subprocess-path="C:\Python27\lib\site-packages\cefpython3/subprocess" --lang=en-US --log-file="H:\gamespider\Scrapy\tutorial\cBrowser\debug.log" --log-severity=info --enable-release-dcheck --resources-dir-path="C:\Python27\lib\site-packages\cefpython3" --locales-dir-path="C:\Python27\lib\site-packages\cefpython3/locales" --remote-debugging-port=56108 --no-sandbox "H:\gamespider\Scrapy\tutorial\cBrowser\wxpython.py"
+[CEF Python] BrowserProcessHandler_OnBeforeChildProcessLaunch()
+[CEF Python] BrowserProcessHandler_OnBeforeChildProcessLaunch()
+[CEF Python] QuitMessageLoop()
+[0118/031218:ERROR_REPORT:message_loop.cc(324)] Check failed: false. Must be inside Run to call Quit
+[CEF Python] Shutdown()
+[CEF Python] Initialize() called
+[CEF Python] CefExecuteProcess(): exitCode = -1
+[CEF Python] CefInitialize()
+[CEF Python] App_OnBeforeCommandLineProcessing_BrowserProcess()
+[CEF Python] App: Command line string for the browser process: "C:\Python27\python.exe" --browser-subprocess-path="C:\Python27\lib\site-packages\cefpython3/subprocess" --lang=en-US --log-file="H:\gamespider\Scrapy\tutorial\cBrowser\debug.log" --log-severity=info --enable-release-dcheck --resources-dir-path="C:\Python27\lib\site-packages\cefpython3" --locales-dir-path="C:\Python27\lib\site-packages\cefpython3/locales" --remote-debugging-port=63873 --no-sandbox "H:\gamespider\Scrapy\tutorial\cBrowser\wxpython.py"
+[CEF Python] BrowserProcessHandler_OnBeforeChildProcessLaunch()
+[CEF Python] BrowserProcessHandler_OnBeforeChildProcessLaunch()
+[CEF Python] QuitMessageLoop()
+[0118/031230:ERROR_REPORT:message_loop.cc(324)] Check failed: false. Must be inside Run to call Quit
+[CEF Python] Shutdown()
+[CEF Python] Initialize() called
+[CEF Python] CefExecuteProcess(): exitCode = -1
+[CEF Python] CefInitialize()
+[CEF Python] App_OnBeforeCommandLineProcessing_BrowserProcess()
+[CEF Python] App: Command line string for the browser process: "C:\Python27\python.exe" --browser-subprocess-path="C:\Python27\lib\site-packages\cefpython3/subprocess" --lang=en-US --log-file="H:\gamespider\Scrapy\tutorial\cBrowser\debug.log" --log-severity=info --enable-release-dcheck --resources-dir-path="C:\Python27\lib\site-packages\cefpython3" --locales-dir-path="C:\Python27\lib\site-packages\cefpython3/locales" --remote-debugging-port=58377 --no-sandbox "H:\gamespider\Scrapy\tutorial\cBrowser\wxpython.py"
+[CEF Python] BrowserProcessHandler_OnBeforeChildProcessLaunch()
+[CEF Python] BrowserProcessHandler_OnBeforeChildProcessLaunch()
+[CEF Python] QuitMessageLoop()
+[0118/031340:ERROR_REPORT:message_loop.cc(324)] Check failed: false. Must be inside Run to call Quit
+[CEF Python] Shutdown()
+[CEF Python] Initialize() called
+[CEF Python] CefExecuteProcess(): exitCode = -1
+[CEF Python] CefInitialize()
+[CEF Python] App_OnBeforeCommandLineProcessing_BrowserProcess()
+[CEF Python] App: Command line string for the browser process: "C:\Python27\python.exe" --browser-subprocess-path="C:\Python27\lib\site-packages\cefpython3/subprocess" --lang=en-US --log-file="H:\gamespider\Scrapy\tutorial\cBrowser\debug.log" --log-severity=info --enable-release-dcheck --resources-dir-path="C:\Python27\lib\site-packages\cefpython3" --locales-dir-path="C:\Python27\lib\site-packages\cefpython3/locales" --remote-debugging-port=52778 --no-sandbox "H:\gamespider\Scrapy\tutorial\cBrowser\wxpython.py"
+[CEF Python] BrowserProcessHandler_OnBeforeChildProcessLaunch()
+[CEF Python] BrowserProcessHandler_OnBeforeChildProcessLaunch()
+[CEF Python] CreateBrowserSync() called
+[CEF Python] navigateUrl: 
+[CEF Python] CefBrowser::CreateBrowserSync()
+[CEF Python] App: Browser: OnAfterCreated(): auto_zooming = system_dpi
+
+[CEF Python] App: Browser: SetBrowserDpiSettings: DPI=96 zoom=0
+
+[CEF Python] GetPyBrowser(): creating new PyBrowser, browserId=1
+[CEF Python] CefBrowser::CreateBrowserSync() succeeded
+[CEF Python] SendProcessMessage(): message=DoJavascriptBindings, arguments size=1
+[CEF Python] BrowserProcessHandler_OnBeforeChildProcessLaunch()
+[CEF Python] App: Command line string for the renderer process: "C:\Python27\lib\site-packages\cefpython3/subprocess" --type=renderer --no-sandbox --lang=en-US --enable-release-dcheck --lang=en-US --locales-dir-path="C:\Python27\lib\site-packages\cefpython3/locales" --log-file="H:\gamespider\Scrapy\tutorial\cBrowser\debug.log" --log-severity=info --resources-dir-path="C:\Python27\lib\site-packages\cefpython3" --channel="18752.1.236159046\1133905033" /prefetch:673131151
+[CEF Python] App: Renderer: OnProcessMessageReceived(): DoJavascriptBindings
+[CEF Python] App: Renderer: OnContextCreated()
+[CEF Python] App: Renderer: DoJavascriptBindingsForFrame(): bindings are set
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextCreated
+[CEF Python] V8ContextHandler_OnContextCreated()
+[CEF Python] App: Renderer: DoJavascriptBindingsForFrame(): bindings are set
+[0118/031420:INFO:CONSOLE(0)] "Uncaught ReferenceError: $ is not defined", source:  (0)
+[CEF Python] App: Renderer: OnContextReleased()
+[CEF Python] App: Renderer: OnContextCreated()
+[CEF Python] App: Renderer: DoJavascriptBindingsForFrame(): bindings are set
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextReleased
+[CEF Python] V8ContextHandler_OnContextReleased()
+[CEF Python] del g_pyFrames[1#1]
+[CEF Python] App: Browser: OnProcessMessageReceived(): RemovePythonCallbacksForFrame
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextCreated
+[CEF Python] V8ContextHandler_OnContextCreated()
+[CEF Python] BrowserProcessHandler_OnBeforeChildProcessLaunch()
+[0118/031421:INFO:CONSOLE(101)] "一张网页，要经历怎样的过程，才能抵达用户面前？
+一位新人，要经历怎样的成长，才能站在技术之巅？
+探寻这里的秘密；
+体验这里的挑战；
+成为这里的主人；
+加入百度，加入网页搜索，你，可以影响世界。
+", source: https://ss1.bdstatic.com/5eN1bjq8AAUYm2zgoY3K/r/www/cache/static/protocol/https/global/js/all_async_search_21f541da.js (101)
+[0118/031421:INFO:CONSOLE(101)] "请将简历发送至 %c ps_recruiter@baidu.com（ 邮件标题请以“姓名-应聘XX职位-来自console”命名）", source: https://ss1.bdstatic.com/5eN1bjq8AAUYm2zgoY3K/r/www/cache/static/protocol/https/global/js/all_async_search_21f541da.js (101)
+[0118/031421:INFO:CONSOLE(101)] "职位介绍：http://dwz.cn/hr2013", source: https://ss1.bdstatic.com/5eN1bjq8AAUYm2zgoY3K/r/www/cache/static/protocol/https/global/js/all_async_search_21f541da.js (101)
+[0118/031422:INFO:CONSOLE(0)] "event.returnValue is deprecated. Please use the standard event.preventDefault() instead.", source:  (0)
+[CEF Python] QuitMessageLoop()
+[0118/031823:ERROR_REPORT:message_loop.cc(324)] Check failed: false. Must be inside Run to call Quit
+[CEF Python] Shutdown()
+[CEF Python] del g_pyFrames[1#1]
+[CEF Python] del g_pyFrames[1#-4]
+[CEF Python] del g_pyBrowsers[1]
+[0118/031823:ERROR_REPORT:browser_main.cc(126)] Check failed: browser_contexts_.empty(). 
+[CEF Python] App: Renderer: OnContextReleased()
+[CEF Python] App: Renderer: OnBrowserDestroyed()
+[CEF Python] Initialize() called
+[CEF Python] CefExecuteProcess(): exitCode = -1
+[CEF Python] CefInitialize()
+[CEF Python] App_OnBeforeCommandLineProcessing_BrowserProcess()
+[CEF Python] App: Command line string for the browser process: "C:\Python27\python.exe" --browser-subprocess-path="C:\Python27\lib\site-packages\cefpython3/subprocess" --lang=en-US --log-file="H:\gamespider\Scrapy\tutorial\cBrowser\debug.log" --log-severity=info --enable-release-dcheck --resources-dir-path="C:\Python27\lib\site-packages\cefpython3" --locales-dir-path="C:\Python27\lib\site-packages\cefpython3/locales" --remote-debugging-port=58805 --no-sandbox "H:\gamespider\Scrapy\tutorial\cBrowser\wxpython.py"
+[CEF Python] BrowserProcessHandler_OnBeforeChildProcessLaunch()
+[CEF Python] BrowserProcessHandler_OnBeforeChildProcessLaunch()
+[CEF Python] CreateBrowserSync() called
+[CEF Python] navigateUrl: 
+[CEF Python] CefBrowser::CreateBrowserSync()
+[CEF Python] App: Browser: OnAfterCreated(): auto_zooming = system_dpi
+
+[CEF Python] App: Browser: SetBrowserDpiSettings: DPI=96 zoom=0
+
+[CEF Python] GetPyBrowser(): creating new PyBrowser, browserId=1
+[CEF Python] CefBrowser::CreateBrowserSync() succeeded
+[CEF Python] SendProcessMessage(): message=DoJavascriptBindings, arguments size=1
+[CEF Python] BrowserProcessHandler_OnBeforeChildProcessLaunch()
+[CEF Python] App: Command line string for the renderer process: "C:\Python27\lib\site-packages\cefpython3/subprocess" --type=renderer --no-sandbox --lang=en-US --enable-release-dcheck --lang=en-US --locales-dir-path="C:\Python27\lib\site-packages\cefpython3/locales" --log-file="H:\gamespider\Scrapy\tutorial\cBrowser\debug.log" --log-severity=info --resources-dir-path="C:\Python27\lib\site-packages\cefpython3" --channel="16088.1.1816171515\2139164822" /prefetch:673131151
+[CEF Python] App: Renderer: OnProcessMessageReceived(): DoJavascriptBindings
+[CEF Python] App: Renderer: OnContextCreated()
+[CEF Python] App: Renderer: DoJavascriptBindingsForFrame(): bindings are set
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextCreated
+[CEF Python] App: Renderer: DoJavascriptBindingsForFrame(): bindings are set
+[CEF Python] V8ContextHandler_OnContextCreated()
+[CEF Python] App: Renderer: OnContextCreated()
+[CEF Python] App: Renderer: OnContextCreated()
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextCreated
+[CEF Python] V8ContextHandler_OnContextCreated()
+[CEF Python] App: Renderer: OnContextCreated()
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextCreated
+[CEF Python] V8ContextHandler_OnContextCreated()
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextCreated
+[CEF Python] V8ContextHandler_OnContextCreated()
+[CEF Python] App: Renderer: OnContextCreated()
+[0118/031853:INFO:CONSOLE(1)] "JQMIGRATE: Logging is active", source: http://assets.dwstatic.com/b=amkit/gallery&f=jquery-plugin/jquery-migrate.js,mustache/0.8.2/mustache.js&nm&20150507 (1)
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextCreated
+[CEF Python] V8ContextHandler_OnContextCreated()
+[CEF Python] App: Renderer: OnContextReleased()
+[CEF Python] App: Renderer: OnContextCreated()
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextReleased
+[CEF Python] V8ContextHandler_OnContextReleased()
+[CEF Python] del g_pyFrames[1#5]
+[CEF Python] App: Browser: OnProcessMessageReceived(): RemovePythonCallbacksForFrame
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextCreated
+[CEF Python] V8ContextHandler_OnContextCreated()
+[CEF Python] PyTaskRunnable: taskId=1, func=_CreatePopup
+[CEF Python] CreateBrowserSync() called
+[CEF Python] navigateUrl: http://www.5253.com/
+[CEF Python] CefBrowser::CreateBrowserSync()
+[CEF Python] App: Browser: OnAfterCreated(): auto_zooming = system_dpi
+
+[CEF Python] GetPyBrowser(): creating new PyBrowser, browserId=2
+[CEF Python] BrowserProcessHandler_OnBeforeChildProcessLaunch()
+[CEF Python] CefBrowser::CreateBrowserSync() succeeded
+[CEF Python] SendProcessMessage(): message=DoJavascriptBindings, arguments size=1
+[CEF Python] App: Command line string for the renderer process: "C:\Python27\lib\site-packages\cefpython3/subprocess" --type=renderer --no-sandbox --lang=en-US --enable-release-dcheck --lang=en-US --locales-dir-path="C:\Python27\lib\site-packages\cefpython3/locales" --log-file="H:\gamespider\Scrapy\tutorial\cBrowser\debug.log" --log-severity=info --resources-dir-path="C:\Python27\lib\site-packages\cefpython3" --channel="16088.2.2061135709\1434033212" /prefetch:673131151
+[CEF Python] App: Renderer: OnProcessMessageReceived(): DoJavascriptBindings
+[CEF Python] App: Renderer: OnContextCreated()
+[CEF Python] App: Renderer: DoJavascriptBindingsForFrame(): bindings are set
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextCreated
+[CEF Python] V8ContextHandler_OnContextCreated()
+[CEF Python] App: Renderer: DoJavascriptBindingsForFrame(): bindings are set
+[CEF Python] App: Renderer: OnContextCreated()
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextCreated
+[CEF Python] App: Renderer: OnContextCreated()
+[CEF Python] V8ContextHandler_OnContextCreated()
+[CEF Python] App: Renderer: OnContextCreated()
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextCreated
+[CEF Python] V8ContextHandler_OnContextCreated()
+[CEF Python] QuitMessageLoop()
+[CEF Python] Shutdown()
+[CEF Python] del g_pyFrames[1#3]
+[CEF Python] del g_pyFrames[1#2]
+[CEF Python] del g_pyFrames[1#1]
+[CEF Python] del g_pyFrames[1#5]
+[CEF Python] del g_pyFrames[1#4]
+[CEF Python] del g_pyFrames[1#-4]
+[CEF Python] del g_pyBrowsers[1]
+[CEF Python] del g_pyFrames[2#1]
+[CEF Python] App: Renderer: OnContextReleased()
+[CEF Python] del g_pyFrames[2#2]
+[CEF Python] App: Renderer: OnContextReleased()
+[CEF Python] del g_pyFrames[2#3]
+[CEF Python] App: Renderer: OnContextReleased()
+[CEF Python] del g_pyBrowsers[2]
+[CEF Python] App: Renderer: OnContextReleased()
+[0118/031901:ERROR_REPORT:browser_main.cc(126)] Check failed: browser_contexts_.empty(). 
+[CEF Python] GetPyBrowser(): creating new PyBrowser, browserId=2
+[CEF Python] App: Renderer: OnContextReleased()
+[CEF Python] App: Renderer: OnContextReleased()
+[CEF Python] App: Renderer: OnBrowserDestroyed()
+[CEF Python] App: Renderer: OnContextReleased()
+[CEF Python] App: Renderer: OnContextReleased()
+[CEF Python] App: Renderer: OnContextReleased()
+[CEF Python] App: Renderer: OnBrowserDestroyed()
+[CEF Python] Initialize() called
+[CEF Python] CefExecuteProcess(): exitCode = -1
+[CEF Python] CefInitialize()
+[CEF Python] App_OnBeforeCommandLineProcessing_BrowserProcess()
+[CEF Python] App: Command line string for the browser process: "C:\Python27\python.exe" --browser-subprocess-path="C:\Python27\lib\site-packages\cefpython3/subprocess" --lang=en-US --log-file="H:\gamespider\Scrapy\tutorial\cBrowser\debug.log" --log-severity=info --enable-release-dcheck --resources-dir-path="C:\Python27\lib\site-packages\cefpython3" --locales-dir-path="C:\Python27\lib\site-packages\cefpython3/locales" --remote-debugging-port=57366 --no-sandbox "H:\gamespider\Scrapy\tutorial\cBrowser\wxpython.py"
+[CEF Python] BrowserProcessHandler_OnBeforeChildProcessLaunch()
+[CEF Python] BrowserProcessHandler_OnBeforeChildProcessLaunch()
+[CEF Python] CreateBrowserSync() called
+[CEF Python] navigateUrl: 
+[CEF Python] CefBrowser::CreateBrowserSync()
+[CEF Python] App: Browser: OnAfterCreated(): auto_zooming = system_dpi
+
+[CEF Python] App: Browser: SetBrowserDpiSettings: DPI=96 zoom=0
+
+[CEF Python] GetPyBrowser(): creating new PyBrowser, browserId=1
+[CEF Python] CefBrowser::CreateBrowserSync() succeeded
+[CEF Python] SendProcessMessage(): message=DoJavascriptBindings, arguments size=1
+[CEF Python] BrowserProcessHandler_OnBeforeChildProcessLaunch()
+[CEF Python] App: Command line string for the renderer process: "C:\Python27\lib\site-packages\cefpython3/subprocess" --type=renderer --no-sandbox --lang=en-US --enable-release-dcheck --lang=en-US --locales-dir-path="C:\Python27\lib\site-packages\cefpython3/locales" --log-file="H:\gamespider\Scrapy\tutorial\cBrowser\debug.log" --log-severity=info --resources-dir-path="C:\Python27\lib\site-packages\cefpython3" --channel="12680.1.1497762156\1111897608" /prefetch:673131151
+[CEF Python] App: Renderer: OnProcessMessageReceived(): DoJavascriptBindings
+[CEF Python] App: Renderer: OnContextCreated()
+[CEF Python] App: Renderer: DoJavascriptBindingsForFrame(): bindings are set
+[CEF Python] App: Renderer: DoJavascriptBindingsForFrame(): bindings are set
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextCreated
+[CEF Python] V8ContextHandler_OnContextCreated()
+[0118/031930:INFO:CONSOLE(1)] "JQMIGRATE: Logging is active", source: http://assets.dwstatic.com/b=amkit/gallery&f=jquery-plugin/jquery-migrate.js,underscore/1.6.0/underscore.js,mustache/0.8.2/mustache.js&nm&20150507 (1)
+[CEF Python] App: Renderer: OnContextCreated()
+[CEF Python] App: Renderer: OnContextCreated()
+[CEF Python] App: Renderer: OnContextCreated()
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextCreated
+[CEF Python] V8ContextHandler_OnContextCreated()
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextCreated
+[CEF Python] V8ContextHandler_OnContextCreated()
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextCreated
+[CEF Python] V8ContextHandler_OnContextCreated()
+[CEF Python] App: Renderer: OnContextCreated()
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextCreated
+[CEF Python] V8ContextHandler_OnContextCreated()
+[CEF Python] PyTaskRunnable: taskId=1, func=_CreatePopup
+[CEF Python] CreateBrowserSync() called
+[CEF Python] navigateUrl: http://www.5253.com/
+[CEF Python] CefBrowser::CreateBrowserSync()
+[CEF Python] App: Browser: OnAfterCreated(): auto_zooming = system_dpi
+
+[CEF Python] GetPyBrowser(): creating new PyBrowser, browserId=2
+[CEF Python] App: Renderer: OnContextReleased()
+[CEF Python] App: Renderer: OnContextCreated()
+[CEF Python] BrowserProcessHandler_OnBeforeChildProcessLaunch()
+[CEF Python] CefBrowser::CreateBrowserSync() succeeded
+[CEF Python] SendProcessMessage(): message=DoJavascriptBindings, arguments size=1
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextReleased
+[CEF Python] V8ContextHandler_OnContextReleased()
+[CEF Python] del g_pyFrames[1#5]
+[CEF Python] App: Browser: OnProcessMessageReceived(): RemovePythonCallbacksForFrame
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextCreated
+[CEF Python] V8ContextHandler_OnContextCreated()
+[CEF Python] App: Command line string for the renderer process: "C:\Python27\lib\site-packages\cefpython3/subprocess" --type=renderer --no-sandbox --lang=en-US --enable-release-dcheck --lang=en-US --locales-dir-path="C:\Python27\lib\site-packages\cefpython3/locales" --log-file="H:\gamespider\Scrapy\tutorial\cBrowser\debug.log" --log-severity=info --resources-dir-path="C:\Python27\lib\site-packages\cefpython3" --channel="12680.2.19456020\1173849635" /prefetch:673131151
+[CEF Python] App: Renderer: OnProcessMessageReceived(): DoJavascriptBindings
+[CEF Python] App: Renderer: OnContextCreated()
+[CEF Python] App: Renderer: DoJavascriptBindingsForFrame(): bindings are set
+[CEF Python] App: Renderer: DoJavascriptBindingsForFrame(): bindings are set
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextCreated
+[CEF Python] V8ContextHandler_OnContextCreated()
+[CEF Python] App: Renderer: OnContextCreated()
+[CEF Python] App: Renderer: OnContextCreated()
+[CEF Python] App: Renderer: OnContextCreated()
+[CEF Python] BrowserProcessHandler_OnBeforeChildProcessLaunch()
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextCreated
+[CEF Python] V8ContextHandler_OnContextCreated()
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextCreated
+[CEF Python] V8ContextHandler_OnContextCreated()
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextCreated
+[CEF Python] V8ContextHandler_OnContextCreated()
+[0118/031936:INFO:CONSOLE(0)] "event.returnValue is deprecated. Please use the standard event.preventDefault() instead.", source:  (0)
+[CEF Python] QuitMessageLoop()
+[0118/032101:ERROR_REPORT:message_loop.cc(324)] Check failed: false. Must be inside Run to call Quit
+[CEF Python] Shutdown()
+[CEF Python] del g_pyFrames[1#3]
+[CEF Python] del g_pyFrames[1#2]
+[CEF Python] del g_pyFrames[1#1]
+[CEF Python] del g_pyFrames[1#5]
+[CEF Python] del g_pyFrames[1#4]
+[CEF Python] del g_pyFrames[1#-4]
+[CEF Python] del g_pyBrowsers[1]
+[CEF Python] del g_pyFrames[2#4]
+[CEF Python] App: Renderer: OnContextReleased()
+[CEF Python] del g_pyFrames[2#1]
+[CEF Python] App: Renderer: OnContextReleased()
+[CEF Python] del g_pyFrames[2#2]
+[CEF Python] App: Renderer: OnContextReleased()
+[CEF Python] del g_pyFrames[2#3]
+[CEF Python] App: Renderer: OnContextReleased()
+[CEF Python] del g_pyBrowsers[2]
+[CEF Python] App: Renderer: OnContextReleased()
+[0118/032101:ERROR_REPORT:browser_main.cc(126)] Check failed: browser_contexts_.empty(). 
+[CEF Python] App: Renderer: OnContextReleased()
+[CEF Python] App: Renderer: OnContextReleased()
+[CEF Python] App: Renderer: OnContextReleased()
+[CEF Python] App: Renderer: OnContextReleased()
+[CEF Python] App: Renderer: OnBrowserDestroyed()
+[CEF Python] App: Renderer: OnBrowserDestroyed()
+[CEF Python] Initialize() called
+[CEF Python] CefExecuteProcess(): exitCode = -1
+[CEF Python] CefInitialize()
+[CEF Python] App_OnBeforeCommandLineProcessing_BrowserProcess()
+[CEF Python] App: Command line string for the browser process: "C:\Python27\python.exe" --browser-subprocess-path="C:\Python27\lib\site-packages\cefpython3/subprocess" --lang=en-US --log-file="H:\gamespider\Scrapy\tutorial\cBrowser\debug.log" --log-severity=info --enable-release-dcheck --resources-dir-path="C:\Python27\lib\site-packages\cefpython3" --locales-dir-path="C:\Python27\lib\site-packages\cefpython3/locales" --remote-debugging-port=58241 --no-sandbox "H:\gamespider\Scrapy\tutorial\cBrowser\wxpython.py"
+[CEF Python] BrowserProcessHandler_OnBeforeChildProcessLaunch()
+[CEF Python] BrowserProcessHandler_OnBeforeChildProcessLaunch()
+[CEF Python] CreateBrowserSync() called
+[CEF Python] navigateUrl: 
+[CEF Python] CefBrowser::CreateBrowserSync()
+[CEF Python] App: Browser: OnAfterCreated(): auto_zooming = system_dpi
+
+[CEF Python] App: Browser: SetBrowserDpiSettings: DPI=96 zoom=0
+
+[CEF Python] GetPyBrowser(): creating new PyBrowser, browserId=1
+[CEF Python] CefBrowser::CreateBrowserSync() succeeded
+[CEF Python] SendProcessMessage(): message=DoJavascriptBindings, arguments size=1
+[CEF Python] BrowserProcessHandler_OnBeforeChildProcessLaunch()
+[CEF Python] App: Command line string for the renderer process: "C:\Python27\lib\site-packages\cefpython3/subprocess" --type=renderer --no-sandbox --lang=en-US --enable-release-dcheck --lang=en-US --locales-dir-path="C:\Python27\lib\site-packages\cefpython3/locales" --log-file="H:\gamespider\Scrapy\tutorial\cBrowser\debug.log" --log-severity=info --resources-dir-path="C:\Python27\lib\site-packages\cefpython3" --channel="14812.1.9383195\666285662" /prefetch:673131151
+[CEF Python] App: Renderer: OnProcessMessageReceived(): DoJavascriptBindings
+[CEF Python] App: Renderer: OnContextCreated()
+[CEF Python] App: Renderer: DoJavascriptBindingsForFrame(): bindings are set
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextCreated
+[CEF Python] App: Renderer: DoJavascriptBindingsForFrame(): bindings are set
+[CEF Python] V8ContextHandler_OnContextCreated()
+[0118/032118:INFO:CONSOLE(1)] "JQMIGRATE: Logging is active", source: http://assets.dwstatic.com/b=amkit/gallery&f=jquery-plugin/jquery-migrate.js,underscore/1.6.0/underscore.js,mustache/0.8.2/mustache.js&nm&20150507 (1)
+[CEF Python] App: Renderer: OnContextCreated()
+[CEF Python] App: Renderer: OnContextCreated()
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextCreated
+[CEF Python] V8ContextHandler_OnContextCreated()
+[CEF Python] App: Renderer: OnContextCreated()
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextCreated
+[CEF Python] V8ContextHandler_OnContextCreated()
+[CEF Python] App: Browser: OnProcessMessageReceived(): OnContextCreated
+[CEF Python] V8ContextHandler_OnContextCreated()
+[CEF Python] PyTaskRunnable: taskId=1, func=_CreatePopup
+[CEF Python] QuitMessageLoop()
+[CEF Python] Shutdown()
+[CEF Python] del g_pyFrames[1#3]
+[CEF Python] del g_pyFrames[1#2]
+[CEF Python] del g_pyFrames[1#1]
+[CEF Python] del g_pyFrames[1#4]
+[CEF Python] del g_pyFrames[1#-4]
+[CEF Python] del g_pyBrowsers[1]
+[0118/032118:ERROR_REPORT:browser_main.cc(126)] Check failed: browser_contexts_.empty(). 
+[0118/032118:ERROR:ipc_channel_win.cc(404)] pipe error: 232
+[CEF Python] App: Renderer: OnContextReleased()
+[CEF Python] App: Renderer: OnContextReleased()
+[CEF Python] App: Renderer: OnContextReleased()
+[CEF Python] App: Renderer: OnContextReleased()
+[CEF Python] App: Renderer: OnBrowserDestroyed()
+[CEF Python] Initialize() called
+[CEF Python] CefExecuteProcess(): exitCode = -1
+[CEF Python] CefInitialize()
+[CEF Python] App_OnBeforeCommandLineProcessing_BrowserProcess()
+[CEF Python] App: Command line string for the browser process: "C:\Python27\python.exe" --browser-subprocess-path="C:\Python27\lib\site-packages\cefpython3/subprocess" --lang=en-US --log-file="H:\gamespider\Scrapy\tutorial\cBrowser\debug.log" --log-severity=info --enable-release-dcheck --resources-dir-path="C:\Python27\lib\site-packages\cefpython3" --locales-dir-path="C:\Python27\lib\site-packages\cefpython3/locales" --remote-debugging-port=61146 --no-sandbox "H:\gamespider\Scrapy\tutorial\cBrowser\wxpython.py"
+[CEF Python] BrowserProcessHandler_OnBeforeChildProcessLaunch()
+[CEF Python] BrowserProcessHandler_OnBeforeChildProcessLaunch()
+[CEF Python] CreateBrowserSync() called
+[CEF Python] navigateUrl: 
+[CEF Python] CefBrowser::CreateBrowserSync()
+[CEF Python] App: Browser: OnAfterCreated(): auto_zooming = system_dpi
+
+[CEF Python] App: Browser: SetBrowserDpiSettings: DPI=96 zoom=0
+
+[CEF Python] GetPyBrowser(): creating new PyBrowser, browserId=1
+[CEF Python] CefBrowser::CreateBrowserSync() succeeded
+[CEF Python] SendProcessMessage(): message=DoJavascriptBindings, arguments size=1
+[CEF Python] QuitMessageLoop()
+[0118/191759:ERROR_REPORT:message_loop.cc(324)] Check failed: false. Must be inside Run to call Quit
+[CEF Python] Shutdown()
+[CEF Python] del g_pyFrames[1#-4]
+[CEF Python] del g_pyBrowsers[1]

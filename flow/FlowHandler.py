@@ -39,7 +39,7 @@ class FlowHandler:			#定义一个普通类，如果是集成类需要带括号�
 		pass
 	def _onLoadingStateChange(self,browser, isLoading, canGoBack,canGoForward):
 		flowprint(browser,isLoading,canGoBack,canGoForward)
-
+		flowprint('11111111111111111111111111111111111111111111111111111111111')
 		self.stateChangeCount+=1
 		self.stateChange.append({'url':browser.GetUrl(),'l':isLoading})
 		#奇怪的stateChangecount=2，但是stateChange只会apped一次
@@ -48,8 +48,9 @@ class FlowHandler:			#定义一个普通类，如果是集成类需要带括号�
 	def _onLoaded(self,browser, frame, httpStatusCode):
 		#self.items['i']=self.items['i']-1
 		#flowprint(self.items['i'])#模组级变量 以及
-		
-		
+		if frame == browser.GetMainFrame():
+			print "Finished loading main frame: %s (http code = %d)" % (frame.GetUrl(), httpStatusCode)
+		flowprint('22222222222222222222222222222222222222222222222222222222222222|'+str(httpStatusCode))
 		self.loadedCount+=1
 		self.loaded.append(browser.GetUrl())
 		print("FlowHandler url="+browser.GetUrl())

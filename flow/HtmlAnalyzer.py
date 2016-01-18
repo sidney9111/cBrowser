@@ -69,8 +69,9 @@ class HtmlAnalyzer:
         reload(FlowConst)
         lst = FlowConst.Read(sel)
 
-        ret = self.RepeatCheck(lst)
-        if(ret==False):
+        if(lst):
+            # ret = self.RepeatCheck(lst)
+            # if(ret==False):
             for key,value in enumerate(lst):
                 linkSave.add("data",value)
                 print(value)

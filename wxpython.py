@@ -44,6 +44,7 @@ import struct
 sys.path.append("flow")
 from FlowHandler import FlowHandler
 from OutputFrame import OutputFrame
+from MainScrollPanel import MainScrollPanel
 # -----------------------------------------------------------------------------
 # Globals
 
@@ -122,10 +123,31 @@ def ExceptHook(excType, excValue, traceObject):
     cefpython.Shutdown()
     os._exit(1)
 
+class Singleton(object):  
+    def __new__(cls, *args, **kw):  
+        if not hasattr(cls, '_instance'):  
+            orig = super(Singleton, cls)  
+            cls._instance = orig.__new__(cls, *args, **kw)  
+        return cls._instance  
 
+class MainInstance(Singleton):
+    """docstring for MainInstance"""
+    def __init__(self):
+        #super(MainInstance, self).__init__()
+        # self.arg = arg
+        # self.num = num
+        pass
+    def getInstance():
+        return self
+    def getMainPages(self):
+        return self.arg
+    def getNumber(self):
+        return self.num
+DefMainInstance = MainInstance
 class MainFrame(wx.Frame):
     browser = None
     mainPanel = None
+    mainnumber = 1
     def GetHandleForBrowser(self):
         if self.mainPanel:
             return self.mainPanel.GetHandle()
@@ -185,12 +207,22 @@ class MainFrame(wx.Frame):
         self.BoxSizer=wx.BoxSizer(wx.VERTICAL)
         self.BoxSizer.Add(self.MPL,proportion =0, border = 0,flag = wx.ALL | wx.EXPAND)
         self.SetSizer(self.BoxSizer)
+
+        pages = wx.Notebook(id=1, name='pages',
+              parent=self, pos=wx.Point(0, 0), size=wx.Size(200, 100),
+              style=0)
+        #DefMainInstance = MainInstance(pages,1)
+        instance= MainInstance()
+        instance.pages=pages
+        instance.number=1
         if TEST_EMBEDDING_IN_PANEL:
             print("Embedding in a wx.Panel!")
             # You also have to set the wx.WANTS_CHARS style for
             # all parent panels/controls, if it's deeply embedded.
-            self.mainPanel = wx.Panel(self, style=wx.WANTS_CHARS)
-        self.BoxSizer.Add(self.mainPanel,proportion =-10, border = 2,flag = wx.ALL | wx.EXPAND)
+            #self.mainPanel = wx.Panel(self, style=wx.WANTS_CHARS)
+            self.mainPanel = wx.Panel(pages, style=wx.WANTS_CHARS)
+        self.BoxSizer.Add(pages,proportion =-10, border = 2,flag = wx.ALL | wx.EXPAND)
+        pages.AddPage(imageId=-1, page=self.mainPanel, select=True, text=u'b2')
 
         # Global client callbacks must be set before browser is created.
         self.clientHandler = ClientHandler()
@@ -253,16 +285,18 @@ class MainFrame(wx.Frame):
         #self.clientHandler.site=str(self.siteAddressText.GetValue())
         self.browser.GetMainFrame().LoadUrl(self.siteAddressText.GetValue())
     def OnTest(self,event):
-        #g_flow.next()
-        # jsreturn = "aa"
-        # jsreturnLine = 0
-        jsframe = self.browser.GetMainFrame()
+        # #g_flow.next()
+        # jsframe = self.browser.GetMainFrame()
 
-        jsframe.ExecuteJavascript ("$('.page__next').find('span').click();")
-        #jsframe.ExecuteJavascript ("$('.page__next').addClass('is-current');")
-        # self.browser.GetMainFrame().ExecuteJavascript("document.getElementById('su').click();")
-        # print(jsreturnLine)
-        # print(jsreturn)
+        # jsframe.ExecuteJavascript ("$('.page__next').find('span').click();")
+        # #jsframe.ExecuteJavascript ("$('.page__next').addClass('is-current');")
+        # # self.browser.GetMainFrame().ExecuteJavascript("document.getElementById('su').click();")
+        # # print(jsreturnLine)
+        # # print(jsreturn)
+        instance = MainInstance()
+        print(instance.number)
+        b2 = MainScrollPanel(instance.pages)
+        instance.pages.AddPage(imageId=-1, page=b2, select=True, text=u'b2')
     def CreateMenu(self):
         filemenu = wx.Menu()
         op = filemenu.Append(1, "Open")
@@ -320,8 +354,10 @@ class MainFrame(wx.Frame):
         # cleanly. Otherwise there may be issues for example with cookies
         # not being flushed to disk when closing app immediately
         # (Issue 158).
-        del self.javascriptExternal.mainBrowser
-        del self.clientHandler.mainBrowser
+        if(self.javascriptExternal.mainBrowser):
+            del self.javascriptExternal.mainBrowser
+        if(self.clientHandler.mainBrowser):
+            del self.clientHandler.mainBrowser
         del self.browser
 
         # Destroy wx frame, this will complete the destruction of CEF browser
@@ -793,8 +829,19 @@ class ClientHandler:
         return not allowPopups
 
     def _CreatePopup(self, url):
-        frame = MainFrame(url=url, popup=True)
-        frame.Show()
+        # frame = MainFrame(url=url, popup=True)
+        # frame.Show()
+        instance = MainInstance()
+        print(instance.number)
+        # b2 = wx.Panel(instance.pages, style=wx.WANTS_CHARS)
+        # windowInfo = cefpython.WindowInfo()
+        # windowInfo.SetAsChild(b2.GetHandle())
+        # browserSettings = {}
+        # browser = cefpython.CreateBrowserSync(windowInfo,
+        #         browserSettings=browserSettings,
+        #         navigateUrl=url)
+        b2 = MainScrollPanel(instance.pages)
+        instance.pages.AddPage(imageId=-1, page=b2, select=True, text=u'b2')
 
     def _OnAfterCreated(self, browser):
         # This is a global callback set using SetGlobalClientCallback().

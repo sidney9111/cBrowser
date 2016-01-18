@@ -29,7 +29,6 @@ class FlowHandler:			#定义一个普通类，如果是集成类需要带括号�
 	stateChangeCount=0
 	loaded =[]
 	loadedCount=0
-	browserLoadedFlag=False
 	loopCount=0
 	def __init__(self):
 		pass				#不能留空，至少写pass
@@ -46,8 +45,6 @@ class FlowHandler:			#定义一个普通类，如果是集成类需要带括号�
 		#奇怪的stateChangecount=2，但是stateChange只会apped一次
 		#而这一次就是Browser加载完毕的事件，和函数名不符合
 		#更奇怪的是第一次执行cefpython ,只执行一次，但按ongo button是执行2次的
-		if(isLoading==False):
-			self.browserLoadedFlag=True
 	def _onLoaded(self,browser, frame, httpStatusCode):
 		#self.items['i']=self.items['i']-1
 		#flowprint(self.items['i'])#模组级变量 以及
@@ -57,14 +54,10 @@ class FlowHandler:			#定义一个普通类，如果是集成类需要带括号�
 		self.loaded.append(browser.GetUrl())
 		print("FlowHandler url="+browser.GetUrl())
 		print("FlowHandler on loaded"+str(self.loadedCount)+"|"+str(self.stateChangeCount)) #5|2
-		for s in self.loaded:
-			print("onload-"+s)
-		for s in self.stateChange:
-			print("sc-"+s['url']+str(s['l']))
-		if(self.browserLoadedFlag==True):#这里
-			self.browser=browser
-			self.stringVisitor = SouceVisitor(self)
-			browser.GetMainFrame().GetSource(self.stringVisitor)
+	
+		# self.browser=browser
+		# self.stringVisitor = SouceVisitor(self)
+		# browser.GetMainFrame().GetSource(self.stringVisitor)
 	def reset(self):
 		self.stateChange =[]
 		self.stateChangeCount=0

@@ -254,6 +254,10 @@ class MainFrame(wx.Frame):
         self.browser = cefpython.CreateBrowserSync(windowInfo,
                 browserSettings=g_browserSettings,
                 navigateUrl=url)
+        #to avoid close problem on win 10 if there was no url loaded before close button click
+        #-------------------------------------------------------
+        self.browser.LoadUrl("file://"+GetApplicationPath("wxpython.html"))
+        #-----------------------------------------------------------
         instance.browser = self.browser
         self.clientHandler.main = self
         self.browser.SetClientHandler(self.clientHandler)
@@ -361,15 +365,16 @@ class MainFrame(wx.Frame):
         # cleanly. Otherwise there may be issues for example with cookies
         # not being flushed to disk when closing app immediately
         # (Issue 158).
+        print('close1')
         if(self.javascriptExternal.mainBrowser):
             del self.javascriptExternal.mainBrowser
         if(self.clientHandler.mainBrowser):
             del self.clientHandler.mainBrowser
         del self.browser
-
+        print('close3')
         # Destroy wx frame, this will complete the destruction of CEF browser
         self.Destroy()
-
+        print('close4')
         # In wx.chromectrl calling browser.CloseBrowser and/or self.Destroy
         # may cause crashes when embedding multiple browsers in tab
         # (Issue 107). In such case instead of calling CloseBrowser/Destroy
@@ -777,20 +782,18 @@ class ClientHandler:
         # For file:// urls the status code = 0
         print("    http status code = %s" % httpStatusCode)
         g_flow._onLoaded(browser,frame,httpStatusCode)
-        # form=TestFrame()
-        # form.load(frame)
-        # form.Show()
-        # #frame.GetText(visitor)
+        # Here is document loaded, then return 200
+        # But not the resource final loaded, such as image or javascript
+        if frame == browser.GetMainFrame():
+            #print "Finished loading main frame: %s (http code = %d)" % (frame.GetUrl(), httpStatusCode)
+            if(httpStatusCode==200):
+                sys.path.append("asserts/scripts")
+                from meituan import meituanBehavior 
+    
+                meiturn = meituanBehavior()
+                meiturn.Run(browser)
         # Tests for the Browser object methods
         self._Browser_LoadUrl(browser)
-        #link=LinkSave()
-        # if not hasattr(self,'logFrame'):
-        #      self.logFrame=LogFrame(self)
-        #      self.logFrame.Show()
-        # if not hasattr(self,'saveHandler'):
-        #     self.saveHandler=PySave()
-        # self.saveHandler.setSite(self.site)
-        # self.saveHandler.onLoadEnd(browser,frame,httpStatusCode)
     def _Browser_LoadUrl(self, browser):
         if browser.GetUrl() == "data:text/html,Test#Browser.LoadUrl":
              browser.LoadUrl("file://"+GetApplicationPath("wxpython.html"))

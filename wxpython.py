@@ -11,7 +11,7 @@ import sys
 reload(sys)
 sys.setdefaultencoding('utf-8')
 #----------------------------------------------------------------------------------
-
+import imp
 import os, sys
 libcef_dll = os.path.join(os.path.dirname(os.path.abspath(__file__)),
         'libcef.dll')
@@ -46,6 +46,8 @@ from FlowHandler import FlowHandler
 from OutputFrame import OutputFrame
 from MainScrollPanel import MainScrollPanel
 from BrowserSettingPanel import BrowserSettingPanel
+sys.path.append("components")
+from ScriptRunner import ScriptRunner
 # -----------------------------------------------------------------------------
 # Globals
 
@@ -62,7 +64,8 @@ g_commandLineSwitches = None
 USE_EVT_IDLE = False # If False then Timer will be used
 
 TEST_EMBEDDING_IN_PANEL = True
-g_flow = FlowHandler()
+g_flow = FlowHandler()#已弃用
+g_scriptRunner = ScriptRunner()
 # -----------------------------------------------------------------------------
 
 def GetApplicationPath(file=None):
@@ -220,6 +223,8 @@ class MainFrame(wx.Frame):
 
         instance.pages=pages
         instance.number=1
+        self.instance = instance
+        instance.loaded_script_activity = True
 
         if TEST_EMBEDDING_IN_PANEL:
             print("Embedding in a wx.Panel!")
@@ -247,7 +252,8 @@ class MainFrame(wx.Frame):
 
         #in here,expect:TEST_EMBEDDING_IN_PANEL==True
         
-    
+        g_scriptRunner.SetScript("meituan")
+        g_scriptRunner.SetActivity(False)
         #topPanel=wx.Panel(self)
         windowInfo = cefpython.WindowInfo()
         windowInfo.SetAsChild(self.GetHandleForBrowser())
@@ -787,11 +793,9 @@ class ClientHandler:
         if frame == browser.GetMainFrame():
             #print "Finished loading main frame: %s (http code = %d)" % (frame.GetUrl(), httpStatusCode)
             if(httpStatusCode==200):
-                sys.path.append("asserts/scripts")
-                from meituan import meituanBehavior 
-    
-                meiturn = meituanBehavior()
-                meiturn.Run(browser)
+                instance = MainInstance()
+                g_scriptRunner.SetActivity(instance.loaded_script_activity)
+                g_scriptRunner.Execute(browser);
         # Tests for the Browser object methods
         self._Browser_LoadUrl(browser)
     def _Browser_LoadUrl(self, browser):

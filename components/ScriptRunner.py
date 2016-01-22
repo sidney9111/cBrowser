@@ -14,7 +14,7 @@ class ScriptRunner():
 			if(self.script_name==""):
 				moduleName = "None"
 
-			fp, pathname, desc = imp.find_module(moduleName, ['./asserts/scripts'])
+			fp, pathname, desc = imp.find_module(moduleName, ['./assets/scripts'])
 			meiturnModule = imp.load_module(moduleName, fp, pathname, desc)
 			meiturnClass = getattr(meiturnModule, "meituanBehavior")()
 			meiturnClass.Run(browser)

@@ -213,7 +213,7 @@ class MainFrame(wx.Frame):
         self.SetSizer(self.BoxSizer)
 
         self.splitter_window = wx.SplitterWindow(self)  
-        self.splitter_rightpanel = BrowserSettingPanel(self.splitter_window)
+        self.splitter_rightpanel = BrowserSettingPanel(name='$$$$$$$$$$$$$$$$$',parent=self.splitter_window)
         pages = wx.Notebook(id=1, name='pages',
               parent=self.splitter_window, pos=wx.Point(0, 0),size=wx.Size(600, 100),
               style=0)
@@ -919,7 +919,8 @@ class ClientHandler:
     def OnJavascriptDialogClosed(self, browser):
         print("[wxpython.py] OnDialogClosed()")
 
-
+import Preferences
+from Utils import _
 class MyApp(wx.App):
     timer = None
     timerID = 1
@@ -931,10 +932,19 @@ class MyApp(wx.App):
         print("__int__")
         print(self)
         print(url)
+        print(os.path.join(Preferences.pyPath, 'locale'))
+        print(Preferences.i18nLanguage)
+           # i18n support
+
 
     def OnInit(self):
         print("oninit ")
-  
+        self.locale = wx.Locale(Preferences.i18nLanguage)
+        wx.Locale.AddCatalogLookupPathPrefix(os.path.join(Preferences.pyPath, 'locale'))
+        # if hasattr(sys, 'frozen'):
+        #     self.locale.AddCatalog('wxstd')
+        self.locale.AddCatalog('boa') 
+
         if not USE_EVT_IDLE:
             print("[wxpython.py] Using TIMER to run CEF message loop")
             self.CreateTimer()

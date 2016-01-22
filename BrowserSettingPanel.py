@@ -1,21 +1,13 @@
-# -*- coding: UTF-8 -*-
 import wx
 from PythonScriptPanel import PythonScriptPanel
+import Utils
+from Utils import _
 class BrowserSettingPanel(wx.Panel):
-	def __init__(self,parent):  
+	def __init__(self,parent,name="aa"):  
+		print("BrowserSettingPanel param testing ",name)
+		print("BrowserSettingPanel param testing ",parent)
 		wx.Panel.__init__(self, parent, -1,size=wx.DefaultSize, style=wx.WANTS_CHARS, name='MainScrollPanel')  
 		self.SetBackgroundColour("green")
-	
-		'''
-		BoxSizer 布局管理
-参数说明：
-orient：wx.VERTICAL（垂直方向） 或 wx.HORIZONTAL（水平方向）
-proportion：控件在方向上所占空间的相对于其他组件比例，
-porportion=0，表示保持本身大小；
-porportion=1，表示在水平方向上占三分之一的空间；
-porportion=2，表示在水平方向上占三分之二的空间。
-flag： wx.TOP | wx.BOTTOM | wx.LEFT | wx.RIGHT | wx.ALL | 
-wx.EXPAND（自动填充）'''
 		#self.BoxSizer= wx.BoxSizer(wx.VERTICAL)
 		
 		#self.SetSizer(self.BoxSizer)
@@ -33,11 +25,11 @@ wx.EXPAND（自动填充）'''
 		# 	box_sizer.Add(wx.StaticText(self.scrolled_window, -1, "ddddd")) 
 		#self.BoxSizer.Add(self.scrolled_window,proportion =1, border = 2,flag = wx.ALL | wx.EXPAND)
 
-		check = wx.CheckBox(self.scrolled_window,label="在新窗口打开页面")
+		check = wx.CheckBox(self.scrolled_window,label=_('Open In New Tab'))
 		check.SetValue(True)
 		
 		#box_sizer.Add(check) 
-		checkLoadImage = wx.CheckBox(self.scrolled_window,label="加载页面图片")
+		checkLoadImage = wx.CheckBox(self.scrolled_window,label="load")
 		checkLoadImage.SetValue(True)
 		#box_sizer.Add(checkLoadImage)
 

@@ -77,7 +77,7 @@ wxALL
         #self.scrolled_window.SetSizer(topBoxSizer)
         #self.scrolled_window.SetBackgroundColour("blue")
         #goButton=wx.Button(self.scrolled_window,label="Go!",size=(50,28))
-        check = wx.CheckBox(self.scrolled_window,label="在新窗口打开页面")
+        check = wx.CheckBox(self.scrolled_window,label=_('About'))
         check.SetValue(True)
 
         checkLoadImage = wx.CheckBox(self.scrolled_window,label="加载页面图片",pos=wx.Point(0,100))

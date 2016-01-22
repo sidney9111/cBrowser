@@ -127,14 +127,9 @@ def ExceptHook(excType, excValue, traceObject):
     cefpython.Shutdown()
     os._exit(1)
 
-class Singleton(object):  
-    def __new__(cls, *args, **kw):  
-        if not hasattr(cls, '_instance'):  
-            orig = super(Singleton, cls)  
-            cls._instance = orig.__new__(cls, *args, **kw)  
-        return cls._instance  
 
-class MainInstance(Singleton):
+
+class MainInstance(Singleton):#from utils
     """docstring for MainInstance"""
     def __init__(self):
         #super(MainInstance, self).__init__()

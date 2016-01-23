@@ -42,12 +42,14 @@ import platform
 import inspect
 import struct
 sys.path.append("flow")
+from FlowManagement import FlowManagement
 from FlowHandler import FlowHandler
 from OutputFrame import OutputFrame
 from MainScrollPanel import MainScrollPanel
 from BrowserSettingPanel import BrowserSettingPanel
 sys.path.append("components")
 from ScriptRunner import ScriptRunner
+from Utils import Singleton
 # -----------------------------------------------------------------------------
 # Globals
 
@@ -142,7 +144,6 @@ class MainInstance(Singleton):#from utils
         return self.arg
     def getNumber(self):
         return self.num
-DefMainInstance = MainInstance
 class MainFrame(wx.Frame):
     browser = None
     mainPanel = None
@@ -213,12 +214,11 @@ class MainFrame(wx.Frame):
               parent=self.splitter_window, pos=wx.Point(0, 0),size=wx.Size(600, 100),
               style=0)
         self.splitter_window.SplitVertically(pages, self.splitter_rightpanel, 100)  #分割面板  
-        #DefMainInstance = MainInstance(pages,1)
-        instance= MainInstance()
 
-        instance.pages=pages
-        instance.number=1
-        self.instance = instance
+        instance= MainInstance()#单例
+        # instance.pages=pages
+        # instance.number=1
+        #self.instance = instance    
         instance.loaded_script_activity = True
 
         if TEST_EMBEDDING_IN_PANEL:
@@ -305,10 +305,17 @@ class MainFrame(wx.Frame):
         # # self.browser.GetMainFrame().ExecuteJavascript("document.getElementById('su').click();")
         # # print(jsreturnLine)
         # # print(jsreturn)
-        instance = MainInstance()
-        print("OnTest "+str(instance.number))
-        b2 = MainScrollPanel(instance.pages)
-        instance.pages.AddPage(imageId=-1, page=b2, select=True, text=u'b2')
+        manager = FlowManagement(self.browser)
+        from FlowOpenUrl import FlowOpenUrl
+        from FlowLoop import FlowLoop
+        item = FlowOpenUrl('http://news.duowan.com/1410/m_276866157894_%d.html')
+        loop = FlowLoop()
+        loop.setOptions({'start':1,'end':4,'item':item})
+        loop.Execute()
+       # instance = MainInstance()
+        # print("OnTest "+str(instance.number))
+        # b2 = MainScrollPanel(instance.pages)
+        # instance.pages.AddPage(imageId=-1, page=b2, select=True, text=u'b2')
     def CreateMenu(self):
         filemenu = wx.Menu()
         op = filemenu.Append(1, "Open")
@@ -782,12 +789,14 @@ class ClientHandler:
         print("    frame url = %s" % frame.GetUrl()[:100])
         # For file:// urls the status code = 0
         print("    http status code = %s" % httpStatusCode)
-        g_flow._onLoaded(browser,frame,httpStatusCode)
+        #g_flow._onLoaded(browser,frame,httpStatusCode)
         # Here is document loaded, then return 200
         # But not the resource final loaded, such as image or javascript
         if frame == browser.GetMainFrame():
             #print "Finished loading main frame: %s (http code = %d)" % (frame.GetUrl(), httpStatusCode)
             if(httpStatusCode==200):
+                manager = FlowManagement(browser)
+                manager._OnLoadEnd()
                 instance = MainInstance()
                 g_scriptRunner.SetActivity(instance.loaded_script_activity)
                 g_scriptRunner.Execute(browser);

@@ -1,13 +1,24 @@
 import Utils
-class FlowItem:
-	def __init_(self,manager):
+class FlowItem(object):
+	def __init__(self,manager=None,options={}):
+		#{'key':'normal'}
+		#self.options = options
+		self.options = {'key':'item'}
+		self.component = None
 		self.manager = manager
-	def Options(self,option):
-		if(option.key == "open_url"):
-			self.manager.browser.OpenUrl(option.url)
-		pass
+	# def Options(self,option):
+	# 	if(option.key == "open_url"):
+	# 		self.manager.browser.OpenUrl(option.url)
+	# 	pass
+	def Decorate(self,component):
+		self.component = component
 	def Execute(self):
-		self.isEnd = true
+		print(self.options)
+		print('FlowItem Executt' + self.options['key'])
+		if(self.component):
+			self.component.Execute()
+		#self.isEnd = True
+
 		pass
-	def CheckExecuted(self):
-		return self.isEnd
+	# def CheckExecuted(self):
+	# 	return self.isEnd

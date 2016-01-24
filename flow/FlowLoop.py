@@ -4,6 +4,7 @@ class FlowLoop(FlowItem):
 		super(FlowLoop,self).__init__(options={'key':'loop'})
 	def Execute(self):
 		print("FlowLoop. exe")
+		super(FlowLoop,self).Log("flowloop exe")
 		if self.options:
 			start = self.options['start']
 			end = self.options['end']

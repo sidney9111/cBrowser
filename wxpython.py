@@ -34,6 +34,7 @@ from SearchFrame import SearchFrame
 from LinkSave import LinkSave
 from TestFrame import TestFrame
 from LogFrame import LogFrame
+from MonitorFrame import MonitorFrame
 import wx
 import time
 import re
@@ -68,6 +69,8 @@ USE_EVT_IDLE = False # If False then Timer will be used
 TEST_EMBEDDING_IN_PANEL = True
 g_flow = FlowHandler()#已弃用
 g_scriptRunner = ScriptRunner()
+EVT_BROSER_TYPE = wx.NewEventType()
+EVT_BROWSER_LOADURL = wx.PyEventBinder(EVT_BROSER_TYPE,1)#2 创建一个事件类型  #3 创建一个绑定器对象  
 # -----------------------------------------------------------------------------
 
 def GetApplicationPath(file=None):
@@ -199,7 +202,8 @@ class MainFrame(wx.Frame):
         self.MPL.SetSizer(topBoxSizer)
         self.Bind(wx.EVT_BUTTON, self.OnButton, goButton)
         self.Bind(wx.EVT_TEXT_ENTER, self.OnButton, self.siteAddressText)
-        
+        self.Bind(EVT_BROWSER_LOADURL,self.OnLoadUrl)
+
         testButton = wx.Button(self.MPL,label="tt",size=(50,28))
         topBoxSizer.Add(testButton,proportion=2,border=5,flag=wx.ALL)
         self.Bind(wx.EVT_BUTTON,self.OnTest,testButton)
@@ -257,7 +261,8 @@ class MainFrame(wx.Frame):
                 navigateUrl=url)
         #to avoid close problem on win 10 if there was no url loaded before close button click
         #-------------------------------------------------------
-        self.browser.LoadUrl("file://"+GetApplicationPath("wxpython.html"))
+        if (url==None or url==""):
+            self.browser.LoadUrl("file://"+GetApplicationPath("wxpython.html"))
         #-----------------------------------------------------------
         instance.browser = self.browser
         self.clientHandler.main = self
@@ -293,6 +298,9 @@ class MainFrame(wx.Frame):
         menu=menubar.GetMenu(1)
         item=menu.FindItemByPosition(0)
         return item.IsChecked()
+    def OnLoadUrl(self,event):
+        print('wxpython on load url')
+        self.siteAddressText.SetValue(event.GetEventArgs())
     def OnButton(self,event):
         #self.clientHandler.site=str(self.siteAddressText.GetValue())
         self.browser.GetMainFrame().LoadUrl(self.siteAddressText.GetValue())
@@ -305,17 +313,40 @@ class MainFrame(wx.Frame):
         # # self.browser.GetMainFrame().ExecuteJavascript("document.getElementById('su').click();")
         # # print(jsreturnLine)
         # # print(jsreturn)
-        manager = FlowManagement(self.browser)
         from FlowOpenUrl import FlowOpenUrl
-        from FlowLoop import FlowLoop
-        item = FlowOpenUrl('http://news.duowan.com/1410/m_276866157894_%d.html')
-        loop = FlowLoop()
-        loop.setOptions({'start':1,'end':4,'item':item})
-        loop.Execute()
-       # instance = MainInstance()
-        # print("OnTest "+str(instance.number))
-        # b2 = MainScrollPanel(instance.pages)
-        # instance.pages.AddPage(imageId=-1, page=b2, select=True, text=u'b2')
+        from FlowScrapy import FlowScrapy
+        print(EVT_BROSER_TYPE)
+        manager = FlowManagement(self)
+        manager.SetEventID(EVT_BROSER_TYPE)
+        manager.preference = MainInstance()
+        # from FrameworkEvent import FrameworkEvent
+        # evt = FrameworkEvent(EVT_BROSER_TYPE,1)
+        # evt.SetEventArgs('aa')
+        # self.GetEventHandler().ProcessEvent(evt)
+        #子页面
+        # item = FlowOpenUrl(manager,
+        #     "http://gz.meituan.com/shop/40548825?acm=UwunyailsW9681367913693545351.40548825.1&mtt=1.index%2Fdefault%2Fpoi.pz.1.ijrh96eq&cks=47185#bdw")
+        # scrapy = FlowScrapy({'path':'//div[@class="fs-section__left"]/p','index':1,'text':True})
+        # item.Decorate(scrapy) 
+        #列表页面        
+        item = FlowOpenUrl(manager,
+            "http://gz.meituan.com/category/meishi?mtt=1.index%2Ffloornew.nc.1.ijs6g6k5")
+        scrapy = FlowScrapy({'script':'meituanfood'})
+        #item.Decorate(scrapy)
+        
+        # 
+        # from FlowLoop import FlowLoop
+        # from FlowItem import FlowItem
+        # itemMain = FlowItem(manager)
+        # item = FlowOpenUrl('http://news.duowan.com/1410/m_276866157894_%d.html')
+        # from FlowLog import FlowLog
+        # log = FlowLog()
+        # item.Decorate(log)
+        # loop = FlowLoop()
+        # loop.setOptions({'start':1,'end':4,'item':item})
+        # itemMain.Decorate(loop)
+        item.Execute()
+ 
     def CreateMenu(self):
         filemenu = wx.Menu()
         op = filemenu.Append(1, "Open")
@@ -323,8 +354,13 @@ class MainFrame(wx.Frame):
         exit = filemenu.Append(2, "Exit")
         self.Bind(wx.EVT_MENU, self.OnClose, exit)
         windowsmenu=wx.Menu()
-        outputwindow=windowsmenu.Append(5,"Output")
+        outputwindow=windowsmenu.Append(5,"&Output\tCtrl+O",kind=wx.ITEM_CHECK)
+
+        monitorFrame = windowsmenu.Append(6,"&Monitor\tCtrl+M",kind=wx.ITEM_CHECK)
+        #monitorFrame.SetBitmap(wx.Bitmap('exit.png'))
+        monitorFrame.Check(True)
         self.Bind(wx.EVT_MENU,self.OnWindow_output,outputwindow)
+        self.Bind(wx.EVT_MENU,self.OnWindow_monitor,monitorFrame)
 
         aboutmenu = wx.Menu()
         ab=aboutmenu.Append(3, "CEF Python")
@@ -340,8 +376,22 @@ class MainFrame(wx.Frame):
         menubar.Append(windowsmenu,"&Windows")
         menubar.Append(aboutmenu, "&About")
         self.SetMenuBar(menubar)
+    def OnWindow_monitor(self,event):
+        pass
     def OnWindow_output(self,event):
-        OutputFrame().Show()
+        if (hasattr(self,'outputFrame')==False):
+            self.outputFrame = OutputFrame()
+            self.outputFrame.Show()
+            print("OnWindow_output none")
+        else:
+            if (self.outputFrame!=None and self.outputFrame.IsShown()):
+                self.outputFrame.Close()
+            else:
+                self.outputFrame = OutputFrame()
+                self.outputFrame.Show()    
+            print(self.outputFrame==None)
+        
+        
     def OnAbout(self,event):
         pass
     def OnOpen(self,event):
@@ -860,19 +910,12 @@ class ClientHandler:
         return not allowPopups
 
     def _CreatePopup(self, url):
-        # frame = MainFrame(url=url, popup=True)
-        # frame.Show()
-        instance = MainInstance()
-        #print(instance.number)
-        # b2 = wx.Panel(instance.pages, style=wx.WANTS_CHARS)
-        # windowInfo = cefpython.WindowInfo()
-        # windowInfo.SetAsChild(b2.GetHandle())
-        # browserSettings = {}
-        # browser = cefpython.CreateBrowserSync(windowInfo,
-        #         browserSettings=browserSettings,
-        #         navigateUrl=url)
+        frame = MainFrame(url=url, popup=True)
+        frame.Show()
+    
         
-        instance.browser.LoadUrl(url)
+        # instance = MainInstance()
+        # instance.browser.LoadUrl(url)
     def _OnAfterCreated(self, browser):
         # This is a global callback set using SetGlobalClientCallback().
         print("[wxpython.py] LifespanHandler::_OnAfterCreated()")
@@ -955,10 +998,10 @@ class MyApp(wx.App):
         #self.mainFrame = MainFrame()
         if hasattr(self,"url"):
             self.OnSearchButton(self.url)
-        else:
-            self.mainFrame=SearchFrame(self,self.index)
-            self.SetTopWindow(self.mainFrame)
-            self.mainFrame.Show()
+        # else:
+        #     self.mainFrame=SearchFrame(self,self.index)
+        #     self.SetTopWindow(self.mainFrame)
+        #     self.mainFrame.Show()
         return True
     def OnSearchButton(self,evt,frame=None,textCtrl=None):
         if textCtrl:
@@ -1131,6 +1174,9 @@ if __name__ == '__main__':
 
     #app = MyApp(False,"http://www.sohu.com")
     app = MyApp("",1)
+    preference = MainInstance()
+    preference.monitorFrame = MonitorFrame()
+    preference.monitorFrame.Show()
     app.MainLoop()
     print('main loop finished')
     # Let wx.App destructor do the cleanup before calling

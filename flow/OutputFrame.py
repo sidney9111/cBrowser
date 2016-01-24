@@ -7,8 +7,9 @@ http://www.blog.pythonlibrary.org/2010/04/04/wxpython-grid-tips-and-tricks/
 import wx
 import wx.grid as  gridlib
 from LinkSave import LinkSave
+from Utils import Singleton2
 class OutputFrame(wx.Frame):
- 
+    #__metaclass__ = Singleton2
     def __init__(self):
         wx.Frame.__init__(self, None, wx.ID_ANY, 
                           "Grid with Popup Menu")

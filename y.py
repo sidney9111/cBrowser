@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 import random
- 
+
+from flow.FlowItem import FlowItem
 def get_data():
     """返回0到9之间的3个随机数，模拟异步操作"""
     return random.sample(range(10), 3)
@@ -26,10 +27,18 @@ def produce(consumer):
         yield
  
 if __name__ == '__main__':
-    consumer = consume()
-    consumer.send(None) 
-    producer = produce(consumer)
+    item = FlowItem()
+    print(item)
+
+    boa = [{'name':'//h/a/img/@href','index':1}]
+    boa[0]['key']=38
+    print(boa)
+    print(boa[0])
+    print(boa[0]['key'])
+    # consumer = consume()
+    # consumer.send(None) 
+    # producer = produce(consumer)
  
-    # for _ in range(10):
-    #     print('Producing...')
-    next(producer)
+    # # for _ in range(10):
+    # #     print('Producisng...')
+    # next(producer)

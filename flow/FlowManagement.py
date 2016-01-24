@@ -1,16 +1,32 @@
 from Utils import Singleton
 import time
+from FrameworkEvent import FrameworkEvent
+import wx
 class FlowManagement(Singleton):
-	def __init__(self,browser=None):
-		if (browser!=None):
-			self.browser = browser
+	def __init__(self,parent=None):
+		if (parent!=None):
+			self.parent = parent
 		self.url = ""
+		#self.EVT_TYPE = evt
+	def SetEventID(self,id):
+		self.EVT_TYPE = id
 	def LoadUrl(self,url):
-		self.browser.LoadUrl(url)
-		self.url = url
-		time.sleep(3)
+		self.parent.browser.LoadUrl(url)
+		print('flow manager load url111111111111111111111111111')
+		print(self.EVT_TYPE)
+		evt = FrameworkEvent(self.EVT_TYPE,1)
+		evt.SetEventArgs(url)
+		self.parent.GetEventHandler().ProcessEvent(evt)
+		self.url = url	
+	def GetBrowser():
+		return self.parent.browser
 	def _OnLoadEnd(self):
 		if (self.url ==""):
 			return
-		if (self.browser.GetMainFrame().GetUrl()==self.url):
+		if (self.parent.browser.GetMainFrame().GetUrl()==self.url):
 			self.url = ""
+	def CheckIsLoading(self):
+		if (self.url==""):
+			return False
+		else:
+			return True

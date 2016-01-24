@@ -67,6 +67,13 @@ class LinkSave:
         #self.parse(f.read())
         f.close()
         return s
+    def readlines(self,name):
+        local='links/' + name + '.txt'
+        f=open(local)
+        lst = f.readlines()
+        #self.parse(f.read())
+        f.close()
+        return lst
     def parse(self,string):
         sel = HtmlXPathSelector(text=string)
         #print(string)

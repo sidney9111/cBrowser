@@ -14,6 +14,17 @@ class meituanfood:
 		print('$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$')
 		print(self.urlFront)
 		#jsframe.ExecuteJavascript ("$('.page__next').find('span').click();")
+	def SetParent(self,parent):
+		self._ = parent
+
+	def Parse(self,string):
+		sel = HtmlXPathSelector(text=string)
+		#main = sel.select('//div[@class="poi-tile-nodeal"]')
+		main = sel.select('//div[contains(@class,"poi-tile-nodeal")]')
+		div = main.select('./div[@class="poi-tile__info"]')
+		title_cf = div.select('./div[@class="basic cf"]/a/text()')
+		self._.Log(len(title_cf))
+		self._.Log(title_cf.extract())
 class SourceVisitor:# 这个类无需写接口，但可直接实现接口
 	def __init__(self,parent):
 		self.parent=parent # self.parent已弃用，只是示范，可以直接这样实现Visitor接口

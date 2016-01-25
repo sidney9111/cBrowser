@@ -354,13 +354,14 @@ class MainFrame(wx.Frame):
         exit = filemenu.Append(2, "Exit")
         self.Bind(wx.EVT_MENU, self.OnClose, exit)
         windowsmenu=wx.Menu()
-        outputwindow=windowsmenu.Append(5,"&Output\tCtrl+O",kind=wx.ITEM_CHECK)
+        #outputwindow=windowsmenu.Append(5,"&Output\tCtrl+O",kind=wx.ITEM_CHECK)
+        self.menuOutputwindow=windowsmenu.Append(5,"&Output\tCtrl+O")
 
-        monitorFrame = windowsmenu.Append(6,"&Monitor\tCtrl+M",kind=wx.ITEM_CHECK)
+        self.menuMonitorFrame = windowsmenu.Append(6,"&Monitor\tCtrl+M")
         #monitorFrame.SetBitmap(wx.Bitmap('exit.png'))
-        monitorFrame.Check(True)
-        self.Bind(wx.EVT_MENU,self.OnWindow_output,outputwindow)
-        self.Bind(wx.EVT_MENU,self.OnWindow_monitor,monitorFrame)
+        #self.menuMonitorFrame.Check(True)
+        self.Bind(wx.EVT_MENU,self.OnWindow_output,self.menuOutputwindow)
+        self.Bind(wx.EVT_MENU,self.OnWindow_monitor,self.menuMonitorFrame)
 
         aboutmenu = wx.Menu()
         ab=aboutmenu.Append(3, "CEF Python")
@@ -377,21 +378,15 @@ class MainFrame(wx.Frame):
         menubar.Append(aboutmenu, "&About")
         self.SetMenuBar(menubar)
     def OnWindow_monitor(self,event):
-        pass
+        preference = MainInstance()
+        if (hasattr(preference, 'monitorFrame')==False):
+            preference.monitorFrame = MonitorFrame()
+        preference.monitorFrame.restore()
     def OnWindow_output(self,event):
-        if (hasattr(self,'outputFrame')==False):
-            self.outputFrame = OutputFrame()
-            self.outputFrame.Show()
-            print("OnWindow_output none")
-        else:
-            if (self.outputFrame!=None and self.outputFrame.IsShown()):
-                self.outputFrame.Close()
-            else:
-                self.outputFrame = OutputFrame()
-                self.outputFrame.Show()    
-            print(self.outputFrame==None)
-        
-        
+        preference = MainInstance()
+        if (hasattr(preference,'outputFrame')==False):
+            preference.outputFrame = OutputFrame()
+        preference.outputFrame.restore()
     def OnAbout(self,event):
         pass
     def OnOpen(self,event):
@@ -419,20 +414,28 @@ class MainFrame(wx.Frame):
         cefpython.WindowUtils.OnSize(self.GetHandleForBrowser(), 0, 0, 0)
 
     def OnClose(self, event):
+        preference = MainInstance()
+        if (hasattr(preference,'monitorFrame')):
+            preference.monitorFrame.Close()
+            #del preference.monitorFrame
+            preference.monitorFrame.Destroy()
+            print('preference monitorFrame close')
+        if (hasattr(preference,'outputFrame')):
+            print('preference close')
+            preference.outputFrame.Close()
+            #del preference.outputFrame
+            preference.outputFrame.Destroy()
         # Remove all CEF browser references so that browser is closed
         # cleanly. Otherwise there may be issues for example with cookies
         # not being flushed to disk when closing app immediately
         # (Issue 158).
-        print('close1')
         if(self.javascriptExternal.mainBrowser):
             del self.javascriptExternal.mainBrowser
         if(self.clientHandler.mainBrowser):
             del self.clientHandler.mainBrowser
         del self.browser
-        print('close3')
         # Destroy wx frame, this will complete the destruction of CEF browser
         self.Destroy()
-        print('close4')
         # In wx.chromectrl calling browser.CloseBrowser and/or self.Destroy
         # may cause crashes when embedding multiple browsers in tab
         # (Issue 107). In such case instead of calling CloseBrowser/Destroy

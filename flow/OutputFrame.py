@@ -8,7 +8,8 @@ import wx
 import wx.grid as  gridlib
 from LinkSave import LinkSave
 from Utils import Singleton2
-class OutputFrame(wx.Frame):
+import Utils
+class OutputFrame(wx.Frame,Utils.FrameRestorerMixin):
     #__metaclass__ = Singleton2
     def __init__(self):
         wx.Frame.__init__(self, None, wx.ID_ANY, 
@@ -28,12 +29,12 @@ class OutputFrame(wx.Frame):
         linklib = LinkSave()
         lst=linklib.readlines("data")
         rowCount=0
-        for s in lst:
         #for number in range(0,10):
+        for s in lst:
             self.grid.AppendRows()
             self.grid.SetCellValue(rowCount,0,s.decode('utf-8'))
             rowCount+=1
-
+        self.Bind(wx.EVT_CLOSE, self.OnCloseWindow)
     #----------------------------------------------------------------------
     def showPopupMenu(self, event):
         """
@@ -56,3 +57,7 @@ class OutputFrame(wx.Frame):
         # will be called before PopupMenu returns.
         self.PopupMenu(menu)
         menu.Destroy()
+    def restore(self):
+        Utils.FrameRestorerMixin.restore(self)
+    def OnCloseWindow(self,event):
+        self.Show(False)

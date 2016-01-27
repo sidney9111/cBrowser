@@ -16,7 +16,17 @@ class FlowItem(object):
 	# 	pass
 	def Decorate(self,component):
 		self.component = component
+		''' Add by Sidney on 20160127
+			If it contains manager, it will naturally deliver it to its decorate target
+			It means that this function will cover the target's manager
+			And this function is not sure it will lead manager to unclose states for it will be delivered much,
+			Obviousely, manager may pass as many times as its decorate times
+			Thie function shoud be always keep on considering. Import!!
+		'''
+		if (self.manager):
+			self.component.manager = self.manager
 	def Execute(self):
+		print("flowitem Execute...")
 		print(self.options)
 		#print('FlowItem Executt' + self.options['key'])
 		if(self.component):

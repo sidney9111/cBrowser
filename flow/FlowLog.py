@@ -1,6 +1,6 @@
 from FlowItem import FlowItem
 class FlowLog(FlowItem):
 	def __init__(self):
-		pass
+		super(FlowLoop,self).__init__()
 	def Execute(self):
 		print('flowlog .........log')

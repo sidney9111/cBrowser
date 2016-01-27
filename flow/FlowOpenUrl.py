@@ -20,7 +20,8 @@ def timer(manager,url,parent):
 	while (manager.CheckIsLoading()==True):
 		time.sleep(2)
 	parent.Log("loaded %s end:"% url)
-	parent.Execute()
+
+	parent.Execute()# flow item execute
 
 	mylock.release()  #Release the lock.  
 class FlowOpenUrl(FlowItem):

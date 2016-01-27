@@ -3,8 +3,12 @@ import time
 from FrameworkEvent import FrameworkEvent
 import wx
 class FlowManagement(Singleton):
+	'''
+	Because FlowManagement is Singleton
+	For multiplue programmer development,the parent param should be seldom inited 
+	'''
 	def __init__(self,parent=None):
-		if (parent!=None):
+		if (parent!=None and hasattr(self,'parent')==False):
 			self.parent = parent
 		self.url = ""
 		#self.EVT_TYPE = evt
@@ -30,3 +34,8 @@ class FlowManagement(Singleton):
 			return False
 		else:
 			return True
+	def ExecuteJavascript(self,js):
+		print("FlowManagement++++")
+		print("FlowManagement++++")
+		print("FlowManagement++++ javascript")
+		self.parent.browser.GetMainFrame().ExecuteJavascript(js)

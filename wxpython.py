@@ -331,9 +331,11 @@ class MainFrame(wx.Frame):
         #列表页面        
         item = FlowOpenUrl(manager,
             "http://gz.meituan.com/category/meishi?mtt=1.index%2Ffloornew.nc.1.ijs6g6k5")
-        scrapy = FlowScrapy({'script':'meituanfood'})
+        #scrapy = FlowScrapy({'script':'meituanfood'})
         #item.Decorate(scrapy)
-        
+        from FlowJavascript import FlowJavascript
+        js = FlowJavascript("alert('bb');")
+        item.Decorate(js)
         # 
         # from FlowLoop import FlowLoop
         # from FlowItem import FlowItem
@@ -848,7 +850,7 @@ class ClientHandler:
         if frame == browser.GetMainFrame():
             #print "Finished loading main frame: %s (http code = %d)" % (frame.GetUrl(), httpStatusCode)
             if(httpStatusCode==200):
-                manager = FlowManagement(browser)
+                manager = FlowManagement()
                 manager._OnLoadEnd()
                 instance = MainInstance()
                 g_scriptRunner.SetActivity(instance.loaded_script_activity)

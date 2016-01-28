@@ -309,14 +309,15 @@ class MainFrame(wx.Frame):
         # #js = "document.write(\"<script src='http://192.168.1.215:8088/animate.js'><\/script>\");"
         # #js = "document.write(\"<script>function Animate(el, prop, opts) {};Animate.prototype.start=function(){alert('start');}; (function(){document.getElementById('click').onclick = function(e){new Animate('ff').start();}})();<\/script>\");"
         # self.browser.GetMainFrame().ExecuteJavascript(js)
-        js = "script=document.createElement('script');script.type='text/javascript';script.src='http://192.168.1.215:8088/jquery.js';document.body.appendChild(script);"
+        js = "script=document.createElement('script');script.type='text/javascript';script.src='http://192.168.0.103:81/jquery.js';document.body.appendChild(script);"
         self.browser.GetMainFrame().ExecuteJavascript(js)
-        js = "script=document.createElement('script');script.type='text/javascript';script.src='http://192.168.1.215:8088/jquery.scrollTo.js';document.body.appendChild(script);"
+        js = "script=document.createElement('script');script.type='text/javascript';script.src='http://192.168.0.103:81/jquery.scrollTo.js';document.body.appendChild(script);"
         self.browser.GetMainFrame().ExecuteJavascript(js)
-        # js = "alert(document.body.scrollHeight);"
-        # self.browser.GetMainFrame().ExecuteJavascript(js)
-        # js = "var height=document.body.scrollHeight;$(window).scrollTo(str(height)+'px',300,function(){if(document.body.scrollHeight>height){$(window).scrollTo(document.body.scrollHeight,300);});"
-        # self.browser.GetMainFrame().ExecuteJavascript(js)
+        js = "script=document.createElement('script');script.type='text/javascript';script.src='http://192.168.0.103:81/animate.js';document.body.appendChild(script);"
+        self.browser.GetMainFrame().ExecuteJavascript(js)
+        js = "new Animate('','',{time:1}).start();"
+        self.browser.GetMainFrame().ExecuteJavascript(js)
+        return
     def OnTest(self,event):
         
         # #g_flow.next()

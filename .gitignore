@@ -4,3 +4,4 @@ cefpython.wiki
 .tags*
 /cython-version.*
 *.pyc
+debug.log

@@ -302,9 +302,23 @@ class MainFrame(wx.Frame):
         print('wxpython on load url')
         self.siteAddressText.SetValue(event.GetEventArgs())
     def OnButton(self,event):
-        #self.clientHandler.site=str(self.siteAddressText.GetValue())
-        self.browser.GetMainFrame().LoadUrl(self.siteAddressText.GetValue())
+        # #self.clientHandler.site=str(self.siteAddressText.GetValue())
+        # #self.browser.GetMainFrame().LoadUrl(self.siteAddressText.GetValue())
+        # #js = "var head=document.getElementsByTagName('head')[0];document.createElement('script');script.type='text/javascript';script.src='http://192.168.1.215:8088/animate.js';head.appendChild(script);new Animate(el,'opcity',{time:1}).start();"
+        # js = "script=document.createElement('script');script.type='text/javascript';script.src='http://192.168.1.215:8088/animate.js';document.body.appendChild(script);"
+        # #js = "document.write(\"<script src='http://192.168.1.215:8088/animate.js'><\/script>\");"
+        # #js = "document.write(\"<script>function Animate(el, prop, opts) {};Animate.prototype.start=function(){alert('start');}; (function(){document.getElementById('click').onclick = function(e){new Animate('ff').start();}})();<\/script>\");"
+        # self.browser.GetMainFrame().ExecuteJavascript(js)
+        js = "script=document.createElement('script');script.type='text/javascript';script.src='http://192.168.1.215:8088/jquery.js';document.body.appendChild(script);"
+        self.browser.GetMainFrame().ExecuteJavascript(js)
+        js = "script=document.createElement('script');script.type='text/javascript';script.src='http://192.168.1.215:8088/jquery.scrollTo.js';document.body.appendChild(script);"
+        self.browser.GetMainFrame().ExecuteJavascript(js)
+        # js = "alert(document.body.scrollHeight);"
+        # self.browser.GetMainFrame().ExecuteJavascript(js)
+        # js = "var height=document.body.scrollHeight;$(window).scrollTo(str(height)+'px',300,function(){if(document.body.scrollHeight>height){$(window).scrollTo(document.body.scrollHeight,300);});"
+        # self.browser.GetMainFrame().ExecuteJavascript(js)
     def OnTest(self,event):
+        
         # #g_flow.next()
         # jsframe = self.browser.GetMainFrame()
 

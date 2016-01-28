@@ -26,18 +26,23 @@
     }
     </script>
     <link href="prism.css" rel="stylesheet">
-    <script src="smoke.min.js"></script>
+    <!-- <script src="smoke.min.js"></script>-->
     <script>
-    window.originalAlert = window.alert
-    window.alert = smoke.alert;
+    // window.originalAlert = window.alert
+    // window.alert = smoke.alert;
     </script>
     <link href="smoke.css" rel="stylesheet">
 </head>
 <body>
 
 Use the mouse context menu to go Back/Forward in history navigation.
-
-<h2>Table of contents</h2>
+<script type="text/javascript" src="http://192.168.1.215:8088/jquery.js"></script>
+<script type="text/javascript" src="http://192.168.1.215:8088/jquery.scrollTo.js"></script>
+<script type="text/javascript" src="http://192.168.1.215:8088/animate.js"></script>
+<script type="text/javascript">
+    $(window).scrollTo("10px",300);
+</script>
+<h2><p><a class="animated" href="#" id="click">click to test</a></p>Table of contents</h2>
 <ol>
     <li><a href="#google-search">Google search</a></li>
     <li><a href="#user-agent">User agent</a></li>

@@ -316,10 +316,7 @@ class MainFrame(wx.Frame):
         # self.browser.GetMainFrame().ExecuteJavascript(js)
         js = "script=document.createElement('script');script.type='text/javascript';script.src='http://192.168.1.215:8088/animate.js';document.body.appendChild(script);"
         self.browser.GetMainFrame().ExecuteJavascript(js)
-        # js = "alert(document.body.scrollHeight);"
-        # self.browser.GetMainFrame().ExecuteJavascript(js)
-        # js = "var height=document.body.scrollHeight;$(window).scrollTo(str(height)+'px',300,function(){if(document.body.scrollHeight>height){$(window).scrollTo(document.body.scrollHeight,300);});"
-        # self.browser.GetMainFrame().ExecuteJavascript(js)
+        return
     def OnTest(self,event):
         
         # #g_flow.next()

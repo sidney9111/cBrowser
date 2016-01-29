@@ -4,4 +4,4 @@ class FlowJavascript(FlowItem):
 		super(FlowJavascript,self).__init__()
 		self.js = js
 	def Execute(self):
-		self.manager.ExecuteJavascript("PyPrint('fff');")
+		self.manager.ExecuteJavascript("scrollTo(0,500);")

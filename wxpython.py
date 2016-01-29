@@ -263,6 +263,7 @@ class MainFrame(wx.Frame):
         #-------------------------------------------------------
         if (url==None or url==""):
             self.browser.LoadUrl("file://"+GetApplicationPath("wxpython.html"))
+            #self.browser.LoadUrl("file://"+GetApplicationPath("jsimport.html"))
         #-----------------------------------------------------------
         instance.browser = self.browser
         self.clientHandler.main = self
@@ -309,9 +310,11 @@ class MainFrame(wx.Frame):
         # #js = "document.write(\"<script src='http://192.168.1.215:8088/animate.js'><\/script>\");"
         # #js = "document.write(\"<script>function Animate(el, prop, opts) {};Animate.prototype.start=function(){alert('start');}; (function(){document.getElementById('click').onclick = function(e){new Animate('ff').start();}})();<\/script>\");"
         # self.browser.GetMainFrame().ExecuteJavascript(js)
-        js = "script=document.createElement('script');script.type='text/javascript';script.src='http://192.168.1.215:8088/jquery.js';document.body.appendChild(script);"
-        self.browser.GetMainFrame().ExecuteJavascript(js)
-        js = "script=document.createElement('script');script.type='text/javascript';script.src='http://192.168.1.215:8088/jquery.scrollTo.js';document.body.appendChild(script);"
+        # js = "script=document.createElement('script');script.type='text/javascript';script.src='http://192.168.1.215:8088/jquery.js';document.body.appendChild(script);"
+        # self.browser.GetMainFrame().ExecuteJavascript(js)
+        # js = "script=document.createElement('script');script.type='text/javascript';script.src='http://192.168.1.215:8088/jquery.scrollTo.js';document.body.appendChild(script);"
+        # self.browser.GetMainFrame().ExecuteJavascript(js)
+        js = "script=document.createElement('script');script.type='text/javascript';script.src='http://192.168.1.215:8088/animate.js';document.body.appendChild(script);"
         self.browser.GetMainFrame().ExecuteJavascript(js)
         # js = "alert(document.body.scrollHeight);"
         # self.browser.GetMainFrame().ExecuteJavascript(js)
@@ -1175,8 +1178,8 @@ if __name__ == '__main__':
     # browser, see the call to CreateBrowserSync.
     g_browserSettings = {
         # "plugins_disabled": True,
-        # "file_access_from_file_urls_allowed": True,
-        # "universal_access_from_file_urls_allowed": True,
+        "file_access_from_file_urls_allowed": True,
+        #"universal_access_from_file_urls_allowed": True,
 
     }
 

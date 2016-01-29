@@ -279,6 +279,7 @@ class MainFrame(wx.Frame):
         self.javascriptExternal = JavascriptExternal(self.browser)
         jsBindings.SetObject("external", self.javascriptExternal)
         jsBindings.SetProperty("sources", GetSources())
+        jsBindings.SetObject("exmanager",FlowManagement(self))
         self.browser.SetJavascriptBindings(jsBindings)
 
         if self.mainPanel:
@@ -314,11 +315,14 @@ class MainFrame(wx.Frame):
         # self.browser.GetMainFrame().ExecuteJavascript(js)
         # js = "script=document.createElement('script');script.type='text/javascript';script.src='http://192.168.1.215:8088/jquery.scrollTo.js';document.body.appendChild(script);"
         # self.browser.GetMainFrame().ExecuteJavascript(js)
-        js = "script=document.createElement('script');script.type='text/javascript';script.src='http://192.168.1.215:8088/animate.js';document.body.appendChild(script);"
+        jsBindings = cefpython.JavascriptBindings(
+            bindToFrames=False, bindToPopups=True)
+        jsBindings.SetObject("exmanager",FlowManagement(self))
+        self.browser.SetJavascriptBindings(jsBindings)
+        js = "script=document.createElement('script');script.type='text/javascript';script.src='http://192.168.0.103:81/animate.js';document.body.appendChild(script);"
         self.browser.GetMainFrame().ExecuteJavascript(js)
         return
     def OnTest(self,event):
-        
         # #g_flow.next()
         # jsframe = self.browser.GetMainFrame()
 
@@ -345,11 +349,12 @@ class MainFrame(wx.Frame):
         #列表页面        
         item = FlowOpenUrl(manager,
             "http://gz.meituan.com/category/meishi?mtt=1.index%2Ffloornew.nc.1.ijs6g6k5")
-        #scrapy = FlowScrapy({'script':'meituanfood'})
+        scrapy = FlowScrapy({'script':'meituanfood'})
         #item.Decorate(scrapy)
         from FlowJavascript import FlowJavascript
         js = FlowJavascript("alert('bb');")
         item.Decorate(js)
+        js.Decorate(scrapy)
         # 
         # from FlowLoop import FlowLoop
         # from FlowItem import FlowItem
@@ -362,7 +367,7 @@ class MainFrame(wx.Frame):
         # loop.setOptions({'start':1,'end':4,'item':item})
         # itemMain.Decorate(loop)
         item.Execute()
- 
+        
     def CreateMenu(self):
         filemenu = wx.Menu()
         op = filemenu.Append(1, "Open")

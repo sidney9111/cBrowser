@@ -2,10 +2,11 @@
 
 // We'll be granting access to only the arunranga.com domain which we think is safe to access this resource as application/xml
 
-if($_SERVER['HTTP_ORIGIN'] == "file://")
+//if($_SERVER['HTTP_ORIGIN'] == "file://")
+if(1==1)
 {
  
-    header('Access-Control-Allow-Origin: file://');
+    header('Access-Control-Allow-Origin: *');
     header('Content-type: application/xml');
     parse_str($_SERVER['QUERY_STRING'], $get);
    	if(count($get)==0){

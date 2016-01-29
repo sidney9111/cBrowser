@@ -2,6 +2,21 @@ from Utils import Singleton
 import time
 from FrameworkEvent import FrameworkEvent
 import wx
+import thread
+import os
+libcef_dll = os.path.join(os.path.dirname(os.path.abspath(__file__)),
+        'libcef.dll')
+if os.path.exists(libcef_dll):
+    # Import a local module
+    if (2,7) <= sys.version_info < (2,8):
+        import cefpython_py27 as cefpython
+    elif (3,4) <= sys.version_info < (3,4):
+        import cefpython_py34 as cefpython
+    else:
+        raise Exception("Unsupported python version: %s" % sys.version)
+else:
+    # Import an installed package
+    from cefpython3 import cefpython
 class FlowManagement(Singleton):
 	'''
 	Because FlowManagement is Singleton
@@ -22,7 +37,7 @@ class FlowManagement(Singleton):
 		evt.SetEventArgs(url)
 		self.parent.GetEventHandler().ProcessEvent(evt)
 		self.url = url	
-	def GetBrowser():
+	def GetBrowser(self):
 		return self.parent.browser
 	def _OnLoadEnd(self):
 		if (self.url ==""):
@@ -39,3 +54,19 @@ class FlowManagement(Singleton):
 		print("FlowManagement++++")
 		print("FlowManagement++++ javascript")
 		self.parent.browser.GetMainFrame().ExecuteJavascript(js)
+	def TestPythonCallback(self):
+		#jsCallback.Call(self.PyCallback)
+		print("[FlowManagement.py]")
+		self.lock = False
+	def PyCallback(self, *args):
+		message = "PyCallback() was executed successfully! "\
+			"Arguments: %s" % str(args)
+		print("[FlowManagement.py] "+message)
+		#self.mainBrowser.GetMainFrame().ExecuteJavascript("window.alert(\"%s\")" % message)
+	def Lock(self):
+		jsBindings = cefpython.JavascriptBindings(bindToFrames=False, bindToPopups=True)
+		jsBindings.SetObject("exmanager",self)
+		self.parent.browser.SetJavascriptBindings(jsBindings)
+		self.lock = True
+
+

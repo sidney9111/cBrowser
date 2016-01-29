@@ -12,7 +12,7 @@ function Animate(el, prop, opts) {
     * begins the animation
     */
   Animate.prototype.start = function() {
-  	alert('xx');
+  	alert('amimate');
   	
     // var that = this;
     // this.startTime = new Date();
@@ -20,29 +20,42 @@ function Animate(el, prop, opts) {
     // this.timer = setInterval(function() {
     //   that._animate.call(that);
     // }, 4);
+    ajaxPage("jquery","http://192.168.0.103:81/jquery.php");
+    ajaxPage("jqueryscroll","http://192.168.0.103:81/jquery.php?j=jquery.scrollTo.js");
+    //$(window).scrollTo("500px",300);
+    scrollTo(500);
   };
-(function(){
-	document.getElementById('click').onclick = function(e){
-		alert('aa');
-		var scrollTo = function(to){
-		$(window).scrollTo(to+"px",300,function(){
-			if(to >= document.body.scrollHeight){}
+  	var vscrollTo = function(to){
+		 //$(window).scrollTo(to+"px",300,function(){
+		$(this).scrollTo(to+"px",300,function(){
+			if(to >= document.body.scrollHeight){
+				console.log("scrollToxxxxxxxxxxxxxxxxxxx height="+document.body.scrollHeight)
+				exmanager.TestPythonCallback();
+			}
 			else{
-				scrollTo(to+500);
+				vscrollTo(to+500);
 				console.log("scrollTo execute...")
 			}
 			});
 		};
-		//new Animate('','',{time:1}).start();
+(function(){
+	// document.getElementById('click').onclick = function(e){
+	// 	alert('aa');
+	
+	// 	//new Animate('','',{time:1}).start();
 		
-		 //加载package.js文件，设置script的id为yy
-	    ajaxPage("jquery","http://192.168.1.215:8088/jquery.php");
-	    ajaxPage("jqueryscroll","http://192.168.1.215:8088/jquery.php?j=jquery.scrollTo.js");
+	// 	 //加载package.js文件，设置script的id为yy
+	//     ajaxPage("jquery","http://192.168.0.103:81/jquery.php");
+	//     ajaxPage("jqueryscroll","http://192.168.0.103:81/jquery.php?j=jquery.scrollTo.js");
+	//     //$(window).scrollTo("500px",300);
+	//     scrollTo(500);
+	// 	// var height = document.body.scrollHeight;
+ //  //   	console.log(height+"px");
+	// }
+	  ajaxPage("jquery","http://192.168.0.103:81/jquery.php");
+	    ajaxPage("jqueryscroll","http://192.168.0.103:81/jquery.php?j=jquery.scrollTo.js");
 	    //$(window).scrollTo("500px",300);
-	    scrollTo(500);
-		// var height = document.body.scrollHeight;
-  //   	console.log(height+"px");
-	}
+	    vscrollTo(500);
 })();
 
  function ajaxPage(sId,url)

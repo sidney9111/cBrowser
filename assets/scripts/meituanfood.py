@@ -24,7 +24,32 @@ class meituanfood:
 		div = main.select('./div[@class="poi-tile__info"]')
 		title_cf = div.select('./div[@class="basic cf"]/a/text()')
 		self._.Log(len(title_cf))
-		self._.Log(title_cf.extract())
+		lst = []
+		for i,value in enumerate(title_cf):
+			lst.append({'name':value.extract().decode()})
+		rate = div.select('./div[@class="extra"]/div[@class="rate"]/a/span/text()')
+		for i,value in enumerate(rate):
+			lst[i]['rate']=value.extract()
+		category = div.select('./div[@class="extra"]/div[@class="tag-list"]')
+		for i,value in enumerate(category):
+			lst[i]['c1']=value.select('./a/text()')[0].extract().encode('utf-8')
+			lst[i]['c2']=value.select('./a/text()')[1].extract()
+		price2 = main.select('./div[@class="poi-tile__money"]/span[@class="avg"]/span/text()')
+		for i,value in enumerate(price2):
+			lst[i]['p2']=value.extract()
+		price1 = main.select('./div[@class="poi-tile__money"]/a[@class="price f2"]/span/text()')
+		for i,value in enumerate(price1):
+			lst[i]['p1']=value.extract()
+		href = main.select('./a[@class="poi-tile__head"]/@href')
+		print(len(lst))
+		for i,value in enumerate(href):
+			print(i)
+			lst[i]['href'] = value.extract()
+		img = main.select('./a[@class="poi-tile__head"]/img/@src')
+		for i,value in enumerate(img):
+			lst[i]['img']=value.extract()
+		for i,value in enumerate(lst):
+			self._.Log(value)
 class SourceVisitor:# 这个类无需写接口，但可直接实现接口
 	def __init__(self,parent):
 		self.parent=parent # self.parent已弃用，只是示范，可以直接这样实现Visitor接口

@@ -1,4 +1,6 @@
 import Utils
+import thread,time
+import threading
 class FlowItem(object):
 	def __init__(self,manager=None,options={}):
 		#{'key':'normal'}
@@ -10,6 +12,7 @@ class FlowItem(object):
 		self.component = None
 		if(manager!=None):
 			self.manager = manager
+		self.locker = Locker("flowitem_locker",self)
 	# def Options(self,option):
 	# 	if(option.key == "open_url"):
 	# 		self.manager.browser.OpenUrl(option.url)
@@ -39,3 +42,26 @@ class FlowItem(object):
 	def Log(self,string):
 		if (self.manager):
 			self.manager.preference.monitorFrame.Log(str(string))
+	def endTransition(self):
+		self.lock = False
+	def beginTransition(self):
+		self.lock = True
+		thread.start_new_thread(locker, (self)) 
+flowitemlock = thread.allocate_lock()  #Allocate a lock  
+def locker(parent):
+	flowitemlock.acquire() 
+	while (parent.lock==True):
+		time.sleep(1)
+	mylock.release()  #Release the lock.  
+
+class  Locker(threading.Thread):
+	def __init__(self, threadname,func):
+		threading.Thread.__init__(self, name=threadname)
+		self.func = func
+	def run(self):
+		self.func()
+		#flowitemlock.acquire() 
+		# while (parent.manager.url!=""):
+		# 	print("locker running.")
+		# 	time.sleep(1)
+		#mylock.release()  #Release the lock.  		

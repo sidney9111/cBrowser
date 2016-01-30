@@ -262,8 +262,8 @@ class MainFrame(wx.Frame):
         #to avoid close problem on win 10 if there was no url loaded before close button click
         #-------------------------------------------------------
         if (url==None or url==""):
-            self.browser.LoadUrl("file://"+GetApplicationPath("wxpython.html"))
-            #self.browser.LoadUrl("file://"+GetApplicationPath("jsimport.html"))
+            #self.browser.LoadUrl("file://"+GetApplicationPath("wxpython.html"))
+            self.browser.LoadUrl("file://"+GetApplicationPath("jsimport.html"))
         #-----------------------------------------------------------
         instance.browser = self.browser
         self.clientHandler.main = self
@@ -304,23 +304,29 @@ class MainFrame(wx.Frame):
         print('wxpython on load url')
         self.siteAddressText.SetValue(event.GetEventArgs())
     def OnButton(self,event):
-        # #self.clientHandler.site=str(self.siteAddressText.GetValue())
         # #self.browser.GetMainFrame().LoadUrl(self.siteAddressText.GetValue())
-        # #js = "var head=document.getElementsByTagName('head')[0];document.createElement('script');script.type='text/javascript';script.src='http://192.168.1.215:8088/animate.js';head.appendChild(script);new Animate(el,'opcity',{time:1}).start();"
-        # js = "script=document.createElement('script');script.type='text/javascript';script.src='http://192.168.1.215:8088/animate.js';document.body.appendChild(script);"
-        # #js = "document.write(\"<script src='http://192.168.1.215:8088/animate.js'><\/script>\");"
-        # #js = "document.write(\"<script>function Animate(el, prop, opts) {};Animate.prototype.start=function(){alert('start');}; (function(){document.getElementById('click').onclick = function(e){new Animate('ff').start();}})();<\/script>\");"
+  
+        # jsBindings = cefpython.JavascriptBindings(
+        #     bindToFrames=False, bindToPopups=True)
+        # jsBindings.SetObject("exmanager",FlowManagement(self))
+        # self.browser.SetJavascriptBindings(jsBindings)
+        # js = "script=document.createElement('script');script.type='text/javascript';script.src='http://192.168.0.103:81/animate.js';document.body.appendChild(script);"
         # self.browser.GetMainFrame().ExecuteJavascript(js)
-        # js = "script=document.createElement('script');script.type='text/javascript';script.src='http://192.168.1.215:8088/jquery.js';document.body.appendChild(script);"
+        manager = FlowManagement(self)
+        manager.SetEventID(EVT_BROSER_TYPE)
+        manager.preference = MainInstance()
+        from FlowLoop import FlowLoop
+        from FlowClick import FlowClick
+        loop = FlowLoop(manager)
+        from FlowOpenUrlAsync import FlowOpenUrlAsync
+        load = FlowOpenUrlAsync(manager,"http://gz.meituan.com/category/meishi?mtt=1.index%2Ffloornew.nc.1.ijs6g6k5")
+        item = FlowClick()
+        load.Decorate(item)
+        loop.setOptions({'start':1,'end':4,'item':load})
+
+        loop.Execute()
+        # js = "$('.next>a').bind('click',function(){window.location.href=this.href;});$('.next>a').click();"
         # self.browser.GetMainFrame().ExecuteJavascript(js)
-        # js = "script=document.createElement('script');script.type='text/javascript';script.src='http://192.168.1.215:8088/jquery.scrollTo.js';document.body.appendChild(script);"
-        # self.browser.GetMainFrame().ExecuteJavascript(js)
-        jsBindings = cefpython.JavascriptBindings(
-            bindToFrames=False, bindToPopups=True)
-        jsBindings.SetObject("exmanager",FlowManagement(self))
-        self.browser.SetJavascriptBindings(jsBindings)
-        js = "script=document.createElement('script');script.type='text/javascript';script.src='http://192.168.0.103:81/animate.js';document.body.appendChild(script);"
-        self.browser.GetMainFrame().ExecuteJavascript(js)
         return
     def OnTest(self,event):
         # #g_flow.next()
@@ -355,8 +361,12 @@ class MainFrame(wx.Frame):
         js = FlowJavascript("alert('bb');")
         item.Decorate(js)
         js.Decorate(scrapy)
+
+        from FlowClick import FlowClick
+        click=FlowClick()
+        scrapy.Decorate(click)
         # 
-        # from FlowLoop import FlowLoop
+        # 
         # from FlowItem import FlowItem
         # itemMain = FlowItem(manager)
         # item = FlowOpenUrl('http://news.duowan.com/1410/m_276866157894_%d.html')

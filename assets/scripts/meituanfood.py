@@ -48,8 +48,10 @@ class meituanfood:
 		img = main.select('./a[@class="poi-tile__head"]/img/@src')
 		for i,value in enumerate(img):
 			lst[i]['img']=value.extract()
+		linkSave = LinkSave()
 		for i,value in enumerate(lst):
 			self._.Log(value)
+			linkSave.add("data",str(value))
 class SourceVisitor:# 这个类无需写接口，但可直接实现接口
 	def __init__(self,parent):
 		self.parent=parent # self.parent已弃用，只是示范，可以直接这样实现Visitor接口

@@ -7,15 +7,15 @@ class FlowLoop(FlowItem):
 		print("FlowLoop. exe")
 		super(FlowLoop,self).Log("flowloop exe")
 
-		self.locker = Locker("flowloop_locker",self.AsyncFunction)
-		self.locker.start()
-		# if self.options:
-		# 	start = self.options['start']
-		# 	end = self.options['end']
-		# 	obj = self.options['item']
-		# 	for i in range(start,end):
-		# 		print("flowloop"+str(i))
-		# 		obj.Execute()
+		# self.locker = Locker("flowloop_locker",self.AsyncFunction)
+		# self.locker.start()
+		if self.options:
+			start = self.options['start']
+			end = self.options['end']
+			obj = self.options['item']
+			for i in range(start,end):
+				print("flowloop normal "+str(i))
+				obj.Execute()
 		# #print(super().options)
 		# super(FlowLoop,self).Execute()
 	def AsyncFunction(self):
@@ -35,3 +35,5 @@ class FlowLoop(FlowItem):
 		print('flowloop setoption')
 		print(opt)
 		self.options = opt
+		if(self.options['item']!=None and self.manager!=None):
+			self.options['item'].manager = self.manager

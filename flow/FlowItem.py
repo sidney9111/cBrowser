@@ -30,7 +30,7 @@ class FlowItem(object):
 			self.component.manager = self.manager
 	def Execute(self):
 		print("flowitem Execute...")
-		print(self.options)
+		print("flowitem key"+str(self.options))
 		#print('FlowItem Executt' + self.options['key'])
 		if(self.component):
 			self.component.Execute()
@@ -39,6 +39,11 @@ class FlowItem(object):
 		pass
 	# def CheckExecuted(self):
 	# 	return self.isEnd
+	def ExecuteAsync(self):
+		self.locker = Locker("flowitem_locker",self.AsyncFunction)
+		self.locker.start()
+	def AsyncFunction(self):
+		self.Execute()
 	def Log(self,string):
 		if (self.manager):
 			self.manager.preference.monitorFrame.Log(str(string))

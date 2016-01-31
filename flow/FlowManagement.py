@@ -31,7 +31,7 @@ class FlowManagement(Singleton):
 		self.EVT_TYPE = id
 	def LoadUrl(self,url):
 		self.parent.browser.LoadUrl(url)
-		print('flow manager load url111111111111111111111111111')
+		print('flow manager load url33333333333333333')
 		print(self.EVT_TYPE)
 		evt = FrameworkEvent(self.EVT_TYPE,1)
 		evt.SetEventArgs(url)
@@ -54,10 +54,11 @@ class FlowManagement(Singleton):
 		print("FlowManagement++++")
 		print("FlowManagement++++ javascript")
 		self.parent.browser.GetMainFrame().ExecuteJavascript(js)
-	def TestPythonCallback(self):
+	def TestPythonCallback(self,url=""):
 		#jsCallback.Call(self.PyCallback)
-		print("[FlowManagement.py]")
+		print("[FlowManagement.py] finsish js call back")
 		self.lock = False
+		self.lockargs = url
 	def PyCallback(self, *args):
 		message = "PyCallback() was executed successfully! "\
 			"Arguments: %s" % str(args)

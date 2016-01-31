@@ -51,6 +51,7 @@ from BrowserSettingPanel import BrowserSettingPanel
 sys.path.append("components")
 from ScriptRunner import ScriptRunner
 from Utils import Singleton
+from components.ComponentScrollWindow import ComponentScrollWindow
 # -----------------------------------------------------------------------------
 # Globals
 
@@ -134,13 +135,17 @@ def ExceptHook(excType, excValue, traceObject):
 
 
 
-class MainInstance(Singleton):#from utils
-    """docstring for MainInstance"""
+class SettingPreference(Singleton):#from utils
     def __init__(self):
-        #super(MainInstance, self).__init__()
+        #super(SettingPreference, self).__init__()
         # self.arg = arg
         # self.num = num
+        #self._loadImage = False
         pass
+    def setLoadImage(self,bol):
+        self._loadImage = bol
+    def getLoadImage(self):
+        return self._loadImage
     def getInstance():
         return self
     def getMainPages(self):
@@ -180,50 +185,55 @@ class MainFrame(wx.Frame):
 
         self.SetSize(size)
 
-        # if not url or url=="":
-        #     url = "file://"+GetApplicationPath("wxpython.html")
-        #     #url="http:www.baidu.com"
+        self.BoxSizer=wx.BoxSizer(wx.VERTICAL)
+        self.SetSizer(self.BoxSizer)
+        if url and url[:4]!="http":
+             url = "file://"+GetApplicationPath("wxpython.html")
         #     # Test hash in url.
         #     # url += "#test-hash"
         # # g_url = url
         # # print("g_url"+g_url)
+        else:
+            self.CreateMenu()
 
-        self.CreateMenu()
+            #search bar
+            self.MPL= wx.Panel(self, style=wx.WANTS_CHARS)
+            self.siteAddressText = wx.TextCtrl(self.MPL,-1,str(url),size=(1,28),style=wx.TE_PROCESS_ENTER)
+
+            goButton=wx.Button(self.MPL,label="Go!",size=(50,28))
+            topBoxSizer=wx.BoxSizer(wx.HORIZONTAL)
+            topBoxSizer.Add(self.siteAddressText,proportion=7,border=5,flag=wx.ALL)
+            topBoxSizer.Add(goButton,proportion=2,border=5,flag=wx.ALL)
+            self.MPL.SetSizer(topBoxSizer)
+            self.Bind(wx.EVT_BUTTON, self.OnButton, goButton)
+            self.Bind(wx.EVT_TEXT_ENTER, self.OnButton, self.siteAddressText)
+            self.Bind(EVT_BROWSER_LOADURL,self.OnLoadUrl)
+
+            testButton = wx.Button(self.MPL,label="tt",size=(50,28))
+            topBoxSizer.Add(testButton,proportion=2,border=5,flag=wx.ALL)
+            self.Bind(wx.EVT_BUTTON,self.OnTest,testButton)
 
 
-        
-        self.MPL= wx.Panel(self, style=wx.WANTS_CHARS)
-        self.siteAddressText = wx.TextCtrl(self.MPL,-1,str(url),size=(1,28),style=wx.TE_PROCESS_ENTER)
-
-        goButton=wx.Button(self.MPL,label="Go!",size=(50,28))
-        topBoxSizer=wx.BoxSizer(wx.HORIZONTAL)
-        topBoxSizer.Add(self.siteAddressText,proportion=7,border=5,flag=wx.ALL)
-        topBoxSizer.Add(goButton,proportion=2,border=5,flag=wx.ALL)
-        self.MPL.SetSizer(topBoxSizer)
-        self.Bind(wx.EVT_BUTTON, self.OnButton, goButton)
-        self.Bind(wx.EVT_TEXT_ENTER, self.OnButton, self.siteAddressText)
-        self.Bind(EVT_BROWSER_LOADURL,self.OnLoadUrl)
-
-        testButton = wx.Button(self.MPL,label="tt",size=(50,28))
-        topBoxSizer.Add(testButton,proportion=2,border=5,flag=wx.ALL)
-        self.Bind(wx.EVT_BUTTON,self.OnTest,testButton)
-
-        self.BoxSizer=wx.BoxSizer(wx.VERTICAL)
-        self.BoxSizer.Add(self.MPL,proportion =0, border = 0,flag = wx.ALL | wx.EXPAND)
-        self.SetSizer(self.BoxSizer)
+            self.BoxSizer.Add(self.MPL,proportion =0, border = 0,flag = wx.ALL | wx.EXPAND)
+            
 
         self.splitter_window = wx.SplitterWindow(self)  
-        self.splitter_rightpanel = BrowserSettingPanel(name='$$$$$$$$$$$$$$$$$',parent=self.splitter_window)
+        self.splitter_window.SetMinimumPaneSize(200)
+        #self.splitter_window.SetScrollRate(20, 20) 
+        #self.splitter_rightpanel = BrowserSettingPanel(name='$$$$$$$$$$$$$$$$$',parent=self.splitter_window)
+        self.splitter_rightpanel = ComponentScrollWindow(self.splitter_window)
+
+        #chkNewTab = wx.CheckBox(self.splitter_rightpanel,label=_('Open In New Tab'))
+        # self.chkNewTab = chkNewTab
+        # self.splitter_rightpanel.Add(chkNewTab)
+        chkLoadImage = wx.CheckBox(self.splitter_rightpanel,label=_('Load Image'))
+        self.chkLoadImage = chkLoadImage
+        self.Bind(wx.EVT_CHECKBOX,self.OnCheck,chkLoadImage)
+        self.splitter_rightpanel.Add(chkLoadImage)
         pages = wx.Notebook(id=1, name='pages',
               parent=self.splitter_window, pos=wx.Point(0, 0),size=wx.Size(600, 100),
               style=0)
-        self.splitter_window.SplitVertically(pages, self.splitter_rightpanel, 100)  #分割面板  
-
-        instance= MainInstance()#单例
-        # instance.pages=pages
-        # instance.number=1
-        #self.instance = instance    
-        instance.loaded_script_activity = True
+        self.splitter_window.SplitVertically(self.splitter_rightpanel,pages,  100)  #分割面板  
 
         if TEST_EMBEDDING_IN_PANEL:
             print("Embedding in a wx.Panel!")
@@ -251,8 +261,7 @@ class MainFrame(wx.Frame):
 
         #in here,expect:TEST_EMBEDDING_IN_PANEL==True
         
-        g_scriptRunner.SetScript("meituan")
-        g_scriptRunner.SetActivity(False)
+   
         #topPanel=wx.Panel(self)
         windowInfo = cefpython.WindowInfo()
         windowInfo.SetAsChild(self.GetHandleForBrowser())
@@ -265,7 +274,7 @@ class MainFrame(wx.Frame):
             #self.browser.LoadUrl("file://"+GetApplicationPath("wxpython.html"))
             self.browser.LoadUrl("file://"+GetApplicationPath("jsimport.html"))
         #-----------------------------------------------------------
-        instance.browser = self.browser
+        
         self.clientHandler.main = self
         self.browser.SetClientHandler(self.clientHandler)
         #goButton=wx.Button(self.mainPanel,label="Go!",size=(50,50))
@@ -303,6 +312,11 @@ class MainFrame(wx.Frame):
     def OnLoadUrl(self,event):
         print('wxpython on load url')
         self.siteAddressText.SetValue(event.GetEventArgs())
+    def OnCheck(self,event):
+        #checkbox = event.GetClientData()
+        #name = checkbox.GetName()
+        SettingPreference().setLoadImage(self.chkLoadImage.IsChecked())
+        print(SettingPreference().getLoadImage())
     def OnButton(self,event):
         # #self.browser.GetMainFrame().LoadUrl(self.siteAddressText.GetValue())
   
@@ -314,7 +328,7 @@ class MainFrame(wx.Frame):
         # self.browser.GetMainFrame().ExecuteJavascript(js)
         manager = FlowManagement(self)
         manager.SetEventID(EVT_BROSER_TYPE)
-        manager.preference = MainInstance()
+        manager.preference = SettingPreference()
         from FlowLoop import FlowLoop
         from FlowClick import FlowClick
         loop = FlowLoop(manager)
@@ -337,12 +351,12 @@ class MainFrame(wx.Frame):
         # # self.browser.GetMainFrame().ExecuteJavascript("document.getElementById('su').click();")
         # # print(jsreturnLine)
         # # print(jsreturn)
-        from FlowOpenUrl import FlowOpenUrl
+        from FlowOpenUrlAsync import FlowOpenUrlAsync
         from FlowScrapy import FlowScrapy
         print(EVT_BROSER_TYPE)
         manager = FlowManagement(self)
         manager.SetEventID(EVT_BROSER_TYPE)
-        manager.preference = MainInstance()
+        manager.preference = SettingPreference()
         # from FrameworkEvent import FrameworkEvent
         # evt = FrameworkEvent(EVT_BROSER_TYPE,1)
         # evt.SetEventArgs('aa')
@@ -353,18 +367,19 @@ class MainFrame(wx.Frame):
         # scrapy = FlowScrapy({'path':'//div[@class="fs-section__left"]/p','index':1,'text':True})
         # item.Decorate(scrapy) 
         #列表页面        
-        item = FlowOpenUrl(manager,
+        item = FlowOpenUrlAsync(manager,
             "http://gz.meituan.com/category/meishi?mtt=1.index%2Ffloornew.nc.1.ijs6g6k5")
         scrapy = FlowScrapy({'script':'meituanfood'})
         #item.Decorate(scrapy)
-        from FlowJavascript import FlowJavascript
-        js = FlowJavascript("alert('bb');")
-        item.Decorate(js)
-        js.Decorate(scrapy)
+        from FlowJavascriptAsync import FlowJavascriptAsync
+        s = "script=document.createElement('script');script.type='text/javascript';script.src='http://192.168.0.103:81/animate.js';document.body.appendChild(script);"
+        js = FlowJavascriptAsync(s)
+        #item.Decorate(js)
+        
 
         from FlowClick import FlowClick
         click=FlowClick()
-        scrapy.Decorate(click)
+
         # 
         # 
         # from FlowItem import FlowItem
@@ -373,10 +388,15 @@ class MainFrame(wx.Frame):
         # from FlowLog import FlowLog
         # log = FlowLog()
         # item.Decorate(log)
-        # loop = FlowLoop()
-        # loop.setOptions({'start':1,'end':4,'item':item})
+        from FlowLoop import FlowLoop
+        loop = FlowLoop(manager)
+        loop.setOptions({'start':1,'end':50,'item':js})
+        item.Decorate(loop)
         # itemMain.Decorate(loop)
-        item.Execute()
+        js.Decorate(scrapy)
+        scrapy.Decorate(click)
+        item.ExecuteAsync()
+        #loop.Execute()
         
     def CreateMenu(self):
         filemenu = wx.Menu()
@@ -409,17 +429,17 @@ class MainFrame(wx.Frame):
         menubar.Append(aboutmenu, "&About")
         self.SetMenuBar(menubar)
     def OnWindow_monitor(self,event):
-        preference = MainInstance()
+        preference = SettingPreference()
         if (hasattr(preference, 'monitorFrame')==False):
             preference.monitorFrame = MonitorFrame()
         preference.monitorFrame.restore()
     def OnWindow_output(self,event):
-        preference = MainInstance()
+        preference = SettingPreference()
         if (hasattr(preference,'outputFrame')==False):
             preference.outputFrame = OutputFrame()
         preference.outputFrame.restore()
     def OnAbout(self,event):
-        pass
+        MainFrame("wxpython.html").Show()
     def OnOpen(self,event):
         #创建标准文件对话框
         dialog = wx.FileDialog(self,"Open file...",os.getcwd(),style=wx.OPEN,wildcard="*.py|*.*")
@@ -445,7 +465,7 @@ class MainFrame(wx.Frame):
         cefpython.WindowUtils.OnSize(self.GetHandleForBrowser(), 0, 0, 0)
 
     def OnClose(self, event):
-        preference = MainInstance()
+        preference = SettingPreference()
         if (hasattr(preference,'monitorFrame')):
             preference.monitorFrame.Close()
             #del preference.monitorFrame
@@ -881,9 +901,9 @@ class ClientHandler:
             if(httpStatusCode==200):
                 manager = FlowManagement()
                 manager._OnLoadEnd()
-                instance = MainInstance()
-                g_scriptRunner.SetActivity(instance.loaded_script_activity)
-                g_scriptRunner.Execute(browser);
+                #instance = MainInstance()
+                #g_scriptRunner.SetActivity(instance.loaded_script_activity)
+                #g_scriptRunner.Execute(browser);
         # Tests for the Browser object methods
         self._Browser_LoadUrl(browser)
     def _Browser_LoadUrl(self, browser):
@@ -946,10 +966,6 @@ class ClientHandler:
     def _CreatePopup(self, url):
         frame = MainFrame(url=url, popup=True)
         frame.Show()
-    
-        
-        # instance = MainInstance()
-        # instance.browser.LoadUrl(url)
     def _OnAfterCreated(self, browser):
         # This is a global callback set using SetGlobalClientCallback().
         print("[wxpython.py] LifespanHandler::_OnAfterCreated()")
@@ -1208,9 +1224,9 @@ if __name__ == '__main__':
 
     #app = MyApp(False,"http://www.sohu.com")
     app = MyApp("",1)
-    preference = MainInstance()
-    preference.monitorFrame = MonitorFrame()
-    preference.monitorFrame.Show()
+    # preference = SettingPreference()
+    # preference.monitorFrame = MonitorFrame()
+    # preference.monitorFrame.Show()
     app.MainLoop()
     print('main loop finished')
     # Let wx.App destructor do the cleanup before calling

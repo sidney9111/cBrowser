@@ -4,7 +4,7 @@ import Utils
 class MonitorFrame(wx.Frame,Utils.FrameRestorerMixin):
 	def __init__(self):
 		wx.Frame.__init__(self, parent=None, id=wx.ID_ANY,
-                title='Log')
+                title='Monitor')
 		size=(800,600)
 		self.categoryClasses = wx.ListCtrl(self, wxID_EVTCATS, style=wx.LC_LIST)
 		

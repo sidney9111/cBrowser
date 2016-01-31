@@ -13,7 +13,7 @@ class OutputFrame(wx.Frame,Utils.FrameRestorerMixin):
     #__metaclass__ = Singleton2
     def __init__(self):
         wx.Frame.__init__(self, None, wx.ID_ANY, 
-                          "Grid with Popup Menu")
+                          "Output")
  
         # Add a panel so it looks the correct on all platforms
         panel = wx.Panel(self, wx.ID_ANY)

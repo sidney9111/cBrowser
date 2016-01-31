@@ -3,6 +3,7 @@ import os
 import sys
 import struct
 from scrapy.selector import HtmlXPathSelector
+import traceback
 def ExceptHook(excType, excValue, traceObject):
     import traceback, os, time, codecs
     # This hook does the following: in case of exception write it to
@@ -68,12 +69,19 @@ class LinkSave:
         f.close()
         return s
     def readlines(self,name):
-        local='links/' + name + '.txt'
-        f=open(local)
-        lst = f.readlines()
-        #self.parse(f.read())
-        f.close()
-        return lst
+        try:
+            local='links/' + name + '.txt'
+            f=open(local)
+            lst = f.readlines()
+            #self.parse(f.read())
+            f.close()
+            return lst
+        except Exception, e:
+            # print(e)
+            # info=sys.exc_info()  
+            # print info[0],":",info[1]  
+            traceback.print_exc()
+            return []
     def parse(self,string):
         sel = HtmlXPathSelector(text=string)
         #print(string)

@@ -9,7 +9,10 @@ class FlowJavascript(FlowItem):
 
 		thread.start_new_thread(runner, (self.manager,super(FlowJavascript,self))) 
 def runner(manager,parent):
-		js = "script=document.createElement('script');script.type='text/javascript';script.src='http://192.168.1.215:8088/animate.js';document.body.appendChild(script);"
+		if(self.js==""):
+			js = "script=document.createElement('script');script.type='text/javascript';script.src='http://192.168.1.215:8088/animate.js';document.body.appendChild(script);"
+		else
+			js = self.js
 		manager.ExecuteJavascript(js)
 		while (manager.lock==True):
 			print("flowjavascript runner...")

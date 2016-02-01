@@ -353,6 +353,8 @@ class MainFrame(wx.Frame):
         # # print(jsreturn)
         from FlowOpenUrlAsync import FlowOpenUrlAsync
         from FlowScrapy import FlowScrapy
+        from FlowJavascriptAsync import FlowJavascriptAsync
+        from FlowClick import FlowClick
         print(EVT_BROSER_TYPE)
         manager = FlowManagement(self)
         manager.SetEventID(EVT_BROSER_TYPE)
@@ -361,42 +363,36 @@ class MainFrame(wx.Frame):
         # evt = FrameworkEvent(EVT_BROSER_TYPE,1)
         # evt.SetEventArgs('aa')
         # self.GetEventHandler().ProcessEvent(evt)
-        #子页面
-        # item = FlowOpenUrl(manager,
-        #     "http://gz.meituan.com/shop/40548825?acm=UwunyailsW9681367913693545351.40548825.1&mtt=1.index%2Fdefault%2Fpoi.pz.1.ijrh96eq&cks=47185#bdw")
-        # scrapy = FlowScrapy({'path':'//div[@class="fs-section__left"]/p','index':1,'text':True})
-        # item.Decorate(scrapy) 
-        #列表页面        
+        # #子页面
+        # # item = FlowOpenUrl(manager,
+        # #     "http://gz.meituan.com/shop/40548825?acm=UwunyailsW9681367913693545351.40548825.1&mtt=1.index%2Fdefault%2Fpoi.pz.1.ijrh96eq&cks=47185#bdw")
+        # # scrapy = FlowScrapy({'path':'//div[@class="fs-section__left"]/p','index':1,'text':True})
+        # # item.Decorate(scrapy) 
+        # #列表页面        
+        # item = FlowOpenUrlAsync(manager,
+        #     "http://gz.meituan.com/category/meishi?mtt=1.index%2Ffloornew.nc.1.ijs6g6k5")
+        # scrapy = FlowScrapy({'script':'meituanfood'})
+        # #item.Decorate(scrapy)
+
+        # s = "script=document.createElement('script');script.type='text/javascript';script.src='http://192.168.0.103:81/animate.js';document.body.appendChild(script);"
+        # js = FlowJavascriptAsync(s)
+  
+        # click=FlowClick()
+        # from FlowLoop import FlowLoop
+        # loop = FlowLoop(manager)
+        # loop.setOptions({'start':1,'end':50,'item':js})
+        # item.Decorate(loop)
+        # js.Decorate(scrapy)
+        # scrapy.Decorate(click)
+        # item.ExecuteAsync()
         item = FlowOpenUrlAsync(manager,
-            "http://gz.meituan.com/category/meishi?mtt=1.index%2Ffloornew.nc.1.ijs6g6k5")
-        scrapy = FlowScrapy({'script':'meituanfood'})
-        #item.Decorate(scrapy)
-        from FlowJavascriptAsync import FlowJavascriptAsync
-        s = "script=document.createElement('script');script.type='text/javascript';script.src='http://192.168.0.103:81/animate.js';document.body.appendChild(script);"
-        js = FlowJavascriptAsync(s)
-        #item.Decorate(js)
+            "http://www.playno1.com/portal.php?mod=list&catid=78")
+        s="buttons =document.getElementsByTagName('button');console.log(buttons);buttons[0].click();"
+        click18 = FlowJavascriptAsync(s)
+        item.Decorate(click18)
+        #scrapy = FlowScrapy({'script':'jianxiong.py'})
         
-
-        from FlowClick import FlowClick
-        click=FlowClick()
-
-        # 
-        # 
-        # from FlowItem import FlowItem
-        # itemMain = FlowItem(manager)
-        # item = FlowOpenUrl('http://news.duowan.com/1410/m_276866157894_%d.html')
-        # from FlowLog import FlowLog
-        # log = FlowLog()
-        # item.Decorate(log)
-        from FlowLoop import FlowLoop
-        loop = FlowLoop(manager)
-        loop.setOptions({'start':1,'end':50,'item':js})
-        item.Decorate(loop)
-        # itemMain.Decorate(loop)
-        js.Decorate(scrapy)
-        scrapy.Decorate(click)
         item.ExecuteAsync()
-        #loop.Execute()
         
     def CreateMenu(self):
         filemenu = wx.Menu()

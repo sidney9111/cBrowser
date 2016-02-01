@@ -318,30 +318,37 @@ class MainFrame(wx.Frame):
         SettingPreference().setLoadImage(self.chkLoadImage.IsChecked())
         print(SettingPreference().getLoadImage())
     def OnButton(self,event):
-        # #self.browser.GetMainFrame().LoadUrl(self.siteAddressText.GetValue())
+        # # #self.browser.GetMainFrame().LoadUrl(self.siteAddressText.GetValue())
   
-        # jsBindings = cefpython.JavascriptBindings(
-        #     bindToFrames=False, bindToPopups=True)
-        # jsBindings.SetObject("exmanager",FlowManagement(self))
-        # self.browser.SetJavascriptBindings(jsBindings)
-        # js = "script=document.createElement('script');script.type='text/javascript';script.src='http://192.168.0.103:81/animate.js';document.body.appendChild(script);"
-        # self.browser.GetMainFrame().ExecuteJavascript(js)
+        # # jsBindings = cefpython.JavascriptBindings(
+        # #     bindToFrames=False, bindToPopups=True)
+        # # jsBindings.SetObject("exmanager",FlowManagement(self))
+        # # self.browser.SetJavascriptBindings(jsBindings)
+        # # js = "script=document.createElement('script');script.type='text/javascript';script.src='http://192.168.0.103:81/animate.js';document.body.appendChild(script);"
+        # # self.browser.GetMainFrame().ExecuteJavascript(js)
+        # manager = FlowManagement(self)
+        # manager.SetEventID(EVT_BROSER_TYPE)
+        # manager.preference = SettingPreference()
+        # from FlowLoop import FlowLoop
+        # from FlowClick import FlowClick
+        # loop = FlowLoop(manager)
+        # from FlowOpenUrlAsync import FlowOpenUrlAsync
+        # load = FlowOpenUrlAsync(manager,"http://gz.meituan.com/category/meishi?mtt=1.index%2Ffloornew.nc.1.ijs6g6k5")
+        # item = FlowClick()
+        # load.Decorate(item)
+        # loop.setOptions({'start':1,'end':4,'item':load})
+
+        # loop.Execute()
+        # # js = "$('.next>a').bind('click',function(){window.location.href=this.href;});$('.next>a').click();"
+        # # self.browser.GetMainFrame().ExecuteJavascript(js)
+        
+        from FlowClick import FlowClick
         manager = FlowManagement(self)
         manager.SetEventID(EVT_BROSER_TYPE)
         manager.preference = SettingPreference()
-        from FlowLoop import FlowLoop
-        from FlowClick import FlowClick
-        loop = FlowLoop(manager)
-        from FlowOpenUrlAsync import FlowOpenUrlAsync
-        load = FlowOpenUrlAsync(manager,"http://gz.meituan.com/category/meishi?mtt=1.index%2Ffloornew.nc.1.ijs6g6k5")
-        item = FlowClick()
-        load.Decorate(item)
-        loop.setOptions({'start':1,'end':4,'item':load})
-
-        loop.Execute()
-        # js = "$('.next>a').bind('click',function(){window.location.href=this.href;});$('.next>a').click();"
-        # self.browser.GetMainFrame().ExecuteJavascript(js)
-        return
+        click = FlowClick(manager,options={'selector':'.nxt','lockjs':False})
+        click.ExecuteAsync()
+        #click.Log("bbc")
     def OnTest(self,event):
         # #g_flow.next()
         # jsframe = self.browser.GetMainFrame()
@@ -353,6 +360,9 @@ class MainFrame(wx.Frame):
         # # print(jsreturn)
         from FlowOpenUrlAsync import FlowOpenUrlAsync
         from FlowScrapy import FlowScrapy
+        from FlowJavascriptAsync import FlowJavascriptAsync
+        from FlowLoop import FlowLoop
+        from FlowClick import FlowClick
         print(EVT_BROSER_TYPE)
         manager = FlowManagement(self)
         manager.SetEventID(EVT_BROSER_TYPE)
@@ -367,36 +377,45 @@ class MainFrame(wx.Frame):
         # scrapy = FlowScrapy({'path':'//div[@class="fs-section__left"]/p','index':1,'text':True})
         # item.Decorate(scrapy) 
         #列表页面        
+        # item = FlowOpenUrlAsync(manager,
+        #     "http://gz.meituan.com/category/meishi?mtt=1.index%2Ffloornew.nc.1.ijs6g6k5")
+        # scrapy = FlowScrapy({'script':'meituanfood'})
+        # 
+        # s = "script=document.createElement('script');script.type='text/javascript';script.src='http://192.168.0.103:81/animate.js';document.body.appendChild(script);"
+        # js = FlowJavascriptAsync(s)
+        # 
+        # click=FlowClick()
+        # 
+        # loop = FlowLoop(manager)
+        # loop.setOptions({'start':1,'end':50,'item':js})
+        # item.Decorate(loop)
+        # js.Decorate(scrapy)
+        # scrapy.Decorate(click)
+        # item.ExecuteAsync()
+        from FlowWaiting200 import FlowWaiting200
         item = FlowOpenUrlAsync(manager,
-            "http://gz.meituan.com/category/meishi?mtt=1.index%2Ffloornew.nc.1.ijs6g6k5")
-        scrapy = FlowScrapy({'script':'meituanfood'})
-        #item.Decorate(scrapy)
-        from FlowJavascriptAsync import FlowJavascriptAsync
-        s = "script=document.createElement('script');script.type='text/javascript';script.src='http://192.168.0.103:81/animate.js';document.body.appendChild(script);"
-        js = FlowJavascriptAsync(s)
-        #item.Decorate(js)
+                "http://www.playno1.com/portal.php?mod=list&catid=78")
+        s= "buttons=document.getElementsByTagName('button');buttons[0].click();"
+        click18 = FlowJavascriptAsync(s,{'lockjs':False})
         
+        item.Decorate(click18)
+        wait = FlowWaiting200("http://www.playno1.com/portal.php?mod=list&catid=78")
+        click18.Decorate(wait)
+        s = "script=document.createElement('script');script.type='text/javascript';script.src='http://192.168.0.103:81/jqueryimport.js';document.body.appendChild(script);"
+        importjquery = FlowJavascriptAsync(s)
+        wait.Decorate(importjquery)
 
-        from FlowClick import FlowClick
-        click=FlowClick()
+        # click = FlowClick(options={'selector':'.nxt'})
+        # wait.Decorate(click)
 
-        # 
-        # 
-        # from FlowItem import FlowItem
-        # itemMain = FlowItem(manager)
-        # item = FlowOpenUrl('http://news.duowan.com/1410/m_276866157894_%d.html')
-        # from FlowLog import FlowLog
-        # log = FlowLog()
-        # item.Decorate(log)
-        from FlowLoop import FlowLoop
-        loop = FlowLoop(manager)
-        loop.setOptions({'start':1,'end':50,'item':js})
-        item.Decorate(loop)
-        # itemMain.Decorate(loop)
-        js.Decorate(scrapy)
-        scrapy.Decorate(click)
+        # loop = FlowLoop(manager)
+        # scrapy = FlowScrapy({'script':'jianxiong'})
+        # #wait.Decorate(scrapy)
+        # click = FlowClick({'selector':'.nxt'})
+        # scrapy.Decorate(click)
+        # loop.setOptions({'start':1,'end':50,'item':scrapy})
+        # importjquery.Decorate(loop)
         item.ExecuteAsync()
-        #loop.Execute()
         
     def CreateMenu(self):
         filemenu = wx.Menu()

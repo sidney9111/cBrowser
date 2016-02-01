@@ -65,6 +65,7 @@ class FlowManagement(Singleton):
 		print("[FlowManagement.py] "+message)
 		#self.mainBrowser.GetMainFrame().ExecuteJavascript("window.alert(\"%s\")" % message)
 	def Lock(self):
+		print("[FlowManagement.py] lock")
 		jsBindings = cefpython.JavascriptBindings(bindToFrames=False, bindToPopups=True)
 		jsBindings.SetObject("exmanager",self)
 		self.parent.browser.SetJavascriptBindings(jsBindings)

@@ -45,7 +45,8 @@ class FlowItem(object):
 	def AsyncFunction(self):
 		self.Execute()
 	def Log(self,string):
-		if (self.manager):
+		if (self.manager and self.manager.preference
+			and hasattr(self.manager.preference,'monitorFrame')):
 			self.manager.preference.monitorFrame.Log(str(string))
 	def endTransition(self):
 		self.lock = False

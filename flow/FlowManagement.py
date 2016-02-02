@@ -54,6 +54,9 @@ class FlowManagement(Singleton):
 		print("FlowManagement++++")
 		print("FlowManagement++++ javascript")
 		self.parent.browser.GetMainFrame().ExecuteJavascript(js)
+		self.source = SourceVisitor()
+		self.parent.browser.GetMainFrame().GetSource(self.source)
+		print("FlowManagement url=",self.parent.browser.GetMainFrame().GetUrl())
 	def TestPythonCallback(self,url=""):
 		#jsCallback.Call(self.PyCallback)
 		print("[FlowManagement.py] finsish js call back")
@@ -65,9 +68,17 @@ class FlowManagement(Singleton):
 		print("[FlowManagement.py] "+message)
 		#self.mainBrowser.GetMainFrame().ExecuteJavascript("window.alert(\"%s\")" % message)
 	def Lock(self):
-		jsBindings = cefpython.JavascriptBindings(bindToFrames=False, bindToPopups=True)
+		print("[FlowManagement.py] lock")
+		for v in cefpython.JavascriptBindings.__dict__:
+			print(v)
+		jsBindings = cefpython.JavascriptBindings(bindToFrames=True, bindToPopups=False)
 		jsBindings.SetObject("exmanager",self)
 		self.parent.browser.SetJavascriptBindings(jsBindings)
 		self.lock = True
-
+class SourceVisitor:
+	def Visit(self,string):
+		print("FlowManagement string visit")
+		from LinkSave import LinkSave
+		save = LinkSave()
+		save.save("temp",string)
 

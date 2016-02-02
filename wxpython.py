@@ -318,30 +318,54 @@ class MainFrame(wx.Frame):
         SettingPreference().setLoadImage(self.chkLoadImage.IsChecked())
         print(SettingPreference().getLoadImage())
     def OnButton(self,event):
-        # #self.browser.GetMainFrame().LoadUrl(self.siteAddressText.GetValue())
+        # # #self.browser.GetMainFrame().LoadUrl(self.siteAddressText.GetValue())
   
-        # jsBindings = cefpython.JavascriptBindings(
-        #     bindToFrames=False, bindToPopups=True)
-        # jsBindings.SetObject("exmanager",FlowManagement(self))
+        # # jsBindings = cefpython.JavascriptBindings(
+        # #     bindToFrames=False, bindToPopups=True)
+        # # jsBindings.SetObject("exmanager",FlowManagement(self))
+        # # self.browser.SetJavascriptBindings(jsBindings)
+        # # js = "script=document.createElement('script');script.type='text/javascript';script.src='http://192.168.0.103:81/animate.js';document.body.appendChild(script);"
+        # # self.browser.GetMainFrame().ExecuteJavascript(js)
+        # manager = FlowManagement(self)
+        # manager.SetEventID(EVT_BROSER_TYPE)
+        # manager.preference = SettingPreference()
+        # from FlowLoop import FlowLoop
+        # from FlowClick import FlowClick
+        # loop = FlowLoop(manager)
+        # from FlowOpenUrlAsync import FlowOpenUrlAsync
+        # load = FlowOpenUrlAsync(manager,"http://gz.meituan.com/category/meishi?mtt=1.index%2Ffloornew.nc.1.ijs6g6k5")
+        # item = FlowClick()
+        # load.Decorate(item)
+        # loop.setOptions({'start':1,'end':4,'item':load})
+
+        # loop.Execute()
+        # # js = "$('.next>a').bind('click',function(){window.location.href=this.href;});$('.next>a').click();"
+        # # self.browser.GetMainFrame().ExecuteJavascript(js)
+        
+        # jsBindings = cefpython.JavascriptBindings(bindToFrames=True, bindToPopups=False)
+        # jsBindings.SetObject("exmanager",self)
         # self.browser.SetJavascriptBindings(jsBindings)
-        # js = "script=document.createElement('script');script.type='text/javascript';script.src='http://192.168.0.103:81/animate.js';document.body.appendChild(script);"
-        # self.browser.GetMainFrame().ExecuteJavascript(js)
+
+        from FlowClick import FlowClick
         manager = FlowManagement(self)
         manager.SetEventID(EVT_BROSER_TYPE)
         manager.preference = SettingPreference()
-        from FlowLoop import FlowLoop
-        from FlowClick import FlowClick
-        loop = FlowLoop(manager)
-        from FlowOpenUrlAsync import FlowOpenUrlAsync
-        load = FlowOpenUrlAsync(manager,"http://gz.meituan.com/category/meishi?mtt=1.index%2Ffloornew.nc.1.ijs6g6k5")
-        item = FlowClick()
-        load.Decorate(item)
-        loop.setOptions({'start':1,'end':4,'item':load})
+        click = FlowClick(manager,options={'selector':'.nxt','lockjs':False})
+        click.ExecuteAsync()
+        # for v in FlowClick.__dict__:
+        #     print(v)
 
-        loop.Execute()
-        # js = "$('.next>a').bind('click',function(){window.location.href=this.href;});$('.next>a').click();"
-        # self.browser.GetMainFrame().ExecuteJavascript(js)
-        return
+        '''site douban
+        #site putong
+        http://www.wenxuecity.com/news/2013/09/24/ent-81398.html
+        #site douban
+        http://www.douban.com/group/topic/48717285/
+        #site sina
+        http://news.sina.com.tw/books/leisure/barticle/9239-7.html
+        #yishu meinv
+        http://www.douban.com/group/topic/64843255/
+        http://news.dlxww.com/news/content/2014-08/29/content_1408222.htm
+        '''
     def OnTest(self,event):
         # #g_flow.next()
         # jsframe = self.browser.GetMainFrame()
@@ -354,6 +378,7 @@ class MainFrame(wx.Frame):
         from FlowOpenUrlAsync import FlowOpenUrlAsync
         from FlowScrapy import FlowScrapy
         from FlowJavascriptAsync import FlowJavascriptAsync
+        from FlowLoop import FlowLoop
         from FlowClick import FlowClick
         print(EVT_BROSER_TYPE)
         manager = FlowManagement(self)
@@ -363,35 +388,56 @@ class MainFrame(wx.Frame):
         # evt = FrameworkEvent(EVT_BROSER_TYPE,1)
         # evt.SetEventArgs('aa')
         # self.GetEventHandler().ProcessEvent(evt)
-        # #子页面
-        # # item = FlowOpenUrl(manager,
-        # #     "http://gz.meituan.com/shop/40548825?acm=UwunyailsW9681367913693545351.40548825.1&mtt=1.index%2Fdefault%2Fpoi.pz.1.ijrh96eq&cks=47185#bdw")
-        # # scrapy = FlowScrapy({'path':'//div[@class="fs-section__left"]/p','index':1,'text':True})
-        # # item.Decorate(scrapy) 
-        # #列表页面        
+        #子页面
+        # item = FlowOpenUrl(manager,
+        #     "http://gz.meituan.com/shop/40548825?acm=UwunyailsW9681367913693545351.40548825.1&mtt=1.index%2Fdefault%2Fpoi.pz.1.ijrh96eq&cks=47185#bdw")
+        # scrapy = FlowScrapy({'path':'//div[@class="fs-section__left"]/p','index':1,'text':True})
+        # item.Decorate(scrapy) 
+        #列表页面        
         # item = FlowOpenUrlAsync(manager,
         #     "http://gz.meituan.com/category/meishi?mtt=1.index%2Ffloornew.nc.1.ijs6g6k5")
         # scrapy = FlowScrapy({'script':'meituanfood'})
-        # #item.Decorate(scrapy)
-
+        # 
         # s = "script=document.createElement('script');script.type='text/javascript';script.src='http://192.168.0.103:81/animate.js';document.body.appendChild(script);"
         # js = FlowJavascriptAsync(s)
-  
+        # 
         # click=FlowClick()
-        # from FlowLoop import FlowLoop
+        # 
+
         # loop = FlowLoop(manager)
         # loop.setOptions({'start':1,'end':50,'item':js})
         # item.Decorate(loop)
         # js.Decorate(scrapy)
         # scrapy.Decorate(click)
         # item.ExecuteAsync()
+        from FlowWaiting200 import FlowWaiting200
+        # item = FlowOpenUrlAsync(manager,
+        #         "http://www.playno1.com/portal.php?mod=list&catid=78")
         item = FlowOpenUrlAsync(manager,
-            "http://www.playno1.com/portal.php?mod=list&catid=78")
-        s="buttons =document.getElementsByTagName('button');console.log(buttons);buttons[0].click();"
-        click18 = FlowJavascriptAsync(s)
-        item.Decorate(click18)
-        #scrapy = FlowScrapy({'script':'jianxiong.py'})
+            "http://www.playno1.com/portal.php?mod=list&catid=78&page=5")
+        s= "buttons=document.getElementsByTagName('button');buttons[0].click();"
+        click18 = FlowJavascriptAsync(s,{'lockjs':False})
         
+        item.Decorate(click18)
+        wait = FlowWaiting200("http://www.playno1.com/portal.php?mod=list&catid=78")
+        click18.Decorate(wait)
+        s = "script=document.createElement('script');script.type='text/javascript';script.src='http://192.168.1.215:8088/jqueryimport.js';document.body.appendChild(script);"
+        importjquery = FlowJavascriptAsync(s)
+        wait.Decorate(importjquery)
+
+        click = FlowClick(options={'selector':'.nxt'})
+        wait.Decorate(click)
+
+        click2 = FlowClick(options={'selector':'.nxt'})
+        click.Decorate(click2)
+
+        # loop = FlowLoop(manager)
+        # scrapy = FlowScrapy({'script':'jianxiong'})
+        # #wait.Decorate(scrapy)
+        # click = FlowClick({'selector':'.nxt'})
+        # scrapy.Decorate(click)
+        # loop.setOptions({'start':1,'end':50,'item':scrapy})
+        # importjquery.Decorate(loop)
         item.ExecuteAsync()
         
     def CreateMenu(self):

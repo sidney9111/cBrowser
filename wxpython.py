@@ -411,6 +411,7 @@ class MainFrame(wx.Frame):
         # scrapy.Decorate(click)
         # item.ExecuteAsync()
         from FlowWaiting200 import FlowWaiting200
+        from FlowSimulateClick import FlowSimulateClick
         # item = FlowOpenUrlAsync(manager,
         #         "http://www.playno1.com/portal.php?mod=list&catid=78")
         item = FlowOpenUrlAsync(manager,
@@ -421,15 +422,14 @@ class MainFrame(wx.Frame):
         item.Decorate(click18)
         wait = FlowWaiting200("http://www.playno1.com/portal.php?mod=list&catid=78")
         click18.Decorate(wait)
-        s = "script=document.createElement('script');script.type='text/javascript';script.src='http://192.168.1.215:8088/jqueryimport.js';document.body.appendChild(script);"
+        s = "script=document.createElement('script');script.type='text/javascript';script.src='http://192.168.0.103:81/jqueryimport.js';document.body.appendChild(script);"
         importjquery = FlowJavascriptAsync(s)
         wait.Decorate(importjquery)
 
-        click = FlowClick(options={'selector':'.nxt'})
+        click = FlowSimulateClick()
         wait.Decorate(click)
-
-        click2 = FlowClick(options={'selector':'.nxt'})
-        click.Decorate(click2)
+        clickopen = FlowOpenUrlAsync()
+        click.Decorate(clickopen)
 
         # loop = FlowLoop(manager)
         # scrapy = FlowScrapy({'script':'jianxiong'})
@@ -943,6 +943,7 @@ class ClientHandler:
             if(httpStatusCode==200):
                 manager = FlowManagement()
                 manager._OnLoadEnd()
+             
                 #instance = MainInstance()
                 #g_scriptRunner.SetActivity(instance.loaded_script_activity)
                 #g_scriptRunner.Execute(browser);

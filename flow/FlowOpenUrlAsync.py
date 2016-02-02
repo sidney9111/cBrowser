@@ -6,9 +6,13 @@ class FlowOpenUrlAsync(FlowItem):
 		print('FlowOpenUrlAsync manager=',manager)
 		self.url = url
 	def Execute(self):
-		self.manager.LoadUrl(self.url)		
+		url = getattr(self,'href',self.url)
+		if (url==""):
+			self.manager.LoadUrl("http://www.playno1.com/portal.php?mod=list&catid=78&page=6")		
+		else:
+			self.manager.LoadUrl(url)		
 		while(self.manager.CheckIsLoading()==True):
-			print('FlowOpenUrlAsync Execute')
+			print('FlowOpenUrlAsync Execute',url)
 			time.sleep(1)
 
 		super(FlowOpenUrlAsync,self).Execute()

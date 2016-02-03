@@ -2,13 +2,13 @@ from pymongo import MongoClient
 from LinkSave import LinkSave
 class MongoSave(object):
 	"""docstring for MongoSave"""
-	def __init__(self, arg):
+	def __init__(self, arg=""):
 		super(MongoSave, self).__init__()
 		self.arg = arg
 		self.client = MongoClient()
 	def add(self,str):
 		db = self.client.test
-		ret = db.meituan.insert_one(str)
+		ret = db.jian.insert_one(str)
 		print(ret)
 	def read(self):
 		

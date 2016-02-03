@@ -5,8 +5,10 @@ class FlowWaiting200(FlowItem):
 		super(FlowWaiting200,self).__init__()
 		self.url = url
 	def Execute(self):
-		#self.manager.LoadUrl(self.url)		
-		self.manager.url = self.url
+		# url = getattr(self,'href',self.url)
+		# if (url==""):
+		url = self.url
+		self.manager.url = url
 		count = 0
 		while(self.manager.CheckIsLoading()==True):
 			count +=1

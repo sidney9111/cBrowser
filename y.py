@@ -25,16 +25,17 @@ def produce(consumer):
         print('Produced {}'.format(data))
         consumer.send(data)
         yield
- 
+from LinkSave import LinkSave
+from MongoSave import MongoSave
 if __name__ == '__main__':
-    item = FlowItem()
-    print(item)
+    # item = FlowItem()
+    # print(item)
 
-    boa = [{'name':'//h/a/img/@href','index':1}]
-    boa[0]['key']=38
-    print(boa)
-    print(boa[0])
-    print(boa[0]['key'])
+    # boa = [{'name':'//h/a/img/@href','index':1}]
+    # boa[0]['key']=38
+    # print(boa)
+    # print(boa[0])
+    # print(boa[0]['key'])
     # consumer = consume()
     # consumer.send(None) 
     # producer = produce(consumer)
@@ -42,3 +43,11 @@ if __name__ == '__main__':
     # # for _ in range(10):
     # #     print('Producisng...')
     # next(producer)
+    
+    link = LinkSave()
+    ret = link.readlines("data")
+    save = MongoSave()
+    for v in ret:
+        item = eval(v)
+        item['date_x']=item['date'][:10]
+        save.add(item)

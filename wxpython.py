@@ -422,21 +422,22 @@ class MainFrame(wx.Frame):
         item.Decorate(click18)
         wait = FlowWaiting200("http://www.playno1.com/portal.php?mod=list&catid=78")
         click18.Decorate(wait)
-        s = "script=document.createElement('script');script.type='text/javascript';script.src='http://192.168.0.103:81/jqueryimport.js';document.body.appendChild(script);"
-        importjquery = FlowJavascriptAsync(s)
-        wait.Decorate(importjquery)
+        # s = "script=document.createElement('script');script.type='text/javascript';script.src='http://192.168.0.103:81/jqueryimport.js';document.body.appendChild(script);"
+        # importjquery = FlowJavascriptAsync(s)
+        # wait.Decorate(importjquery)
 
+        
+
+        loop = FlowLoop(manager)
+        wait.Decorate(loop)
+        scrapy = FlowScrapy({'script':'jianxiong'})
+
+        loop.setOptions({'start':1,'end':100,'item':scrapy})
         click = FlowSimulateClick()
-        wait.Decorate(click)
-        clickopen = FlowOpenUrlAsync()
+        scrapy.Decorate(click)
+        clickopen = FlowOpenUrlAsync()  #link deliever from FlowSimiulateClick
         click.Decorate(clickopen)
-
-        # loop = FlowLoop(manager)
-        # scrapy = FlowScrapy({'script':'jianxiong'})
-        # #wait.Decorate(scrapy)
-        # click = FlowClick({'selector':'.nxt'})
-        # scrapy.Decorate(click)
-        # loop.setOptions({'start':1,'end':50,'item':scrapy})
+ 
         # importjquery.Decorate(loop)
         item.ExecuteAsync()
         

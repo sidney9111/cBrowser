@@ -432,7 +432,7 @@ class MainFrame(wx.Frame):
         wait.Decorate(loop)
         scrapy = FlowScrapy({'script':'jianxiong'})
 
-        loop.setOptions({'start':1,'end':100,'item':scrapy})
+        loop.setOptions({'start':1,'end':405,'item':scrapy})
         click = FlowSimulateClick()
         scrapy.Decorate(click)
         clickopen = FlowOpenUrlAsync()  #link deliever from FlowSimiulateClick

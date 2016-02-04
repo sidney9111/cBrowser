@@ -6,9 +6,10 @@
     <!-- 引入 echarts.js -->
     <script src="js/echarts.min.js"></script>
 </head>
-<body>
-    <h1> <%= titles %> </h1>
-        <h2> <%- data %> </h2>
+<body style="MARGIN-RIGHT: auto; MARGIN-LEFT: auto;width: 600px;">
+<a href="http://www.playno1.com/">
+    <img src="http://www.playno1.com/template/eis_c_play/img/logo.gif" 
+        </img></a>
     <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
     <div id="main" style="width: 600px;height:400px;"></div>
     <script type="text/javascript">
@@ -46,11 +47,11 @@ data = data.map(function (item) {
 
 option = {
     title: {
-        text: 'Punch Card of Github',
-        link: 'https://github.com/pissang/echarts-next/graphs/punch-card'
+        text: '剑大发帖活跃度',
+        //link: 'https://github.com/pissang/echarts-next/graphs/punch-card'
     },
     legend: {
-        data: ['Punch Card'],
+        data: ['活跃度'],
         left: 'right'
     },
     tooltip: {
@@ -88,7 +89,7 @@ option = {
         }
     },
     series: [{
-        name: 'Punch Card',
+        name: '活跃度',
         type: 'scatter',
         symbolSize: function (val) {
             return val[2] * 0.1;
@@ -100,5 +101,6 @@ option = {
         // 使用刚指定的配置项和数据显示图表。
         myChart.setOption(option);
     </script>
+    <div style="margin-top:10px;">更新时间：<%- last_date %></div>
 </body>
 </html>

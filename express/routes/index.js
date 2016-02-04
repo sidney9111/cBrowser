@@ -14,6 +14,7 @@ router.get('/', function(req, res, next) {
 	   		list[i*24+j]=[i,j,0];	
 	   	}
 	   }
+	   var last_date = db.collection('jian').first()
 	   // console.log(list[7][2]);
 	   // list[7].count+=1;
 	   // console.log(list[7].count);
